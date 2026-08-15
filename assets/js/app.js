@@ -9,7 +9,7 @@
   function markActiveNavLink() {
     var here = window.location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
     if (here === "") here = "/";
-    document.querySelectorAll(".hm-header__nav a[href]").forEach(function (link) {
+    document.querySelectorAll(".hm-header__nav a[href], .hm-header__mobile-drawer a[href]").forEach(function (link) {
       var href = link.getAttribute("href");
       if (!href) return;
       var normalized = href.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
@@ -22,8 +22,7 @@
   function initMobileNav() {
     var root = document.querySelector(".hm-root");
     var toggle = document.querySelector(".hm-header__menu-toggle");
-    var nav = document.querySelector(".hm-header__nav");
-    if (!root || !toggle || !nav) return;
+    if (!root || !toggle) return;
 
     toggle.addEventListener("click", function () {
       var open = root.getAttribute("data-nav-open") === "true";
@@ -31,7 +30,7 @@
       toggle.setAttribute("aria-expanded", open ? "false" : "true");
     });
 
-    nav.querySelectorAll("a").forEach(function (link) {
+    document.querySelectorAll(".hm-header__nav a, .hm-header__mobile-drawer a").forEach(function (link) {
       link.addEventListener("click", function () {
         root.setAttribute("data-nav-open", "false");
         toggle.setAttribute("aria-expanded", "false");
@@ -47,6 +46,25 @@
     });
   }
 
+  function initHeaderScroll() {
+    var header = document.querySelector(".hm-header");
+    if (!header) return;
+
+    var hasHeroBg = document.querySelector(".hm-hero-bacanha");
+    if (hasHeroBg) {
+      header.classList.add("hm-header--overlay");
+      var handleScroll = function () {
+        if (window.scrollY > 30) {
+          header.classList.add("hm-header--scrolled");
+        } else {
+          header.classList.remove("hm-header--scrolled");
+        }
+      };
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      handleScroll();
+    }
+  }
+
   function setFooterYear() {
     document.querySelectorAll("[data-hm-year]").forEach(function (el) {
       el.textContent = new Date().getFullYear();
@@ -56,6 +74,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     markActiveNavLink();
     initMobileNav();
+    initHeaderScroll();
     setFooterYear();
   });
 })();

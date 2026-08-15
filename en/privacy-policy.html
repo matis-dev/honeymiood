@@ -24,26 +24,42 @@
 <body>
 <div class="hm-root" data-hm-lang="en">
 <a class="hm-skip-link" href="#hm-main">Skip to main content</a>
-<header class="hm-header">
+<header class="hm-header hm-header--split">
   <div class="hm-container hm-header__inner">
-    <div class="hm-header__brand-group">
-      <a class="hm-header__brand" href="index.html">honeymiood</a>
-      <span class="hm-header__tag">Kępa Redłowska Apiary · Est. 1923</span>
-    </div>
-    <nav class="hm-header__nav" id="hm-primary-nav" aria-label="Primary navigation">
+    <nav class="hm-header__nav hm-header__nav--left" aria-label="Product navigation">
       <a href="honeys.html">Honeys</a>
       <a href="gift-sets.html">Gift Sets</a>
       <a href="about.html">About</a>
-      <a href="stockists.html">Stockists</a>
-      <a href="contact.html">Contact</a>
     </nav>
-    <div class="hm-header__actions">
-      <span class="hm-langswitch">
-        <a href="../polityka-prywatnosci.html" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="index.html" aria-current="true" hreflang="en">EN</a>
-      </span>
-      <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-primary-nav" aria-label="Open menu"><span></span></button>
+    
+    <div class="hm-header__brand-group hm-header__brand-group--center">
+      <a class="hm-header__brand" href="index.html" aria-label="Honeymiood">
+        <img class="hm-header__logo hm-header__logo--white" src="../assets/images/logo_w.png" alt="Honeymiood" width="180" height="32" />
+        <img class="hm-header__logo hm-header__logo--black" src="../assets/images/logo_b.png" alt="Honeymiood" width="180" height="32" />
+      </a>
+    </div>
+    
+    <div class="hm-header__right-group">
+      <nav class="hm-header__nav hm-header__nav--right" aria-label="Info navigation">
+        <a href="stockists.html">Stockists</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hm-header__actions">
+        <span class="hm-langswitch">
+          <a href="../polityka-prywatnosci.html" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="index.html" aria-current="true" hreflang="en">EN</a>
+        </span>
+        <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-mobile-nav" aria-label="Open menu"><span></span></button>
+      </div>
     </div>
   </div>
+
+  <nav class="hm-header__mobile-drawer" id="hm-mobile-nav" aria-label="Mobile navigation">
+    <a href="honeys.html">Honeys</a>
+    <a href="gift-sets.html">Gift Sets</a>
+    <a href="about.html">About</a>
+    <a href="stockists.html">Stockists</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main id="hm-main">

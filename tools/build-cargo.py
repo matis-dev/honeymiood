@@ -107,10 +107,47 @@ def rewrite_href(href, lang):
     return "/" + slug if slug else href
 
 
+IMAGE_MAP = {
+    "assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/V2068509248785881701117978684150/64649669791__DF27E753-71BC-493E-96BB-50366C30FF2A.JPG",
+    "../assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/V2068509248785881701117978684150/64649669791__DF27E753-71BC-493E-96BB-50366C30FF2A.JPG",
+    "assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/w/1200/i/O2665675402324908920199793132646/DSC04179.JPG",
+    "../assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/w/1200/i/O2665675402324908920199793132646/DSC04179.JPG",
+    "assets/images/giftset-swieczka.jpg": "https://freight.cargo.site/w/1200/i/P2665674917637840135805561017446/DSC04183.JPG",
+    "../assets/images/giftset-swieczka.jpg": "https://freight.cargo.site/w/1200/i/P2665674917637840135805561017446/DSC04183.JPG",
+    "assets/images/giftset-trojmioodek.jpg": "https://freight.cargo.site/w/1200/i/W2665674697793467406180598818406/DSC04184.JPG",
+    "../assets/images/giftset-trojmioodek.jpg": "https://freight.cargo.site/w/1200/i/W2665674697793467406180598818406/DSC04184.JPG",
+    "assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/w/1200/i/F2665675685816999266185802271846/DSC04169.JPG",
+    "../assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/w/1200/i/F2665675685816999266185802271846/DSC04169.JPG",
+    "assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/T2665650558211413843780725582582/07520010.JPG",
+    "../assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/T2665650558211413843780725582582/07520010.JPG",
+    "assets/images/jarek-hives.jpg": "https://freight.cargo.site/w/1200/i/U2665660857904724278458999815270/DSC03178.JPG",
+    "../assets/images/jarek-hives.jpg": "https://freight.cargo.site/w/1200/i/U2665660857904724278458999815270/DSC03178.JPG",
+    "assets/images/about-honeycomb.jpg": "https://freight.cargo.site/w/1200/i/C2665665809796068285511062635622/DSC03174.JPG",
+    "../assets/images/about-honeycomb.jpg": "https://freight.cargo.site/w/1200/i/C2665665809796068285511062635622/DSC03174.JPG",
+    "assets/images/about-hives-smoker.jpg": "https://freight.cargo.site/w/1200/i/L2665662191544719230559640994918/DSC03175.JPG",
+    "../assets/images/about-hives-smoker.jpg": "https://freight.cargo.site/w/1200/i/L2665662191544719230559640994918/DSC03175.JPG",
+    "assets/images/kepa-meadows.jpg": "https://freight.cargo.site/w/1200/i/L2665617795318199409720291437302/DSC03179.JPG",
+    "../assets/images/kepa-meadows.jpg": "https://freight.cargo.site/w/1200/i/L2665617795318199409720291437302/DSC03179.JPG",
+    "assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
+    "../assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
+    "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
+    "../assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
+    "assets/images/logo_w.png": "https://freight.cargo.site/w/1200/i/X2156015466378587388984278854390/logo_honeymiood.png",
+    "../assets/images/logo_w.png": "https://freight.cargo.site/w/1200/i/X2156015466378587388984278854390/logo_honeymiood.png",
+    "assets/images/logo_b.png": "https://freight.cargo.site/w/1200/i/D2056736702074654142009068169974/honeymood_logo.png",
+    "../assets/images/logo_b.png": "https://freight.cargo.site/w/1200/i/D2056736702074654142009068169974/honeymood_logo.png",
+}
+
+
 def rewrite_links(html, lang):
-    def repl(m):
+    def repl_href(m):
         return f'href="{rewrite_href(m.group(1), lang)}"'
-    return re.sub(r'href="([^"]+)"', repl, html)
+    def repl_src(m):
+        src = m.group(1)
+        return f'src="{IMAGE_MAP.get(src, src)}"'
+    html = re.sub(r'href="([^"]+)"', repl_href, html)
+    html = re.sub(r'src="([^"]+)"', repl_src, html)
+    return html
 
 
 def wrap(fragment, lang):

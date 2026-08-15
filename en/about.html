@@ -24,26 +24,42 @@
 <body>
 <div class="hm-root" data-hm-lang="en">
 <a class="hm-skip-link" href="#hm-main">Skip to main content</a>
-<header class="hm-header">
+<header class="hm-header hm-header--split">
   <div class="hm-container hm-header__inner">
-    <div class="hm-header__brand-group">
-      <a class="hm-header__brand" href="index.html">honeymiood</a>
-      <span class="hm-header__tag">Kępa Redłowska Apiary · Est. 1923</span>
-    </div>
-    <nav class="hm-header__nav" id="hm-primary-nav" aria-label="Primary navigation">
+    <nav class="hm-header__nav hm-header__nav--left" aria-label="Product navigation">
       <a href="honeys.html">Honeys</a>
       <a href="gift-sets.html">Gift Sets</a>
       <a href="about.html">About</a>
-      <a href="stockists.html">Stockists</a>
-      <a href="contact.html">Contact</a>
     </nav>
-    <div class="hm-header__actions">
-      <span class="hm-langswitch">
-        <a href="../o-nas.html" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="index.html" aria-current="true" hreflang="en">EN</a>
-      </span>
-      <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-primary-nav" aria-label="Open menu"><span></span></button>
+    
+    <div class="hm-header__brand-group hm-header__brand-group--center">
+      <a class="hm-header__brand" href="index.html" aria-label="Honeymiood">
+        <img class="hm-header__logo hm-header__logo--white" src="../assets/images/logo_w.png" alt="Honeymiood" width="180" height="32" />
+        <img class="hm-header__logo hm-header__logo--black" src="../assets/images/logo_b.png" alt="Honeymiood" width="180" height="32" />
+      </a>
+    </div>
+    
+    <div class="hm-header__right-group">
+      <nav class="hm-header__nav hm-header__nav--right" aria-label="Info navigation">
+        <a href="stockists.html">Stockists</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hm-header__actions">
+        <span class="hm-langswitch">
+          <a href="../o-nas.html" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="index.html" aria-current="true" hreflang="en">EN</a>
+        </span>
+        <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-mobile-nav" aria-label="Open menu"><span></span></button>
+      </div>
     </div>
   </div>
+
+  <nav class="hm-header__mobile-drawer" id="hm-mobile-nav" aria-label="Mobile navigation">
+    <a href="honeys.html">Honeys</a>
+    <a href="gift-sets.html">Gift Sets</a>
+    <a href="about.html">About</a>
+    <a href="stockists.html">Stockists</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main id="hm-main">
@@ -52,10 +68,18 @@
     <span class="hm-hero__meta-label">Est. 1923 · Apiary Heritage</span>
     <h1>Four generations, one apiary</h1>
     <p class="hm-hero__lead">We have nurtured beekeeping knowledge in our family across four generations. In every jar of Honeymiood is genuine care, craftsmanship, and pure coastal nature.</p>
+    <div class="hm-hero__chips">
+      <span class="hm-hero__chip">100+ Years Heritage</span>
+      <span class="hm-hero__chip">Kępa Redłowska Reserve</span>
+      <span class="hm-hero__chip">Gentle Natural Beekeeping</span>
+    </div>
   </div>
   <div class="hm-hero__media-wrapper">
     <div class="hm-hero__media">
-      <img src="https://freight.cargo.site/w/1200/i/A2665658737553076358817040771830/DSC03176.JPG" alt="Hives at Honeymiood apiary by Kępa Redłowska Nature Reserve" width="1200" height="900" fetchpriority="high" />
+      <img src="../assets/images/apiary-kepa-redlowska.jpg" alt="Hives at Honeymiood apiary by Kępa Redłowska Nature Reserve" width="1200" height="900" fetchpriority="high" />
+    </div>
+    <div class="hm-hero__caption">
+      <span>Our garden hives bordering the Kępa Redłowska Nature Reserve in Gdynia</span>
     </div>
   </div>
 </section>
@@ -100,9 +124,40 @@
       <h2>By the nature reserve, with the sea just beyond</h2>
       <p>Our apiary sits in our family garden in Gdynia, directly beside the Kępa Redłowska Nature Reserve, just steps from the Baltic coast. Linden, acacia, evening primrose, cornflowers, wild clover, dandelion, and blackberries flourish here.</p>
       <p>Our bees thrive in this quiet paradise — their calm temperament is proof. Our honey is exceptionally aromatic and rich in natural character thanks to this pristine seaside microclimate.</p>
+      <div class="hm-about__quote">
+        “For us, honey is never a mass product, but a pure record of the weather and floral bloom of each passing coastal summer.”
+      </div>
     </div>
     <div class="hm-about__media">
-      <img src="https://freight.cargo.site/w/1000/i/L2665617795318199409720291437302/DSC03179.JPG" alt="Blooming meadows of Kępa Redłowska Nature Reserve in Gdynia" width="1000" height="1000" loading="lazy" />
+      <img src="../assets/images/jarek-hives.jpg" alt="Jarek at the hives in Honeymiood apiary, Gdynia" width="1000" height="1000" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section class="hm-container hm-section--tight">
+  <div class="hm-section-head hm-section-head--center">
+    <h2>Moments from the Apiary</h2>
+    <p>Daily rhythm around the hives, gentle work with the bees, and the coastal meadows of Kępa Redłowska.</p>
+  </div>
+  
+  <div class="hm-gallery-grid">
+    <div class="hm-gallery-item">
+      <div class="hm-gallery-media">
+        <img src="../assets/images/about-honeycomb.jpg" alt="Fresh honeycomb straight from the hive" width="600" height="450" loading="lazy" />
+      </div>
+      <span class="hm-gallery-caption">Fresh raw honeycomb straight from the colony</span>
+    </div>
+    <div class="hm-gallery-item">
+      <div class="hm-gallery-media">
+        <img src="../assets/images/about-hives-smoker.jpg" alt="Tending hives in the garden apiary" width="600" height="450" loading="lazy" />
+      </div>
+      <span class="hm-gallery-caption">Quiet afternoon inspection in the garden apiary</span>
+    </div>
+    <div class="hm-gallery-item">
+      <div class="hm-gallery-media">
+        <img src="../assets/images/kepa-meadows.jpg" alt="Blooming coastal meadows of Kępa Redłowska Reserve" width="600" height="450" loading="lazy" />
+      </div>
+      <span class="hm-gallery-caption">Wild blooming meadows of Kępa Redłowska Reserve</span>
     </div>
   </div>
 </section>

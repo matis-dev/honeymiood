@@ -24,26 +24,42 @@
 <body>
 <div class="hm-root" data-hm-lang="pl">
 <a class="hm-skip-link" href="#hm-main">Przejdź do treści głównej</a>
-<header class="hm-header">
+<header class="hm-header hm-header--split">
   <div class="hm-container hm-header__inner">
-    <div class="hm-header__brand-group">
-      <a class="hm-header__brand" href="index.html">honeymiood</a>
-      <span class="hm-header__tag">Pasieka Kępa Redłowska · Od 1923</span>
-    </div>
-    <nav class="hm-header__nav" id="hm-primary-nav" aria-label="Nawigacja główna">
+    <nav class="hm-header__nav hm-header__nav--left" aria-label="Nawigacja po produktach">
       <a href="miody.html">Miody</a>
       <a href="zestawy.html">Zestawy</a>
       <a href="o-nas.html">O Pasiece</a>
-      <a href="gdzie-kupic.html">Gdzie Kupić</a>
-      <a href="kontakt.html">Kontakt</a>
     </nav>
-    <div class="hm-header__actions">
-      <span class="hm-langswitch">
-        <a href="index.html" aria-current="true" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="en/about.html" hreflang="en">EN</a>
-      </span>
-      <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-primary-nav" aria-label="Otwórz menu"><span></span></button>
+    
+    <div class="hm-header__brand-group hm-header__brand-group--center">
+      <a class="hm-header__brand" href="index.html" aria-label="Honeymiood">
+        <img class="hm-header__logo hm-header__logo--white" src="assets/images/logo_w.png" alt="Honeymiood" width="180" height="32" />
+        <img class="hm-header__logo hm-header__logo--black" src="assets/images/logo_b.png" alt="Honeymiood" width="180" height="32" />
+      </a>
+    </div>
+    
+    <div class="hm-header__right-group">
+      <nav class="hm-header__nav hm-header__nav--right" aria-label="Nawigacja informacyjna">
+        <a href="gdzie-kupic.html">Gdzie Kupić</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <div class="hm-header__actions">
+        <span class="hm-langswitch">
+          <a href="index.html" aria-current="true" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="en/about.html" hreflang="en">EN</a>
+        </span>
+        <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-mobile-nav" aria-label="Otwórz menu"><span></span></button>
+      </div>
     </div>
   </div>
+
+  <nav class="hm-header__mobile-drawer" id="hm-mobile-nav" aria-label="Menu mobilne">
+    <a href="miody.html">Miody</a>
+    <a href="zestawy.html">Zestawy</a>
+    <a href="o-nas.html">O Pasiece</a>
+    <a href="gdzie-kupic.html">Gdzie Kupić</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
 
 <main id="hm-main">
@@ -52,10 +68,18 @@
     <span class="hm-hero__meta-label">Od 1923 Roku · Historia Pasieki</span>
     <h1>Cztery pokolenia, jedna pasieka</h1>
     <p class="hm-hero__lead">Pielęgnujemy wiedzę pszczelarską w naszej rodzinie od czterech pokoleń. W słoikach Honeymiood jest 100% miodowego nastroju i szacunku do nadmorskiej natury.</p>
+    <div class="hm-hero__chips">
+      <span class="hm-hero__chip">100+ Lat Tradycji</span>
+      <span class="hm-hero__chip">Rezerwat Kępa Redłowska</span>
+      <span class="hm-hero__chip">Ekologiczny Szacunek dla Pszczół</span>
+    </div>
   </div>
   <div class="hm-hero__media-wrapper">
     <div class="hm-hero__media">
-      <img src="https://freight.cargo.site/w/1200/i/A2665658737553076358817040771830/DSC03176.JPG" alt="Ule w pasiece Honeymiood przy Rezerwacie Kępa Redłowska" width="1200" height="900" fetchpriority="high" />
+      <img src="assets/images/apiary-kepa-redlowska.jpg" alt="Ule w pasiece Honeymiood przy Rezerwacie Kępa Redłowska" width="1200" height="900" fetchpriority="high" />
+    </div>
+    <div class="hm-hero__caption">
+      <span>Nasze ule w ogrodzie przy Rezerwacie Kępa Redłowska w Gdyni</span>
     </div>
   </div>
 </section>
@@ -100,9 +124,40 @@
       <h2>Tuż przy rezerwacie, za którym jest morze</h2>
       <p>Pasieka stoi w naszym ogrodzie w Gdyni, tuż przy Rezerwacie Kępa Redłowska, za którym jest plaża i morze. W obrębie rezerwatu rosną lipy, akacje, wiesiołki, bławatki, koniczyny, zioła, mniszki i jeżyny.</p>
       <p>Nasze pszczoły mają tutaj prawdziwy raj — co potwierdza ich nastrój, są niezwykle spokojne. Nasz miód jest wyjątkowo aromatyczny i wartościowy dzięki tej unikalnej nadmorskiej lokalizacji.</p>
+      <div class="hm-about__quote">
+        „Miód to dla nas nie masowa produkcja, lecz zapis pogody i kwitnienia z każdego kolejnego lata w rezerwacie.”
+      </div>
     </div>
     <div class="hm-about__media">
-      <img src="https://freight.cargo.site/w/1000/i/L2665617795318199409720291437302/DSC03179.JPG" alt="Kwitnące łąki Rezerwatu Kępa Redłowska w Gdyni" width="1000" height="1000" loading="lazy" />
+      <img src="assets/images/jarek-hives.jpg" alt="Jarek przy ulach w pasiece Honeymiood w Gdyni" width="1000" height="1000" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section class="hm-container hm-section--tight">
+  <div class="hm-section-head hm-section-head--center">
+    <h2>Migawki z Życia Pasieki</h2>
+    <p>Codzienność wśród uli, praca z pszczołami i nadmorska przyroda Kępy Redłowskiej.</p>
+  </div>
+  
+  <div class="hm-gallery-grid">
+    <div class="hm-gallery-item">
+      <div class="hm-gallery-media">
+        <img src="assets/images/about-honeycomb.jpg" alt="Świeży plaster miodu prosto z ula" width="600" height="450" loading="lazy" />
+      </div>
+      <span class="hm-gallery-caption">Świeży plaster miodu prosto z ula</span>
+    </div>
+    <div class="hm-gallery-item">
+      <div class="hm-gallery-media">
+        <img src="assets/images/about-hives-smoker.jpg" alt="Doglądanie uli w ogrodowej pasiece" width="600" height="450" loading="lazy" />
+      </div>
+      <span class="hm-gallery-caption">Cicha praca przy ulach w ciepłe popołudnia</span>
+    </div>
+    <div class="hm-gallery-item">
+      <div class="hm-gallery-media">
+        <img src="assets/images/kepa-meadows.jpg" alt="Kwitnące łąki Rezerwatu Kępa Redłowska" width="600" height="450" loading="lazy" />
+      </div>
+      <span class="hm-gallery-caption">Dzikie łąki Rezerwatu Kępa Redłowska</span>
     </div>
   </div>
 </section>

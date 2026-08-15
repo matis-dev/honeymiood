@@ -24,26 +24,42 @@
 <body>
 <div class="hm-root" data-hm-lang="en">
 <a class="hm-skip-link" href="#hm-main">Skip to main content</a>
-<header class="hm-header">
+<header class="hm-header hm-header--split">
   <div class="hm-container hm-header__inner">
-    <div class="hm-header__brand-group">
-      <a class="hm-header__brand" href="index.html">honeymiood</a>
-      <span class="hm-header__tag">Kępa Redłowska Apiary · Est. 1923</span>
-    </div>
-    <nav class="hm-header__nav" id="hm-primary-nav" aria-label="Primary navigation">
+    <nav class="hm-header__nav hm-header__nav--left" aria-label="Product navigation">
       <a href="honeys.html">Honeys</a>
       <a href="gift-sets.html">Gift Sets</a>
       <a href="about.html">About</a>
-      <a href="stockists.html">Stockists</a>
-      <a href="contact.html">Contact</a>
     </nav>
-    <div class="hm-header__actions">
-      <span class="hm-langswitch">
-        <a href="../zestawy.html" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="index.html" aria-current="true" hreflang="en">EN</a>
-      </span>
-      <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-primary-nav" aria-label="Open menu"><span></span></button>
+    
+    <div class="hm-header__brand-group hm-header__brand-group--center">
+      <a class="hm-header__brand" href="index.html" aria-label="Honeymiood">
+        <img class="hm-header__logo hm-header__logo--white" src="../assets/images/logo_w.png" alt="Honeymiood" width="180" height="32" />
+        <img class="hm-header__logo hm-header__logo--black" src="../assets/images/logo_b.png" alt="Honeymiood" width="180" height="32" />
+      </a>
+    </div>
+    
+    <div class="hm-header__right-group">
+      <nav class="hm-header__nav hm-header__nav--right" aria-label="Info navigation">
+        <a href="stockists.html">Stockists</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hm-header__actions">
+        <span class="hm-langswitch">
+          <a href="../zestawy.html" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="index.html" aria-current="true" hreflang="en">EN</a>
+        </span>
+        <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-mobile-nav" aria-label="Open menu"><span></span></button>
+      </div>
     </div>
   </div>
+
+  <nav class="hm-header__mobile-drawer" id="hm-mobile-nav" aria-label="Mobile navigation">
+    <a href="honeys.html">Honeys</a>
+    <a href="gift-sets.html">Gift Sets</a>
+    <a href="about.html">About</a>
+    <a href="stockists.html">Stockists</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main id="hm-main">
@@ -59,6 +75,9 @@
   <div class="hm-gift-grid">
 
     <div class="hm-giftcard">
+      <div class="hm-giftcard__media">
+        <img src="../assets/images/giftset-mioodki.jpg" alt="Honey Taster Set — 6 Honeymiood jars" width="600" height="450" loading="lazy" />
+      </div>
       <span class="hm-badge hm-badge--accent">Full Tasting</span>
       <h2>Tasting Set</h2>
       <p class="hm-product__price">6 jars, 150g each</p>
@@ -76,6 +95,9 @@
     </div>
 
     <div class="hm-giftcard">
+      <div class="hm-giftcard__media">
+        <img src="../assets/images/giftset-swieczka.jpg" alt="Candle & Honey Set — 2 honeys and pure beeswax candle" width="600" height="450" loading="lazy" />
+      </div>
       <span class="hm-badge hm-badge--pine">Cozy Evening</span>
       <h2>Candle & Honey Set</h2>
       <p class="hm-product__price">2 jars 320g + beeswax candle</p>
@@ -90,6 +112,9 @@
     </div>
 
     <div class="hm-giftcard">
+      <div class="hm-giftcard__media">
+        <img src="../assets/images/giftset-trojmioodek.jpg" alt="Trio Selection — 3 Honeymiood jars in gift packaging" width="600" height="450" loading="lazy" />
+      </div>
       <span class="hm-badge hm-badge--accent">Custom Selection</span>
       <h2>Trio Selection</h2>
       <p class="hm-product__price">3 jars 320g, your choice</p>
@@ -104,6 +129,9 @@
     </div>
 
     <div class="hm-giftcard">
+      <div class="hm-giftcard__media">
+        <img src="../assets/images/giftset-swiateczny.jpg" alt="Holiday Gift Set — 3 honeys, candle, and ornament" width="600" height="450" loading="lazy" />
+      </div>
       <span class="hm-badge hm-badge--pine">Holiday Edition</span>
       <h2>Holiday Gift Set</h2>
       <p class="hm-product__price">3 jars 320g + candle + ornament</p>

@@ -24,45 +24,87 @@
 <body>
 <div class="hm-root" data-hm-lang="pl">
 <a class="hm-skip-link" href="#hm-main">Przejdź do treści głównej</a>
-<header class="hm-header">
+<header class="hm-header hm-header--split">
   <div class="hm-container hm-header__inner">
-    <div class="hm-header__brand-group">
-      <a class="hm-header__brand" href="index.html">honeymiood</a>
-      <span class="hm-header__tag">Pasieka Kępa Redłowska · Od 1923</span>
-    </div>
-    <nav class="hm-header__nav" id="hm-primary-nav" aria-label="Nawigacja główna">
+    <nav class="hm-header__nav hm-header__nav--left" aria-label="Nawigacja po produktach">
       <a href="miody.html">Miody</a>
       <a href="zestawy.html">Zestawy</a>
       <a href="o-nas.html">O Pasiece</a>
-      <a href="gdzie-kupic.html">Gdzie Kupić</a>
-      <a href="kontakt.html">Kontakt</a>
     </nav>
-    <div class="hm-header__actions">
-      <span class="hm-langswitch">
-        <a href="index.html" aria-current="true" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="en/index.html" hreflang="en">EN</a>
-      </span>
-      <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-primary-nav" aria-label="Otwórz menu"><span></span></button>
+    
+    <div class="hm-header__brand-group hm-header__brand-group--center">
+      <a class="hm-header__brand" href="index.html" aria-label="Honeymiood">
+        <img class="hm-header__logo hm-header__logo--white" src="assets/images/logo_w.png" alt="Honeymiood" width="180" height="32" />
+        <img class="hm-header__logo hm-header__logo--black" src="assets/images/logo_b.png" alt="Honeymiood" width="180" height="32" />
+      </a>
+    </div>
+    
+    <div class="hm-header__right-group">
+      <nav class="hm-header__nav hm-header__nav--right" aria-label="Nawigacja informacyjna">
+        <a href="gdzie-kupic.html">Gdzie Kupić</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <div class="hm-header__actions">
+        <span class="hm-langswitch">
+          <a href="index.html" aria-current="true" hreflang="pl">PL</a><span aria-hidden="true">|</span><a href="en/index.html" hreflang="en">EN</a>
+        </span>
+        <button type="button" class="hm-header__menu-toggle" aria-expanded="false" aria-controls="hm-mobile-nav" aria-label="Otwórz menu"><span></span></button>
+      </div>
     </div>
   </div>
+
+  <nav class="hm-header__mobile-drawer" id="hm-mobile-nav" aria-label="Menu mobilne">
+    <a href="miody.html">Miody</a>
+    <a href="zestawy.html">Zestawy</a>
+    <a href="o-nas.html">O Pasiece</a>
+    <a href="gdzie-kupic.html">Gdzie Kupić</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
 
 <main id="hm-main">
-<section class="hm-container hm-hero">
-  <div class="hm-hero__content">
-    <span class="hm-hero__meta-label">54°29'N · Rezerwat Kępa Redłowska, Gdynia</span>
-    <h1>Miód z czterech pokoleń jednej rodziny pszczelarzy</h1>
-    <p class="hm-hero__lead">Honeymiood to surowy, niepasteryzowany miód pozyskiwany z pasieki tuż przy nadmorskim rezerwacie w Gdyni — tam, gdzie lipy, akacje i dzikie łąki spotykają się z morzem.</p>
-    <div class="hm-hero__actions">
-      <a class="hm-btn hm-btn--primary" href="miody.html">Zobacz Zbiory Miodów</a>
-      <a class="hm-btn hm-btn--secondary" href="o-nas.html">Poznaj Historię Pasieki</a>
+<section class="hm-hero-bacanha">
+  <div class="hm-hero-bacanha__bg-media">
+    <img src="assets/images/hero-bg-scraped.jpg" alt="Pasieka Honeymiood przy Rezerwacie Kępa Redłowska" fetchpriority="high" />
+    <div class="hm-hero-bacanha__overlay"></div>
+  </div>
+  
+  <div class="hm-container hm-hero-bacanha__container">
+    <div class="hm-hero-bacanha__content">
+      <div class="hm-hero-bacanha__meta">
+        <span class="hm-hero-bacanha__coords">54°29'N 18°33'E · Gdynia, Polska</span>
+        <span class="hm-hero-bacanha__badge">
+          <span class="hm-hero-bacanha__dot" aria-hidden="true"></span>
+          Świeży Zbiór 2026
+        </span>
+      </div>
+      
+      <h1 class="hm-hero-bacanha__title">Surowy miód znad Rezerwatu Kępa Redłowska</h1>
+      
+      <p class="hm-hero-bacanha__lead">Pozyskiwany z rodzinnej pasieki na klifie w Gdyni — tam, gdzie morska bryza Bałtyku spotyka kwitnące lipy, akacje i dzikie łąki rezerwatu. Cztery pokolenia pszczelarskiej wiedzy od 1923 roku.</p>
+      
+      <div class="hm-hero-bacanha__chips">
+        <span class="hm-hero-bacanha__chip">100% Surowy &amp; Niefiltrowany</span>
+        <span class="hm-hero-bacanha__chip">Nadmorski Mikroklimat</span>
+        <span class="hm-hero-bacanha__chip">Cztery Pokolenia Pszczelarzy</span>
+      </div>
+      
+      <div class="hm-hero-bacanha__actions">
+        <a class="hm-btn hm-btn--glow" href="miody.html">
+          <span>Odkryj Zbiory Miodów</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a class="hm-btn hm-btn--ghost" href="o-nas.html">
+          <span>Poznaj Historię Pasieki</span>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="hm-hero__media-wrapper">
-    <div class="hm-hero__media">
-      <img src="https://freight.cargo.site/w/1400/i/X2847188493824277131163436526326/DSC03151.JPG" alt="Pasieka Honeymiood przy Rezerwacie Kępa Redłowska w Gdyni" width="1400" height="1050" fetchpriority="high" />
-    </div>
-    <div class="hm-hero__caption">
-      <span>Pasieka w ogrodzie przy Kępie Redłowskiej w Gdyni</span>
+  
+  <div class="hm-hero-bacanha__footer-bar">
+    <div class="hm-container hm-hero-bacanha__footer-inner">
+      <span class="hm-hero-bacanha__terroir-note">Pożytki Rezerwatu: Lipa · Akacja · Wiesiołek · Dzika Róża · Bławatki</span>
+      <span class="hm-hero-bacanha__provenance-note">Pasieka Rodzinna · Od 1923 Roku</span>
     </div>
   </div>
 </section>

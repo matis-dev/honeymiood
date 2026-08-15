@@ -74,6 +74,34 @@
   background-color: var(--hm-color-surface-soft);
 }
 
+.hm-btn--glow {
+  background-color: var(--hm-color-accent);
+  color: #FFFFFF;
+  border-color: var(--hm-color-accent);
+  box-shadow: 0 4px 20px rgba(155, 93, 26, 0.45);
+}
+
+.hm-btn--glow:hover, .hm-btn--glow.is-hover {
+  background-color: var(--hm-color-accent-hover);
+  border-color: var(--hm-color-accent-hover);
+  color: #FFFFFF;
+  box-shadow: 0 6px 26px rgba(155, 93, 26, 0.65);
+}
+
+.hm-btn--ghost {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FAF7F2;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hm-btn--ghost:hover, .hm-btn--ghost.is-hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
 .hm-btn--block {
   width: 100%;
 }
@@ -457,6 +485,26 @@ shop-product {
   gap: var(--hm-space-2);
   box-shadow: var(--hm-shadow-subtle);
   transition: transform var(--hm-transition-base), box-shadow var(--hm-transition-base), border-color var(--hm-transition-base);
+}
+
+.hm-giftcard__media {
+  border-radius: var(--hm-radius-sm);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: var(--hm-color-surface-soft);
+  border: 1px solid var(--hm-color-border);
+  margin-bottom: var(--hm-space-1);
+}
+
+.hm-giftcard__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hm-giftcard:hover .hm-giftcard__media img {
+  transform: scale(1.03);
 }
 
 .hm-giftcard:hover {
