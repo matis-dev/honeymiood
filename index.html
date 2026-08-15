@@ -26,7 +26,10 @@
 <a class="hm-skip-link" href="#hm-main">Przejdź do treści głównej</a>
 <header class="hm-header">
   <div class="hm-container hm-header__inner">
-    <a class="hm-header__brand" href="index.html">honeymiood</a>
+    <div class="hm-header__brand-group">
+      <a class="hm-header__brand" href="index.html">honeymiood</a>
+      <span class="hm-header__tag">Pasieka Kępa Redłowska · Od 1923</span>
+    </div>
     <nav class="hm-header__nav" id="hm-primary-nav" aria-label="Nawigacja główna">
       <a href="miody.html">Miody</a>
       <a href="zestawy.html">Zestawy</a>
@@ -45,57 +48,73 @@
 
 <main id="hm-main">
 <section class="hm-container hm-hero">
-  <div>
-    <span class="hm-hero__eyebrow">Rezerwat Kępa Redłowska, Gdynia</span>
+  <div class="hm-hero__content">
+    <span class="hm-hero__meta-label">54°29'N · Rezerwat Kępa Redłowska, Gdynia</span>
     <h1>Miód z czterech pokoleń jednej rodziny pszczelarzy</h1>
     <p class="hm-hero__lead">Honeymiood to surowy, niepasteryzowany miód pozyskiwany z pasieki tuż przy nadmorskim rezerwacie w Gdyni — tam, gdzie lipy, akacje i dzikie łąki spotykają się z morzem.</p>
     <div class="hm-hero__actions">
-      <a class="hm-btn hm-btn--primary" href="miody.html">Zobacz Miody</a>
-      <a class="hm-btn hm-btn--secondary" href="o-nas.html">Poznaj Pasiekę</a>
+      <a class="hm-btn hm-btn--primary" href="miody.html">Zobacz Zbiory Miodów</a>
+      <a class="hm-btn hm-btn--secondary" href="o-nas.html">Poznaj Historię Pasieki</a>
     </div>
   </div>
-  <div class="hm-hero__media">
-    <img src="https://freight.cargo.site/w/1400/i/X2847188493824277131163436526326/DSC03151.JPG" alt="Pasieka Honeymiood przy Rezerwacie Kępa Redłowska w Gdyni" width="1400" height="1050" />
+  <div class="hm-hero__media-wrapper">
+    <div class="hm-hero__media">
+      <img src="https://freight.cargo.site/w/1400/i/X2847188493824277131163436526326/DSC03151.JPG" alt="Pasieka Honeymiood przy Rezerwacie Kępa Redłowska w Gdyni" width="1400" height="1050" fetchpriority="high" />
+    </div>
+    <div class="hm-hero__caption">
+      <span>Pasieka w ogrodzie przy Kępie Redłowskiej w Gdyni</span>
+    </div>
   </div>
 </section>
 
 <section class="hm-container hm-section--tight">
-  <div class="hm-origin-strip">
-    <div>
-      <h3>Cztery pokolenia</h3>
-      <p>Od praprababci Jadwigi po Jarka — wiedza pszczelarska przekazywana w rodzinie od ponad stu lat.</p>
-    </div>
-    <div>
-      <h3>Jeden rezerwat</h3>
-      <p>Lipy, akacje, wiesiołki i bławatki Kępy Redłowskiej dają miodowi wyjątkowy, nadmorski charakter.</p>
-    </div>
-    <div>
-      <h3>Zero pośredników</h3>
-      <p>Miód prosto z pasieki — surowy, niepasteryzowany, kremowany na zimno.</p>
+  <div class="hm-provenance">
+    <div class="hm-provenance__grid">
+      <div class="hm-provenance__item">
+        <span class="hm-provenance__num">01</span>
+        <h3>Cztery pokolenia rzemiosła</h3>
+        <p>Od praprababci Jadwigi po Jarka — ponad sto lat rodzinnej wiedzy o zachowaniu uli, rytmie pożytków i naturalnym pszczelarstwie.</p>
+      </div>
+      <div class="hm-provenance__item">
+        <span class="hm-provenance__num">02</span>
+        <h3>Nadmorski mikroklimat</h3>
+        <p>Lipy, akacje, wiesiołki i dzikie bławatki Kępy Redłowskiej nadają miodom wyrazisty bukiet smakowy i unikalną mineralność.</p>
+      </div>
+      <div class="hm-provenance__item">
+        <span class="hm-provenance__num">03</span>
+        <h3>Czysty, surowy zbiór</h3>
+        <p>Miód prosto z plastrów — niefiltrowany na gorąco, niepasteryzowany, z zachowaniem wszystkich naturalnych enzymów i pyłków.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="hm-container hm-section">
-  <div class="hm-section-head">
-    <h2>Nasze Miody</h2>
-    <p>Siedem miodów, jedna pasieka. Każdy zbiór ma swój własny charakter.</p>
+  <div class="hm-section-head hm-section-head--center">
+    <h2>Zbiory z Pasieki</h2>
+    <p>Siedem miodów jednorodnych i nektarowych. Każdy słoik pochodzi ze sprawdzonej partii i nosi unikalny profil smakowy.</p>
   </div>
   <div id="hm-catalog" class="hm-showcase" data-limit="3"></div>
   <p style="text-align:center; margin-top: var(--hm-space-4)">
-    <a class="hm-btn hm-btn--secondary" href="miody.html">Zobacz wszystkie miody</a>
+    <a class="hm-btn hm-btn--secondary" href="miody.html">Poznaj wszystkie 7 miodów</a>
   </p>
 </section>
 
 <section class="hm-container hm-section--tight">
   <div class="hm-about__intro">
     <div class="hm-about__media">
-      <img src="https://freight.cargo.site/w/1000/i/L2665618281113204590861333244662/DSC03172.JPG" alt="Jarek przy ulach w pasiece Honeymiood, Gdynia" width="1000" height="1000" />
+      <img src="https://freight.cargo.site/w/1000/i/L2665618281113204590861333244662/DSC03172.JPG" alt="Jarek przy ulach w pasiece Honeymiood, Gdynia" width="1000" height="1000" loading="lazy" />
     </div>
-    <div>
-      <h2>Rodzinne rzemiosło</h2>
-      <p>Wszystko zaczęło się od praprababci Jadwigi, która założyła pierwszą pasiekę. Dziś prowadzi ją Jarek, w ogrodzie tuż przy Rezerwacie Kępa Redłowska — tam, gdzie kończy się miasto i zaczyna dzika łąka.</p>
-      <a class="hm-btn hm-btn--secondary" href="o-nas.html">Cała nasza historia</a>
+    <div class="hm-about__story">
+      <span class="hm-badge hm-badge--pine">Pasieka Rodzinna</span>
+      <h2>Tradycja, która nie potrzebuje pośpiechu</h2>
+      <p>Wszystko zaczęło się od praprababci Jadwigi, która postawiła pierwsze pnie w ogrodzie. Dziś pasiekę prowadzi Jarek na skraju Rezerwatu Kępa Redłowska — tam, gdzie kończy się miejski zgiełk, a zaczyna morska bryza i dzika roślinność.</p>
+      <div class="hm-about__quote">
+        „Dla nas miód to zapis konkretnego lata, pogody i kwitnienia w rezerwacie. Niczego do niego nie dodajemy i niczego nie odbieramy.”
+      </div>
+      <div>
+        <a class="hm-btn hm-btn--secondary" href="o-nas.html">Przeczytaj pełną historię</a>
+      </div>
     </div>
   </div>
 </section>
@@ -103,36 +122,40 @@
 </main>
 <footer class="hm-footer">
   <div class="hm-container">
-    <div class="hm-footer__grid">
-      <div class="hm-footer__col">
-        <h3>Honeymiood</h3>
-        <p>Rodzinna pasieka przy Rezerwacie Kępa Redłowska w&nbsp;Gdyni. Cztery pokolenia pszczelarskiej wiedzy w&nbsp;każdym słoiku.</p>
-        <a href="https://www.instagram.com/honeymiood/" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:honeymiood@gmail.com">honeymiood@gmail.com</a>
+    <div class="hm-footer__colophon">
+      <div class="hm-footer__brand-block">
+        <h2>honeymiood</h2>
+        <p class="hm-footer__provenance">Surowy, niefiltrowany miód z rodzinnej pasieki przy Rezerwacie Kępa Redłowska w Gdyni. Cztery pokolenia wiedzy, szacunku dla pszczół i nadmorskiej przyrody.</p>
+        <div class="hm-footer__meta-chips">
+          <span class="hm-footer__chip">Gdynia, Polska</span>
+          <span class="hm-footer__chip">Rezerwat Kępa Redłowska</span>
+          <span class="hm-footer__chip">Od 1923 Roku</span>
+        </div>
       </div>
-      <div class="hm-footer__col">
+      <div class="hm-footer__nav-group">
         <h3>Nawigacja</h3>
-        <a href="miody.html">Miody</a>
-        <a href="zestawy.html">Zestawy</a>
-        <a href="o-nas.html">O Pasiece</a>
-        <a href="gdzie-kupic.html">Gdzie Kupić</a>
-        <a href="kontakt.html">Kontakt</a>
+        <nav class="hm-footer__nav-links" aria-label="Nawigacja w stopce">
+          <a href="miody.html">Nasze Miody</a>
+          <a href="zestawy.html">Zestawy Prezentowe</a>
+          <a href="o-nas.html">Historia Pasieki</a>
+          <a href="gdzie-kupic.html">Gdzie Kupić</a>
+          <a href="kontakt.html">Kontakt & B2B</a>
+        </nav>
       </div>
-      <div class="hm-footer__col">
-        <h3>Informacje</h3>
-        <a href="zwroty-i-wysylka.html">Wysyłka i Zwrot</a>
-        <a href="polityka-prywatnosci.html">Polityka Prywatności i Cookies</a>
-        <a href="regulamin.html">Regulamin</a>
-      </div>
-      <div class="hm-footer__col">
-        <h3>Zamówienia hurtowe</h3>
-        <p>Mamy ofertę dla większych zamówień — kawiarni, restauracji i sklepów.</p>
-        <a href="mailto:honeymiood@gmail.com?subject=Zapytanie%20B2B">Napisz do nas</a>
+      <div class="hm-footer__contact-group">
+        <h3>Pasieka & Informacje</h3>
+        <div class="hm-footer__contact-links">
+          <a href="mailto:honeymiood@gmail.com">honeymiood@gmail.com</a>
+          <a href="https://www.instagram.com/honeymiood/" target="_blank" rel="noopener">Instagram: @honeymiood</a>
+          <a href="zwroty-i-wysylka.html">Wysyłka i Zwroty</a>
+          <a href="polityka-prywatnosci.html">Prywatność & Cookies</a>
+          <a href="regulamin.html">Regulamin</a>
+        </div>
       </div>
     </div>
     <div class="hm-footer__bottom">
-      <span>&copy; <span data-hm-year>2026</span> Honeymiood. Wszystkie prawa zastrzeżone.</span>
-      <span class="hm-privacy-note">Strona nie korzysta z plików cookie do śledzenia ani reklam.</span>
+      <span>&copy; <span data-hm-year>2026</span> Honeymiood. Pasieka Kępa Redłowska.</span>
+      <span>Czysty kod bez zewnętrznych skryptów śledzących ani reklam.</span>
     </div>
   </div>
 </footer>

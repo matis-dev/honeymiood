@@ -26,7 +26,10 @@
 <a class="hm-skip-link" href="#hm-main">Przejdź do treści głównej</a>
 <header class="hm-header">
   <div class="hm-container hm-header__inner">
-    <a class="hm-header__brand" href="index.html">honeymiood</a>
+    <div class="hm-header__brand-group">
+      <a class="hm-header__brand" href="index.html">honeymiood</a>
+      <span class="hm-header__tag">Pasieka Kępa Redłowska · Od 1923</span>
+    </div>
     <nav class="hm-header__nav" id="hm-primary-nav" aria-label="Nawigacja główna">
       <a href="miody.html">Miody</a>
       <a href="zestawy.html">Zestawy</a>
@@ -46,28 +49,35 @@
 <main id="hm-main">
 <section class="hm-container hm-section--tight">
   <div class="hm-section-head">
-    <span class="hm-hero__eyebrow">Kontakt</span>
+    <span class="hm-hero__meta-label">Pasieka w Gdyni · Bezpośredni Kontakt</span>
     <h1>Napisz do nas</h1>
-    <p>Aby złożyć wyjątkowe zamówienie lub zadać pytanie — napisz do nas (っ◔◡◔)っ</p>
+    <p>Chętnie odpowiemy na pytania o nasze zbiory, pomożemy skompletować zamówienie lub przygotujemy ofertę dla Twojego lokalu.</p>
   </div>
 </section>
 
-<section class="hm-container hm-section">
+<section class="hm-container hm-section" style="padding-top: 0">
   <div class="hm-contact">
     <div class="hm-contact__card">
+      <span class="hm-badge hm-badge--accent">Klienci Indywidualni</span>
       <h2>Zamówienia i pytania</h2>
-      <p>Mail: <a href="mailto:honeymiood@gmail.com">honeymiood@gmail.com</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/honeymiood/" target="_blank" rel="noopener">@honeymiood</a></p>
-      <a class="hm-btn hm-btn--primary hm-btn--block" href="mailto:honeymiood@gmail.com">Wyślij Wiadomość</a>
+      <p>Napisz do nas mailowo w sprawie zamówień indywidualnych, zestawów upominkowych lub pytań o aktualne zbiory miodów.</p>
+      <p style="margin-top: var(--hm-space-1)"><strong>E-mail:</strong> <a href="mailto:honeymiood@gmail.com" style="color: var(--hm-color-accent); font-weight: 600">honeymiood@gmail.com</a></p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/honeymiood/" target="_blank" rel="noopener" style="color: var(--hm-color-accent); font-weight: 600">@honeymiood</a></p>
+      <div style="margin-top: var(--hm-space-2)">
+        <a class="hm-btn hm-btn--primary hm-btn--block" href="mailto:honeymiood@gmail.com">Wyślij Wiadomość</a>
+      </div>
     </div>
     <div>
       <div class="hm-contact__b2b">
-        <h2>Zamówienia hurtowe / B2B</h2>
-        <p>Mamy ofertę dla większych zamówień — napisz do nas! Współpracujemy z kawiarniami, piekarniami i sklepami w kilku miastach.</p>
-        <a class="hm-btn hm-btn--secondary hm-btn--block" href="mailto:honeymiood@gmail.com?subject=Zapytanie%20B2B">Zapytaj o Współpracę</a>
+        <span class="hm-badge hm-badge--pine">Współpraca B2B</span>
+        <h2>Zamówienia hurtowe & kawiarnie</h2>
+        <p>Zaopatrujemy kawiarnie, rzemieślnicze piekarnie i delikatesy. Zapewniamy stałe dostawy świeżego miodu i materiały o pasiece.</p>
+        <div style="margin-top: var(--hm-space-2)">
+          <a class="hm-btn hm-btn--secondary hm-btn--block" href="mailto:honeymiood@gmail.com?subject=Zapytanie%20B2B">Zapytaj o Ofertę Hurtową</a>
+        </div>
       </div>
-      <p style="margin-top: var(--hm-space-3)">
-        Szukasz nas w sklepie stacjonarnym? <a href="gdzie-kupic.html">Zobacz pełną listę partnerów</a>.
+      <p style="margin-top: var(--hm-space-3); color: var(--hm-color-text-muted); font-size: var(--hm-fs-small)">
+        Szukasz naszych miodów stacjonarnie? <a href="gdzie-kupic.html" style="color: var(--hm-color-accent); font-weight: 600">Zobacz listę kawiarni i sklepów partnerskich &rarr;</a>
       </p>
     </div>
   </div>
@@ -76,36 +86,40 @@
 </main>
 <footer class="hm-footer">
   <div class="hm-container">
-    <div class="hm-footer__grid">
-      <div class="hm-footer__col">
-        <h3>Honeymiood</h3>
-        <p>Rodzinna pasieka przy Rezerwacie Kępa Redłowska w&nbsp;Gdyni. Cztery pokolenia pszczelarskiej wiedzy w&nbsp;każdym słoiku.</p>
-        <a href="https://www.instagram.com/honeymiood/" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:honeymiood@gmail.com">honeymiood@gmail.com</a>
+    <div class="hm-footer__colophon">
+      <div class="hm-footer__brand-block">
+        <h2>honeymiood</h2>
+        <p class="hm-footer__provenance">Surowy, niefiltrowany miód z rodzinnej pasieki przy Rezerwacie Kępa Redłowska w Gdyni. Cztery pokolenia wiedzy, szacunku dla pszczół i nadmorskiej przyrody.</p>
+        <div class="hm-footer__meta-chips">
+          <span class="hm-footer__chip">Gdynia, Polska</span>
+          <span class="hm-footer__chip">Rezerwat Kępa Redłowska</span>
+          <span class="hm-footer__chip">Od 1923 Roku</span>
+        </div>
       </div>
-      <div class="hm-footer__col">
+      <div class="hm-footer__nav-group">
         <h3>Nawigacja</h3>
-        <a href="miody.html">Miody</a>
-        <a href="zestawy.html">Zestawy</a>
-        <a href="o-nas.html">O Pasiece</a>
-        <a href="gdzie-kupic.html">Gdzie Kupić</a>
-        <a href="kontakt.html">Kontakt</a>
+        <nav class="hm-footer__nav-links" aria-label="Nawigacja w stopce">
+          <a href="miody.html">Nasze Miody</a>
+          <a href="zestawy.html">Zestawy Prezentowe</a>
+          <a href="o-nas.html">Historia Pasieki</a>
+          <a href="gdzie-kupic.html">Gdzie Kupić</a>
+          <a href="kontakt.html">Kontakt & B2B</a>
+        </nav>
       </div>
-      <div class="hm-footer__col">
-        <h3>Informacje</h3>
-        <a href="zwroty-i-wysylka.html">Wysyłka i Zwrot</a>
-        <a href="polityka-prywatnosci.html">Polityka Prywatności i Cookies</a>
-        <a href="regulamin.html">Regulamin</a>
-      </div>
-      <div class="hm-footer__col">
-        <h3>Zamówienia hurtowe</h3>
-        <p>Mamy ofertę dla większych zamówień — kawiarni, restauracji i sklepów.</p>
-        <a href="mailto:honeymiood@gmail.com?subject=Zapytanie%20B2B">Napisz do nas</a>
+      <div class="hm-footer__contact-group">
+        <h3>Pasieka & Informacje</h3>
+        <div class="hm-footer__contact-links">
+          <a href="mailto:honeymiood@gmail.com">honeymiood@gmail.com</a>
+          <a href="https://www.instagram.com/honeymiood/" target="_blank" rel="noopener">Instagram: @honeymiood</a>
+          <a href="zwroty-i-wysylka.html">Wysyłka i Zwroty</a>
+          <a href="polityka-prywatnosci.html">Prywatność & Cookies</a>
+          <a href="regulamin.html">Regulamin</a>
+        </div>
       </div>
     </div>
     <div class="hm-footer__bottom">
-      <span>&copy; <span data-hm-year>2026</span> Honeymiood. Wszystkie prawa zastrzeżone.</span>
-      <span class="hm-privacy-note">Strona nie korzysta z plików cookie do śledzenia ani reklam.</span>
+      <span>&copy; <span data-hm-year>2026</span> Honeymiood. Pasieka Kępa Redłowska.</span>
+      <span>Czysty kod bez zewnętrznych skryptów śledzących ani reklam.</span>
     </div>
   </div>
 </footer>

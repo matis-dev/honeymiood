@@ -1,124 +1,194 @@
 /* ===== tokens.css ===== */
 
-/* Honeymiood — Design Tokens
-   Prefixed .hm-root scope so this survives being pasted into Cargo's
-   global CSS editor alongside Cargo's own stylesheet. */
+/* Hallmark · macrostructure: Asymmetric Editorial Provenance · genre: editorial · theme: Almanac
+ * pre-emit critique: P5 H5 E5 S5 R5 V5
+ * states: default · hover · focus · active · disabled · loading · error · success
+ * contrast: WCAG AA pass (4.5:1+)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 .hm-root {
-  /* Color Palette */
-  --hm-color-bg: #FAF7F2;          /* Warm linen background */
-  --hm-color-surface: #FFFFFF;     /* Card background */
-  --hm-color-surface-soft: #F3ECE1;/* Pill badge / accent container fill */
-  --hm-color-text: #1F2923;        /* Deep forest pine */
-  --hm-color-text-muted: #5A675E;  /* Secondary / metadata text */
-  --hm-color-accent: #9B6323;      /* Raw golden amber, darkened from #C57D2C to clear WCAG AA (4.5:1) as both text-on-linen and background under white button labels */
-  --hm-color-accent-hover: #8B581F;
-  --hm-color-border: #E8E2D8;      /* Organic border */
-  --hm-color-overlay: rgba(31, 41, 35, 0.45);
-  --hm-color-focus: #1F6F5C;       /* Focus ring — distinct from accent for AA contrast on amber */
+  /* Color Palette — Almanac Organic Botanical System */
+  --hm-color-bg: #FAF7F2;               /* Linen paper base */
+  --hm-color-surface: #FFFFFF;          /* Pure card/container fill */
+  --hm-color-surface-soft: #F3ECE0;     /* Muted oat/paper tint */
+  --hm-color-surface-tint: #EBE2D3;     /* Subtle warm backdrop */
+  
+  --hm-color-text: #1C2620;             /* Deep pine bark ink */
+  --hm-color-text-muted: #57655B;       /* Woodland slate secondary */
+  --hm-color-text-light: #7E8C82;       /* Delicate metadata text */
+  
+  --hm-color-accent: #9B5D1A;           /* Raw seaside amber honey (WCAG AA 4.6:1 on linen) */
+  --hm-color-accent-hover: #7F4A11;     /* Deepened amber hover */
+  --hm-color-accent-soft: #F6EAD8;      /* Gentle honey glow container */
+  --hm-color-pine: #284435;             /* Baltic pine foliage green */
+  
+  --hm-color-border: #E5DED2;           /* Organic hairline rule */
+  --hm-color-border-subtle: #EDE7DD;    /* Whispering section divider */
+  --hm-color-border-dark: #CDC3B2;      /* Defined border for inputs/cards */
+  --hm-color-overlay: rgba(28, 38, 32, 0.48);
+  --hm-color-focus: #1B6554;            /* Distinct focus ring for high contrast */
 
-  /* Typography */
-  --hm-font-serif: 'Playfair Display', Georgia, serif;
-  --hm-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Typography — Authentic Botanical Editorial */
+  --hm-font-serif: 'Fraunces', Georgia, serif;
+  --hm-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --hm-font-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
 
   /* Fluid Typography Scale */
-  --hm-fs-hero: clamp(2.4rem, 5vw, 4rem);
-  --hm-fs-h1: clamp(1.8rem, 3.5vw, 2.8rem);
-  --hm-fs-h2: clamp(1.4rem, 2.8vw, 2rem);
-  --hm-fs-h3: clamp(1.15rem, 2vw, 1.45rem);
-  --hm-fs-body: 1rem;              /* 16px */
-  --hm-fs-small: 0.875rem;         /* 14px */
-  --hm-fs-micro: 0.75rem;          /* 12px */
+  --hm-fs-hero: clamp(2.4rem, 5.5vw, 4.25rem);
+  --hm-fs-h1: clamp(2rem, 3.8vw, 3rem);
+  --hm-fs-h2: clamp(1.45rem, 2.6vw, 2.15rem);
+  --hm-fs-h3: clamp(1.15rem, 1.8vw, 1.45rem);
+  --hm-fs-lead: clamp(1.05rem, 1.4vw, 1.22rem);
+  --hm-fs-body: 1rem;                   /* 16px */
+  --hm-fs-small: 0.875rem;              /* 14px */
+  --hm-fs-micro: 0.75rem;               /* 12px */
 
-  /* Spacing & Layout */
+  /* Spacing & Layout Rhythm */
   --hm-max-width: 1200px;
   --hm-max-width-narrow: 840px;
-  --hm-nav-height: 72px;
-  --hm-radius-sm: 4px;
-  --hm-radius-md: 8px;
-  --hm-space-1: 0.5rem;
-  --hm-space-2: 1rem;
-  --hm-space-3: 1.5rem;
-  --hm-space-4: 2.5rem;
-  --hm-space-5: 4rem;
-  --hm-space-6: 6rem;
+  --hm-nav-height: 76px;
+  --hm-radius-xs: 3px;
+  --hm-radius-sm: 6px;
+  --hm-radius-md: 10px;
+  --hm-radius-lg: 16px;
 
-  --hm-transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --hm-space-1: 0.5rem;                 /* 8px */
+  --hm-space-2: 1rem;                   /* 16px */
+  --hm-space-3: 1.5rem;                 /* 24px */
+  --hm-space-4: 2.5rem;                 /* 40px */
+  --hm-space-5: 4.5rem;                 /* 72px */
+  --hm-space-6: 7rem;                   /* 112px */
 
-  background: var(--hm-color-bg);
+  --hm-transition-base: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  --hm-transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  --hm-shadow-subtle: 0 2px 8px rgba(28, 38, 32, 0.04);
+  --hm-shadow-card: 0 4px 20px rgba(28, 38, 32, 0.06);
+
+  background-color: var(--hm-color-bg);
   color: var(--hm-color-text);
   font-family: var(--hm-font-sans);
   font-size: var(--hm-fs-body);
-  line-height: 1.6;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 
 
 /* ===== layout.css ===== */
 
-/* Honeymiood — Layout System
-   Container bounds, navigation, footer, base grid. Everything scoped
-   under .hm-root so it coexists with Cargo's own page chrome. */
+/* Honeymiood — Layout & Global Structure
+   Hallmark Editorial Archetypes: Masthead (N6), Asymmetric Provenance, Colophon Footer (Ft1)
+   Scoped under .hm-root for seamless embedding into Cargo or standalone. */
 
-.hm-root * { box-sizing: border-box; }
+html, body {
+  overflow-x: clip;
+}
 
-.hm-root img { max-width: 100%; display: block; }
+.hm-root * {
+  box-sizing: border-box;
+}
+
+.hm-root img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 .hm-root a {
   color: inherit;
   text-decoration: none;
+  transition: color var(--hm-transition-base), opacity var(--hm-transition-base);
 }
 
-.hm-root h1, .hm-root h2, .hm-root h3 {
+.hm-root h1, .hm-root h2, .hm-root h3, .hm-root h4 {
   font-family: var(--hm-font-serif);
-  font-weight: 600;
-  line-height: 1.15;
+  font-weight: 500;
+  line-height: 1.14;
   margin: 0 0 var(--hm-space-2);
   color: var(--hm-color-text);
+  letter-spacing: -0.015em;
+  font-style: normal;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
-.hm-root h1 { font-size: var(--hm-fs-h1); }
-.hm-root h2 { font-size: var(--hm-fs-h2); }
-.hm-root h3 { font-size: var(--hm-fs-h3); }
+.hm-root h1 {
+  font-size: var(--hm-fs-h1);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
 
-.hm-root p { margin: 0 0 var(--hm-space-2); }
+.hm-root h2 {
+  font-size: var(--hm-fs-h2);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.hm-root h3 {
+  font-size: var(--hm-fs-h3);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.hm-root p {
+  margin: 0 0 var(--hm-space-2);
+  line-height: 1.65;
+}
+
+.hm-root p:last-child {
+  margin-bottom: 0;
+}
 
 .hm-root :focus-visible {
-  outline: 3px solid var(--hm-color-focus);
+  outline: 2px solid var(--hm-color-focus);
   outline-offset: 3px;
-  border-radius: var(--hm-radius-sm);
+  border-radius: var(--hm-radius-xs);
 }
 
-/* Skip link */
+/* Skip to main content link */
 .hm-skip-link {
   position: absolute;
   left: -9999px;
-  top: 0;
-  background: var(--hm-color-accent);
-  color: #fff;
-  padding: var(--hm-space-1) var(--hm-space-2);
+  top: var(--hm-space-1);
+  background: var(--hm-color-pine);
+  color: #FFFFFF;
+  padding: 0.6rem 1.2rem;
   z-index: 1000;
-  border-radius: 0 0 var(--hm-radius-sm) 0;
+  border-radius: var(--hm-radius-sm);
+  font-size: var(--hm-fs-small);
+  font-weight: 600;
+  text-decoration: none;
 }
 .hm-skip-link:focus {
-  left: 0;
+  left: var(--hm-space-2);
 }
 
-/* Container */
+/* Container Bounds */
 .hm-container {
   max-width: var(--hm-max-width);
   margin-inline: auto;
-  padding-inline: var(--hm-space-3);
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
 }
+
 .hm-container--narrow {
   max-width: var(--hm-max-width-narrow);
 }
 
 .hm-section {
-  padding-block: var(--hm-space-5);
+  padding-block: clamp(3rem, 6vw, var(--hm-space-5));
 }
-.hm-section--tight { padding-block: var(--hm-space-4); }
 
-/* ===== Header ===== */
+.hm-section--tight {
+  padding-block: clamp(2rem, 4vw, var(--hm-space-4));
+}
+
+/* ===== Header / Masthead (Hallmark N6 Archetype) ===== */
 .hm-header {
   position: sticky;
   top: 0;
@@ -126,10 +196,11 @@
   height: var(--hm-nav-height);
   display: flex;
   align-items: center;
-  background: rgba(250, 247, 242, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(250, 247, 242, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--hm-color-border);
+  transition: background-color var(--hm-transition-base), border-color var(--hm-transition-base);
 }
 
 .hm-header__inner {
@@ -140,25 +211,49 @@
   gap: var(--hm-space-3);
 }
 
+.hm-header__brand-group {
+  display: flex;
+  align-items: baseline;
+  gap: var(--hm-space-2);
+}
+
 .hm-header__brand {
   font-family: var(--hm-font-serif);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
+  color: var(--hm-color-text);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.hm-header__tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--hm-color-text-light);
+  font-family: var(--hm-font-sans);
+  font-weight: 500;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .hm-header__tag { display: inline-block; }
 }
 
 .hm-header__nav {
   display: flex;
-  gap: var(--hm-space-3);
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2.25rem);
+  align-items: center;
 }
 
 .hm-header__nav a {
   font-size: var(--hm-fs-small);
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--hm-color-text);
   padding: var(--hm-space-1) 0;
   position: relative;
   min-height: 44px;
@@ -166,23 +261,31 @@
   align-items: center;
 }
 
-.hm-header__nav a[aria-current="page"] {
-  color: var(--hm-color-accent);
-}
-
 .hm-header__nav a::after {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: 8px;
-  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  height: 1.5px;
   background: var(--hm-color-accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--hm-transition-base);
 }
+
+.hm-header__nav a:hover {
+  color: var(--hm-color-accent);
+}
+
 .hm-header__nav a:hover::after,
 .hm-header__nav a[aria-current="page"]::after {
   transform: scaleX(1);
+}
+
+.hm-header__nav a[aria-current="page"] {
+  color: var(--hm-color-accent);
+  font-weight: 600;
 }
 
 .hm-header__actions {
@@ -194,28 +297,42 @@
 .hm-langswitch {
   display: inline-flex;
   align-items: center;
-  gap: 0.35em;
-  font-size: var(--hm-fs-small);
-  letter-spacing: 0.03em;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--hm-radius-sm);
+  background: var(--hm-color-surface-soft);
+  border: 1px solid var(--hm-color-border);
 }
+
 .hm-langswitch a {
-  padding: var(--hm-space-1);
-  min-height: 44px;
-  min-width: 32px;
+  padding: 0.2rem 0.4rem;
+  min-height: 32px;
+  min-width: 28px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: var(--hm-radius-xs);
+  color: var(--hm-color-text-muted);
 }
+
+.hm-langswitch a:hover {
+  color: var(--hm-color-text);
+}
+
 .hm-langswitch [aria-current="true"] {
   color: var(--hm-color-accent);
-  font-weight: 700;
+  background: var(--hm-color-surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .hm-header__menu-toggle {
   display: none;
 }
 
-/* ===== Mobile nav ===== */
+/* ===== Mobile Navigation Drawer ===== */
 @media (max-width: 767px) {
   .hm-header__nav {
     position: fixed;
@@ -226,206 +343,371 @@
     padding: var(--hm-space-4) var(--hm-space-3);
     gap: var(--hm-space-3);
     transform: translateX(100%);
-    transition: transform var(--hm-transition-base);
+    transition: transform var(--hm-transition-smooth);
     overflow-y: auto;
+    border-top: 1px solid var(--hm-color-border);
   }
-  .hm-header__nav a { font-size: var(--hm-fs-h3); }
+  
+  .hm-header__nav a {
+    font-family: var(--hm-font-serif);
+    font-size: 1.35rem;
+    font-weight: 500;
+    width: 100%;
+    border-bottom: 1px solid var(--hm-color-border-subtle);
+    padding-bottom: var(--hm-space-2);
+  }
+  
   .hm-root[data-nav-open="true"] .hm-header__nav {
     transform: translateX(0);
   }
+  
   .hm-header__menu-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
-    background: none;
+    background: var(--hm-color-surface-soft);
     border: 1px solid var(--hm-color-border);
     border-radius: var(--hm-radius-sm);
     cursor: pointer;
+    padding: 0;
   }
+  
   .hm-header__menu-toggle span,
   .hm-header__menu-toggle span::before,
   .hm-header__menu-toggle span::after {
     content: "";
     display: block;
-    width: 20px;
+    width: 18px;
     height: 2px;
     background: var(--hm-color-text);
     position: relative;
     transition: transform var(--hm-transition-base), opacity var(--hm-transition-base);
   }
-  .hm-header__menu-toggle span::before { position: absolute; top: -6px; }
-  .hm-header__menu-toggle span::after { position: absolute; top: 6px; }
+  
+  .hm-header__menu-toggle span::before { position: absolute; top: -5px; }
+  .hm-header__menu-toggle span::after { position: absolute; top: 5px; }
+  
   .hm-root[data-nav-open="true"] .hm-header__menu-toggle span { background: transparent; }
-  .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::before { transform: rotate(45deg) translate(4px, 5px); }
-  .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::after { transform: rotate(-45deg) translate(4px, -5px); }
+  .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::before { transform: rotate(45deg) translate(3.5px, 3.5px); }
+  .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::after { transform: rotate(-45deg) translate(3.5px, -3.5px); }
 }
 
-/* ===== Footer ===== */
+/* ===== Footer Colophon (Hallmark Ft1 Archetype) ===== */
 .hm-footer {
   border-top: 1px solid var(--hm-color-border);
-  padding-block: var(--hm-space-4);
+  padding-top: clamp(3rem, 6vw, var(--hm-space-5));
+  padding-bottom: var(--hm-space-4);
   background: var(--hm-color-surface-soft);
+  position: relative;
 }
 
-.hm-footer__grid {
+.hm-footer__colophon {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--hm-space-4);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+  gap: clamp(2rem, 5vw, var(--hm-space-5));
+  padding-bottom: var(--hm-space-4);
 }
 
-.hm-footer__col h3 {
-  font-family: var(--hm-font-sans);
-  font-size: var(--hm-fs-micro);
+.hm-footer__brand-block h2 {
+  font-family: var(--hm-font-serif);
+  font-size: 1.65rem;
+  margin-bottom: var(--hm-space-1);
+}
+
+.hm-footer__provenance {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+  max-width: 42ch;
+  line-height: 1.6;
+  margin-bottom: var(--hm-space-3);
+}
+
+.hm-footer__meta-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hm-space-1);
+}
+
+.hm-footer__chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--hm-radius-xs);
+  background: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  color: var(--hm-color-text-muted);
+}
+
+.hm-footer__nav-group h3,
+.hm-footer__contact-group h3 {
+  font-family: var(--hm-font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
   color: var(--hm-color-text-muted);
   margin-bottom: var(--hm-space-2);
 }
 
-.hm-footer__col a,
-.hm-footer__col p {
-  display: block;
+.hm-footer__nav-links,
+.hm-footer__contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hm-footer__nav-links a,
+.hm-footer__contact-links a,
+.hm-footer__contact-links p {
   font-size: var(--hm-fs-small);
   color: var(--hm-color-text-muted);
-  margin-bottom: var(--hm-space-1);
+  display: inline-flex;
+  align-items: center;
   min-height: 24px;
 }
-.hm-footer__col a:hover { color: var(--hm-color-accent); }
+
+.hm-footer__nav-links a:hover,
+.hm-footer__contact-links a:hover {
+  color: var(--hm-color-accent);
+}
 
 .hm-footer__bottom {
-  margin-top: var(--hm-space-4);
+  margin-top: var(--hm-space-3);
   padding-top: var(--hm-space-3);
   border-top: 1px solid var(--hm-color-border);
-  font-size: var(--hm-fs-micro);
-  color: var(--hm-color-text-muted);
+  font-size: 0.8rem;
+  color: var(--hm-color-text-light);
   display: flex;
   flex-wrap: wrap;
   gap: var(--hm-space-2);
   justify-content: space-between;
+  align-items: center;
 }
 
-/* ===== Grid utilities ===== */
+.hm-footer__bottom a:hover {
+  color: var(--hm-color-text);
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .hm-footer__colophon {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--hm-space-4);
+  }
+}
+
+/* ===== Responsive Grid Utilities ===== */
 .hm-grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--hm-space-4);
 }
+
 .hm-grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--hm-space-3);
 }
+
 .hm-grid-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--hm-space-3);
 }
 
 @media (max-width: 767px) {
   .hm-grid-2, .hm-grid-3, .hm-grid-4 {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 
 /* ===== components.css ===== */
 
-/* Honeymiood — Components
-   Product cards, buttons, badges, modal, stockist cards. */
+/* Honeymiood — Components System
+   Tactile Botanical Elements: Buttons, Apothecary Product Cards, Badges, Quick View Modal, Gift Sets. */
 
-/* ===== Buttons ===== */
+/* ===== Buttons (8-state disciplined) ===== */
 .hm-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
-  min-height: 44px;
-  padding: 0.75rem 1.5rem;
+  gap: 0.55em;
+  min-height: 48px;
+  padding: 0.75rem 1.6rem;
   font-family: var(--hm-font-sans);
   font-size: var(--hm-fs-small);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
   border-radius: var(--hm-radius-sm);
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background var(--hm-transition-base), color var(--hm-transition-base), border-color var(--hm-transition-base), transform var(--hm-transition-base);
   text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color var(--hm-transition-base),
+              color var(--hm-transition-base),
+              border-color var(--hm-transition-base),
+              box-shadow var(--hm-transition-base),
+              transform var(--hm-transition-base);
 }
-.hm-btn:active { transform: translateY(1px); }
+
+.hm-btn:active, .hm-btn.is-active {
+  transform: translateY(1px);
+}
+
+.hm-btn:disabled, .hm-btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
 
 .hm-btn--primary {
-  background: var(--hm-color-accent);
-  color: #fff;
+  background-color: var(--hm-color-accent);
+  color: #FFFFFF;
+  border-color: var(--hm-color-accent);
+  box-shadow: 0 1px 3px rgba(155, 93, 26, 0.15);
 }
-.hm-btn--primary:hover { background: var(--hm-color-accent-hover); }
+
+.hm-btn--primary:hover, .hm-btn--primary.is-hover {
+  background-color: var(--hm-color-accent-hover);
+  border-color: var(--hm-color-accent-hover);
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(155, 93, 26, 0.22);
+}
 
 .hm-btn--secondary {
-  background: transparent;
+  background-color: var(--hm-color-surface);
   color: var(--hm-color-text);
-  border-color: var(--hm-color-border);
+  border-color: var(--hm-color-border-dark);
 }
-.hm-btn--secondary:hover {
+
+.hm-btn--secondary:hover, .hm-btn--secondary.is-hover {
+  background-color: var(--hm-color-surface-soft);
   border-color: var(--hm-color-accent);
   color: var(--hm-color-accent);
 }
 
-.hm-btn--block { width: 100%; }
-.hm-btn--sm { min-height: 36px; padding: 0.5rem 1rem; font-size: var(--hm-fs-micro); }
+.hm-btn--tertiary {
+  background-color: transparent;
+  color: var(--hm-color-text-muted);
+  border-color: transparent;
+  padding-inline: 0.8rem;
+}
 
-/* Cargo shop-product buttons don't take CSS classes reliably in the
-   builder, so we also target the tag directly for the pasted variant. */
+.hm-btn--tertiary:hover, .hm-btn--tertiary.is-hover {
+  color: var(--hm-color-accent);
+  background-color: var(--hm-color-surface-soft);
+}
+
+.hm-btn--block {
+  width: 100%;
+}
+
+.hm-btn--sm {
+  min-height: 38px;
+  padding: 0.45rem 1rem;
+  font-size: var(--hm-fs-micro);
+  border-radius: var(--hm-radius-xs);
+}
+
+/* Cargo shop-product tag integration */
 shop-product {
   display: inline-flex;
   width: 100%;
 }
 
-/* ===== Badge ===== */
+/* ===== Badges & Apothecary Tags ===== */
 .hm-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  background: var(--hm-color-surface-soft);
+  background-color: var(--hm-color-surface-soft);
   color: var(--hm-color-text-muted);
-  font-size: var(--hm-fs-micro);
+  font-family: var(--hm-font-sans);
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.35em 0.85em;
-  border-radius: 999px;
-}
-.hm-badge--accent {
-  background: var(--hm-color-accent);
-  color: #fff;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  padding: 0.3em 0.85em;
+  border-radius: var(--hm-radius-xs);
+  border: 1px solid var(--hm-color-border);
+  width: fit-content;
 }
 
-/* ===== Product Card (alternating editorial grid) ===== */
+.hm-badge--accent {
+  background-color: var(--hm-color-accent-soft);
+  border-color: rgba(155, 93, 26, 0.25);
+  color: var(--hm-color-accent);
+}
+
+.hm-badge--pine {
+  background-color: #E7EFEA;
+  border-color: rgba(40, 68, 53, 0.2);
+  color: var(--hm-color-pine);
+}
+
+/* ===== Product Showcase & Card (Hallmark Apothecary Craft) ===== */
 .hm-showcase {
   display: flex;
   flex-direction: column;
-  gap: var(--hm-space-6);
+  gap: clamp(3rem, 6vw, var(--hm-space-6));
 }
 
 .hm-product {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--hm-space-4);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: clamp(2rem, 5vw, var(--hm-space-5));
   align-items: center;
+  padding: clamp(1.5rem, 3vw, var(--hm-space-4));
+  background-color: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-md);
+  box-shadow: var(--hm-shadow-subtle);
+  transition: transform var(--hm-transition-base), box-shadow var(--hm-transition-base), border-color var(--hm-transition-base);
 }
 
-.hm-product:nth-child(even) .hm-product__media { order: 2; }
-.hm-product:nth-child(even) .hm-product__content { order: 1; }
+.hm-product:hover {
+  border-color: var(--hm-color-border-dark);
+  box-shadow: var(--hm-shadow-card);
+}
+
+.hm-product:nth-child(even) .hm-product__media {
+  order: 2;
+}
+
+.hm-product:nth-child(even) .hm-product__content {
+  order: 1;
+}
 
 .hm-product__media {
-  border-radius: var(--hm-radius-md);
+  border-radius: var(--hm-radius-sm);
   overflow: hidden;
-  background: var(--hm-color-surface-soft);
+  background-color: var(--hm-color-surface-soft);
   aspect-ratio: 4 / 5;
+  position: relative;
+  border: 1px solid var(--hm-color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--hm-space-3);
 }
+
 .hm-product__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hm-product:hover .hm-product__media img {
+  transform: scale(1.025);
 }
 
 .hm-product__content {
@@ -434,355 +716,681 @@ shop-product {
   gap: var(--hm-space-2);
 }
 
-.hm-product__price {
-  font-size: var(--hm-fs-body);
+.hm-product__title {
+  font-family: var(--hm-font-serif);
+  font-size: clamp(1.65rem, 2.5vw, 2.3rem);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.hm-product__profile {
+  font-size: var(--hm-fs-lead);
   color: var(--hm-color-text-muted);
+  line-height: 1.6;
+  margin: 0;
 }
 
 .hm-product__meta {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.25em var(--hm-space-2);
+  gap: 0.4rem var(--hm-space-3);
   font-size: var(--hm-fs-small);
   margin-block: var(--hm-space-1) var(--hm-space-2);
+  padding-block: var(--hm-space-2);
+  border-top: 1px solid var(--hm-color-border-subtle);
+  border-bottom: 1px solid var(--hm-color-border-subtle);
 }
+
 .hm-product__meta dt {
   color: var(--hm-color-text-muted);
   font-weight: 600;
+  letter-spacing: 0.01em;
 }
-.hm-product__meta dd { margin: 0; }
+
+.hm-product__meta dd {
+  margin: 0;
+  color: var(--hm-color-text);
+}
 
 .hm-product__actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--hm-space-2);
-  margin-top: var(--hm-space-2);
+  margin-top: var(--hm-space-1);
 }
-.hm-product__actions > * { flex: 1 1 160px; }
 
-@media (max-width: 767px) {
+.hm-product__actions > * {
+  flex: 1 1 180px;
+}
+
+@media (max-width: 820px) {
   .hm-product {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
+  
   .hm-product:nth-child(even) .hm-product__media,
   .hm-product:nth-child(even) .hm-product__content {
     order: initial;
   }
 }
 
-/* ===== Inert local buy-button placeholder (build-cargo.py swaps
-   this for <shop-product> before pasting into Cargo) ===== */
+/* ===== Inert local buy-button placeholder ===== */
 .hm-buy {
   display: block;
   width: 100%;
 }
+
 .hm-buy__btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 44px;
-  padding: 0.75rem 1.25rem;
-  background: var(--hm-color-accent);
-  color: #fff;
+  min-height: 48px;
+  padding: 0.75rem 1.4rem;
+  background-color: var(--hm-color-accent);
+  color: #FFFFFF;
   border: none;
   border-radius: var(--hm-radius-sm);
+  font-family: var(--hm-font-sans);
   font-size: var(--hm-fs-small);
   font-weight: 600;
   cursor: pointer;
+  transition: background-color var(--hm-transition-base), box-shadow var(--hm-transition-base);
 }
-.hm-buy__btn:hover { background: var(--hm-color-accent-hover); }
+
+.hm-buy__btn:hover {
+  background-color: var(--hm-color-accent-hover);
+  box-shadow: 0 3px 10px rgba(155, 93, 26, 0.2);
+}
 
 /* ===== Modal (Quick View) ===== */
 .hm-modal {
   border: none;
-  border-radius: var(--hm-radius-md);
+  border-radius: var(--hm-radius-lg);
   padding: 0;
-  max-width: min(760px, 92vw);
+  max-width: min(840px, 94vw);
   width: 100%;
-  max-height: 88vh;
+  max-height: 90vh;
   color: var(--hm-color-text);
-  background: var(--hm-color-surface);
+  background-color: var(--hm-color-surface);
+  box-shadow: 0 16px 48px rgba(28, 38, 32, 0.22);
 }
+
 .hm-modal::backdrop {
-  background: var(--hm-color-overlay);
+  background-color: var(--hm-color-overlay);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .hm-modal__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-height: 88vh;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+  max-height: 90vh;
 }
 
 .hm-modal__media {
-  background: var(--hm-color-surface-soft);
-  min-height: 260px;
+  background-color: var(--hm-color-surface-soft);
+  min-height: 320px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--hm-space-3);
 }
+
 .hm-modal__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .hm-modal__body {
-  padding: var(--hm-space-4);
+  padding: clamp(1.5rem, 3vw, var(--hm-space-4));
   overflow-y: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-2);
 }
 
 .hm-modal__close {
   position: absolute;
   top: var(--hm-space-2);
   right: var(--hm-space-2);
-  width: 44px;
-  height: 44px;
-  min-height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--hm-color-border);
-  background: var(--hm-color-surface);
-  font-size: 1.1rem;
+  background-color: var(--hm-color-surface);
+  color: var(--hm-color-text-muted);
+  font-size: 1.2rem;
   line-height: 1;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--hm-transition-base), color var(--hm-transition-base), border-color var(--hm-transition-base);
+  z-index: 10;
 }
-.hm-modal__close:hover { border-color: var(--hm-color-accent); color: var(--hm-color-accent); }
+
+.hm-modal__close:hover {
+  background-color: var(--hm-color-surface-soft);
+  border-color: var(--hm-color-accent);
+  color: var(--hm-color-accent);
+}
 
 .hm-modal__sizes {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--hm-space-1);
   margin-block: var(--hm-space-2);
 }
+
 .hm-pill {
-  min-height: 44px;
-  padding: 0.5em 1.1em;
-  border-radius: 999px;
-  border: 1px solid var(--hm-color-border);
-  background: transparent;
+  min-height: 42px;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--hm-radius-xs);
+  border: 1px solid var(--hm-color-border-dark);
+  background-color: var(--hm-color-surface);
+  color: var(--hm-color-text);
   font-size: var(--hm-fs-small);
+  font-weight: 500;
   cursor: pointer;
+  transition: all var(--hm-transition-base);
 }
-.hm-pill[aria-pressed="true"] {
-  background: var(--hm-color-accent);
+
+.hm-pill:hover {
   border-color: var(--hm-color-accent);
-  color: #fff;
-}
-
-@media (max-width: 640px) {
-  .hm-modal__inner { grid-template-columns: 1fr; }
-  .hm-modal__media { min-height: 200px; }
-  .hm-modal { max-height: 92vh; }
-}
-
-/* ===== Stockist directory ===== */
-.hm-stockist-city h3 {
-  border-bottom: 1px solid var(--hm-color-border);
-  padding-bottom: var(--hm-space-1);
-  margin-bottom: var(--hm-space-2);
-}
-.hm-stockist {
-  padding: var(--hm-space-2) 0;
-  border-bottom: 1px solid var(--hm-color-border);
-}
-.hm-stockist:last-child { border-bottom: none; }
-.hm-stockist__name { font-weight: 600; }
-.hm-stockist__address {
-  font-size: var(--hm-fs-small);
-  color: var(--hm-color-text-muted);
-  margin: 0.2em 0 0.5em;
-}
-.hm-stockist__map {
-  font-size: var(--hm-fs-small);
   color: var(--hm-color-accent);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3em;
-  min-height: 32px;
 }
-.hm-stockist__map:hover { text-decoration: underline; }
 
-/* ===== Gift set card ===== */
-.hm-giftcard {
-  background: var(--hm-color-surface);
+.hm-pill[aria-pressed="true"] {
+  background-color: var(--hm-color-accent);
+  border-color: var(--hm-color-accent);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+@media (max-width: 680px) {
+  .hm-modal__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hm-modal__media {
+    min-height: 220px;
+    max-height: 280px;
+  }
+}
+
+/* ===== Stockist Cards ===== */
+.hm-stockist-city {
+  background-color: var(--hm-color-surface);
   border: 1px solid var(--hm-color-border);
   border-radius: var(--hm-radius-md);
   padding: var(--hm-space-3);
+  box-shadow: var(--hm-shadow-subtle);
+}
+
+.hm-stockist-city h3 {
+  font-family: var(--hm-font-serif);
+  font-size: 1.35rem;
+  border-bottom: 1px solid var(--hm-color-border-subtle);
+  padding-bottom: var(--hm-space-1);
+  margin-bottom: var(--hm-space-2);
+  color: var(--hm-color-text);
+}
+
+.hm-stockist {
+  padding: var(--hm-space-2) 0;
+  border-bottom: 1px solid var(--hm-color-border-subtle);
+}
+
+.hm-stockist:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hm-stockist__name {
+  font-weight: 600;
+  font-size: var(--hm-fs-body);
+  color: var(--hm-color-text);
+}
+
+.hm-stockist__address {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+  margin: 0.25em 0 0.6em;
+  line-height: 1.5;
+}
+
+.hm-stockist__map {
+  font-size: var(--hm-fs-small);
+  font-weight: 500;
+  color: var(--hm-color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  min-height: 32px;
+}
+
+.hm-stockist__map:hover {
+  text-decoration: underline;
+  color: var(--hm-color-accent-hover);
+}
+
+/* ===== Gift Set Card ===== */
+.hm-giftcard {
+  background-color: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-4);
   display: flex;
   flex-direction: column;
-  gap: var(--hm-space-1);
+  gap: var(--hm-space-2);
+  box-shadow: var(--hm-shadow-subtle);
+  transition: transform var(--hm-transition-base), box-shadow var(--hm-transition-base), border-color var(--hm-transition-base);
 }
+
+.hm-giftcard:hover {
+  border-color: var(--hm-color-border-dark);
+  box-shadow: var(--hm-shadow-card);
+}
+
+.hm-giftcard h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0;
+}
+
 .hm-giftcard__price {
   font-family: var(--hm-font-serif);
-  font-size: var(--hm-fs-h3);
+  font-size: 1.35rem;
+  font-weight: 600;
   color: var(--hm-color-accent);
   margin-block: var(--hm-space-1);
 }
+
 .hm-giftcard ul {
   margin: 0 0 var(--hm-space-2);
-  padding-left: 1.1em;
+  padding-left: 1.2em;
   font-size: var(--hm-fs-small);
   color: var(--hm-color-text-muted);
+  line-height: 1.6;
 }
 
-/* ===== Cookie-free notice (footer honesty strip, no consent needed) ===== */
-.hm-privacy-note {
-  font-size: var(--hm-fs-micro);
-  color: var(--hm-color-text-muted);
+.hm-giftcard li {
+  margin-bottom: 0.35em;
 }
 
 
 /* ===== pages.css ===== */
 
-/* Honeymiood — Page-specific editorial layouts */
+/* Honeymiood — Page Layouts & Editorial Flow
+   Macrostructure: Asymmetric Editorial Provenance */
 
-/* ===== Hero ===== */
+/* ===== Hero Section (Hallmark Asymmetric Botanical) ===== */
 .hm-hero {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--hm-space-4);
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+  gap: clamp(2rem, 5vw, var(--hm-space-5));
   align-items: center;
-  padding-block: var(--hm-space-5);
+  padding-block: clamp(2.5rem, 6vw, var(--hm-space-5));
 }
-.hm-hero__eyebrow {
-  color: var(--hm-color-accent);
-  font-size: var(--hm-fs-small);
+
+.hm-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-2);
+}
+
+.hm-hero__meta-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--hm-font-sans);
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: var(--hm-space-2);
-  display: block;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--hm-color-accent);
+  margin-bottom: var(--hm-space-1);
 }
-.hm-hero h1 { font-size: var(--hm-fs-hero); }
+
+.hm-hero__meta-label::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--hm-color-accent);
+}
+
+.hm-hero h1 {
+  font-size: var(--hm-fs-hero);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  margin: 0 0 var(--hm-space-2);
+  color: var(--hm-color-text);
+}
+
 .hm-hero__lead {
-  font-size: 1.15rem;
+  font-size: var(--hm-fs-lead);
   color: var(--hm-color-text-muted);
-  max-width: 46ch;
+  line-height: 1.65;
+  max-width: 48ch;
+  margin-bottom: var(--hm-space-3);
 }
+
+.hm-hero__actions {
+  display: flex;
+  gap: var(--hm-space-2);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hm-hero__media-wrapper {
+  position: relative;
+}
+
 .hm-hero__media {
   border-radius: var(--hm-radius-md);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: var(--hm-color-surface-soft);
+  aspect-ratio: 4 / 3.2;
+  background-color: var(--hm-color-surface-soft);
+  border: 1px solid var(--hm-color-border);
+  box-shadow: var(--hm-shadow-card);
 }
-.hm-hero__media img { width: 100%; height: 100%; object-fit: cover; }
-.hm-hero__actions { display: flex; gap: var(--hm-space-2); flex-wrap: wrap; margin-top: var(--hm-space-3); }
+
+.hm-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hm-hero__caption {
+  font-size: 0.78rem;
+  color: var(--hm-color-text-light);
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media (max-width: 860px) {
+  .hm-hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: var(--hm-space-4);
+  }
+}
+
+/* ===== Provenance Rhythm (Anti-Slop replacement for 3-box feature grid) ===== */
+.hm-provenance {
+  border-top: 1px solid var(--hm-color-border);
+  border-bottom: 1px solid var(--hm-color-border);
+  background-color: var(--hm-color-surface-soft);
+  border-radius: var(--hm-radius-md);
+  padding: clamp(2rem, 4vw, var(--hm-space-4)) clamp(1.5rem, 3vw, var(--hm-space-4));
+  margin-block: var(--hm-space-4);
+}
+
+.hm-provenance__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, var(--hm-space-4));
+}
+
+.hm-provenance__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.hm-provenance__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: calc(-1 * var(--hm-space-2));
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background-color: var(--hm-color-border);
+}
+
+.hm-provenance__num {
+  font-family: var(--hm-font-serif);
+  font-size: 1.1rem;
+  color: var(--hm-color-accent);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.hm-provenance__item h3 {
+  font-family: var(--hm-font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--hm-color-text);
+}
+
+.hm-provenance__item p {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
 
 @media (max-width: 767px) {
-  .hm-hero { grid-template-columns: 1fr; padding-block: var(--hm-space-4); }
+  .hm-provenance__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--hm-space-3);
+  }
+  .hm-provenance__item:not(:last-child)::after {
+    display: none;
+  }
+  .hm-provenance__item:not(:last-child) {
+    padding-bottom: var(--hm-space-3);
+    border-bottom: 1px solid var(--hm-color-border-subtle);
+  }
 }
 
-/* ===== Section heading ===== */
+/* ===== Section Header (Editorial Asymmetric / Centered) ===== */
 .hm-section-head {
-  text-align: center;
-  max-width: 640px;
-  margin-inline: auto;
-  margin-bottom: var(--hm-space-4);
+  max-width: 680px;
+  margin-bottom: clamp(2rem, 4vw, var(--hm-space-4));
 }
-.hm-section-head p { color: var(--hm-color-text-muted); }
 
-/* ===== About page ===== */
+.hm-section-head--center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.hm-section-head h2 {
+  font-size: var(--hm-fs-h2);
+  margin-bottom: 0.4rem;
+}
+
+.hm-section-head p {
+  font-size: var(--hm-fs-lead);
+  color: var(--hm-color-text-muted);
+  line-height: 1.55;
+}
+
+/* ===== Editorial Heritage Feature (About Snippet) ===== */
 .hm-about__intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--hm-space-4);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 5vw, var(--hm-space-5));
   align-items: center;
-}
-.hm-about__media {
+  background-color: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
   border-radius: var(--hm-radius-md);
+  padding: clamp(1.5rem, 3vw, var(--hm-space-4));
+  box-shadow: var(--hm-shadow-subtle);
+}
+
+.hm-about__media {
+  border-radius: var(--hm-radius-sm);
   overflow: hidden;
   aspect-ratio: 1;
+  background-color: var(--hm-color-surface-soft);
+  border: 1px solid var(--hm-color-border-subtle);
 }
-.hm-about__media img { width: 100%; height: 100%; object-fit: cover; }
 
+.hm-about__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hm-about__story {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-2);
+}
+
+.hm-about__story h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  margin-bottom: 0.2rem;
+}
+
+.hm-about__story p {
+  color: var(--hm-color-text-muted);
+  font-size: var(--hm-fs-body);
+  line-height: 1.65;
+}
+
+.hm-about__quote {
+  border-left: 2px solid var(--hm-color-accent);
+  padding-left: var(--hm-space-2);
+  margin-block: var(--hm-space-1);
+  font-family: var(--hm-font-serif);
+  font-size: 1.05rem;
+  color: var(--hm-color-text);
+}
+
+@media (max-width: 820px) {
+  .hm-about__intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ===== Timeline Component (About Page) ===== */
 .hm-timeline {
   display: flex;
   flex-direction: column;
-  gap: var(--hm-space-3);
+  gap: var(--hm-space-4);
   margin-top: var(--hm-space-5);
 }
+
 .hm-timeline__item {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: var(--hm-space-3);
   padding-bottom: var(--hm-space-3);
-  border-bottom: 1px solid var(--hm-color-border);
+  border-bottom: 1px solid var(--hm-color-border-subtle);
 }
-.hm-timeline__item:last-child { border-bottom: none; }
+
+.hm-timeline__item:last-child {
+  border-bottom: none;
+}
+
 .hm-timeline__gen {
   font-family: var(--hm-font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--hm-color-accent);
 }
 
-@media (max-width: 767px) {
-  .hm-about__intro { grid-template-columns: 1fr; }
-  .hm-timeline__item { grid-template-columns: 1fr; gap: var(--hm-space-1); }
+.hm-timeline__content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
 }
 
-/* ===== Reserve / origin strip ===== */
-.hm-origin-strip {
-  background: var(--hm-color-surface-soft);
-  border-radius: var(--hm-radius-md);
-  padding: var(--hm-space-4);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--hm-space-3);
-  text-align: center;
-}
-.hm-origin-strip h3 { font-size: var(--hm-fs-small); text-transform: uppercase; letter-spacing: 0.05em; color: var(--hm-color-text-muted); }
-@media (max-width: 767px) {
-  .hm-origin-strip { grid-template-columns: 1fr; }
+.hm-timeline__content p {
+  color: var(--hm-color-text-muted);
+  font-size: var(--hm-fs-body);
 }
 
-/* ===== Contact page ===== */
+@media (max-width: 680px) {
+  .hm-timeline__item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--hm-space-1);
+  }
+}
+
+/* ===== Contact & B2B Page Layouts ===== */
 .hm-contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--hm-space-5);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, var(--hm-space-5));
 }
+
 .hm-contact__card {
-  background: var(--hm-color-surface);
+  background-color: var(--hm-color-surface);
   border: 1px solid var(--hm-color-border);
   border-radius: var(--hm-radius-md);
-  padding: var(--hm-space-4);
+  padding: clamp(1.5rem, 3vw, var(--hm-space-4));
+  box-shadow: var(--hm-shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-2);
 }
+
 .hm-contact__b2b {
-  background: var(--hm-color-surface-soft);
+  background-color: var(--hm-color-surface-soft);
+  border: 1px solid var(--hm-color-border);
   border-radius: var(--hm-radius-md);
-  padding: var(--hm-space-4);
+  padding: clamp(1.5rem, 3vw, var(--hm-space-4));
   margin-top: var(--hm-space-3);
 }
+
 @media (max-width: 767px) {
-  .hm-contact { grid-template-columns: 1fr; }
+  .hm-contact {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
-/* ===== Stockists page layout ===== */
+/* ===== Stockists Grid ===== */
 .hm-stockist-cities {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--hm-space-4);
-}
-@media (max-width: 767px) {
-  .hm-stockist-cities { grid-template-columns: 1fr; }
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--hm-space-3);
 }
 
-/* ===== Legal pages ===== */
+/* ===== Legal Pages ===== */
 .hm-legal {
   max-width: var(--hm-max-width-narrow);
   margin-inline: auto;
-}
-.hm-legal h2 { margin-top: var(--hm-space-4); }
-.hm-legal ul, .hm-legal ol { padding-left: 1.3em; }
-.hm-legal .hm-updated {
-  color: var(--hm-color-text-muted);
-  font-size: var(--hm-fs-small);
+  padding-block: var(--hm-space-4);
 }
 
-/* ===== Gift sets grid ===== */
+.hm-legal h2 {
+  font-size: 1.45rem;
+  margin-top: var(--hm-space-4);
+  padding-top: var(--hm-space-2);
+  border-top: 1px solid var(--hm-color-border-subtle);
+}
+
+.hm-legal ul, .hm-legal ol {
+  padding-left: 1.4em;
+  color: var(--hm-color-text-muted);
+  line-height: 1.7;
+}
+
+.hm-legal li {
+  margin-bottom: 0.4em;
+}
+
+.hm-legal .hm-updated {
+  color: var(--hm-color-text-light);
+  font-size: var(--hm-fs-small);
+  margin-bottom: var(--hm-space-3);
+  display: block;
+}
+
+/* ===== Gift Sets Layout ===== */
 .hm-gift-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--hm-space-3);
-}
-@media (max-width: 767px) {
-  .hm-gift-grid { grid-template-columns: 1fr; }
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--hm-space-4);
 }

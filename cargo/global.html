@@ -417,8 +417,8 @@ if (typeof module !== "undefined" && module.exports) {
     var content = el("div", "hm-product__content");
 
     content.appendChild(el("span", "hm-badge hm-badge--accent", product.harvest));
-    content.appendChild(el("h2", null, d.title));
-    content.appendChild(el("p", "hm-product__price", d.profile));
+    content.appendChild(el("h2", "hm-product__title", d.title));
+    content.appendChild(el("p", "hm-product__profile", d.profile));
 
     var dl = el("dl", "hm-product__meta");
     dl.appendChild(el("dt", null, t.consistency));
