@@ -1,0 +1,51 @@
+/* Honeymiood — Design Tokens
+   Prefixed .hm-root scope so this survives being pasted into Cargo's
+   global CSS editor alongside Cargo's own stylesheet. */
+
+.hm-root {
+  /* Color Palette */
+  --hm-color-bg: #FAF7F2;          /* Warm linen background */
+  --hm-color-surface: #FFFFFF;     /* Card background */
+  --hm-color-surface-soft: #F3ECE1;/* Pill badge / accent container fill */
+  --hm-color-text: #1F2923;        /* Deep forest pine */
+  --hm-color-text-muted: #5A675E;  /* Secondary / metadata text */
+  --hm-color-accent: #9B6323;      /* Raw golden amber, darkened from #C57D2C to clear WCAG AA (4.5:1) as both text-on-linen and background under white button labels */
+  --hm-color-accent-hover: #8B581F;
+  --hm-color-border: #E8E2D8;      /* Organic border */
+  --hm-color-overlay: rgba(31, 41, 35, 0.45);
+  --hm-color-focus: #1F6F5C;       /* Focus ring — distinct from accent for AA contrast on amber */
+
+  /* Typography */
+  --hm-font-serif: 'Playfair Display', Georgia, serif;
+  --hm-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Typography Scale */
+  --hm-fs-hero: clamp(2.4rem, 5vw, 4rem);
+  --hm-fs-h1: clamp(1.8rem, 3.5vw, 2.8rem);
+  --hm-fs-h2: clamp(1.4rem, 2.8vw, 2rem);
+  --hm-fs-h3: clamp(1.15rem, 2vw, 1.45rem);
+  --hm-fs-body: 1rem;              /* 16px */
+  --hm-fs-small: 0.875rem;         /* 14px */
+  --hm-fs-micro: 0.75rem;          /* 12px */
+
+  /* Spacing & Layout */
+  --hm-max-width: 1200px;
+  --hm-max-width-narrow: 840px;
+  --hm-nav-height: 72px;
+  --hm-radius-sm: 4px;
+  --hm-radius-md: 8px;
+  --hm-space-1: 0.5rem;
+  --hm-space-2: 1rem;
+  --hm-space-3: 1.5rem;
+  --hm-space-4: 2.5rem;
+  --hm-space-5: 4rem;
+  --hm-space-6: 6rem;
+
+  --hm-transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  background: var(--hm-color-bg);
+  color: var(--hm-color-text);
+  font-family: var(--hm-font-sans);
+  font-size: var(--hm-fs-body);
+  line-height: 1.6;
+}

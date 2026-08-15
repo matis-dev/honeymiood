@@ -1,0 +1,152 @@
+/* Honeymiood — Page-specific editorial layouts */
+
+/* ===== Hero ===== */
+.hm-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--hm-space-4);
+  align-items: center;
+  padding-block: var(--hm-space-5);
+}
+.hm-hero__eyebrow {
+  color: var(--hm-color-accent);
+  font-size: var(--hm-fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--hm-space-2);
+  display: block;
+}
+.hm-hero h1 { font-size: var(--hm-fs-hero); }
+.hm-hero__lead {
+  font-size: 1.15rem;
+  color: var(--hm-color-text-muted);
+  max-width: 46ch;
+}
+.hm-hero__media {
+  border-radius: var(--hm-radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--hm-color-surface-soft);
+}
+.hm-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+.hm-hero__actions { display: flex; gap: var(--hm-space-2); flex-wrap: wrap; margin-top: var(--hm-space-3); }
+
+@media (max-width: 767px) {
+  .hm-hero { grid-template-columns: 1fr; padding-block: var(--hm-space-4); }
+}
+
+/* ===== Section heading ===== */
+.hm-section-head {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: var(--hm-space-4);
+}
+.hm-section-head p { color: var(--hm-color-text-muted); }
+
+/* ===== About page ===== */
+.hm-about__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hm-space-4);
+  align-items: center;
+}
+.hm-about__media {
+  border-radius: var(--hm-radius-md);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.hm-about__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.hm-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-3);
+  margin-top: var(--hm-space-5);
+}
+.hm-timeline__item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--hm-space-3);
+  padding-bottom: var(--hm-space-3);
+  border-bottom: 1px solid var(--hm-color-border);
+}
+.hm-timeline__item:last-child { border-bottom: none; }
+.hm-timeline__gen {
+  font-family: var(--hm-font-serif);
+  color: var(--hm-color-accent);
+}
+
+@media (max-width: 767px) {
+  .hm-about__intro { grid-template-columns: 1fr; }
+  .hm-timeline__item { grid-template-columns: 1fr; gap: var(--hm-space-1); }
+}
+
+/* ===== Reserve / origin strip ===== */
+.hm-origin-strip {
+  background: var(--hm-color-surface-soft);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--hm-space-3);
+  text-align: center;
+}
+.hm-origin-strip h3 { font-size: var(--hm-fs-small); text-transform: uppercase; letter-spacing: 0.05em; color: var(--hm-color-text-muted); }
+@media (max-width: 767px) {
+  .hm-origin-strip { grid-template-columns: 1fr; }
+}
+
+/* ===== Contact page ===== */
+.hm-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hm-space-5);
+}
+.hm-contact__card {
+  background: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-4);
+}
+.hm-contact__b2b {
+  background: var(--hm-color-surface-soft);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-4);
+  margin-top: var(--hm-space-3);
+}
+@media (max-width: 767px) {
+  .hm-contact { grid-template-columns: 1fr; }
+}
+
+/* ===== Stockists page layout ===== */
+.hm-stockist-cities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--hm-space-4);
+}
+@media (max-width: 767px) {
+  .hm-stockist-cities { grid-template-columns: 1fr; }
+}
+
+/* ===== Legal pages ===== */
+.hm-legal {
+  max-width: var(--hm-max-width-narrow);
+  margin-inline: auto;
+}
+.hm-legal h2 { margin-top: var(--hm-space-4); }
+.hm-legal ul, .hm-legal ol { padding-left: 1.3em; }
+.hm-legal .hm-updated {
+  color: var(--hm-color-text-muted);
+  font-size: var(--hm-fs-small);
+}
+
+/* ===== Gift sets grid ===== */
+.hm-gift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--hm-space-3);
+}
+@media (max-width: 767px) {
+  .hm-gift-grid { grid-template-columns: 1fr; }
+}

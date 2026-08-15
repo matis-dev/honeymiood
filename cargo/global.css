@@ -1,0 +1,788 @@
+/* ===== tokens.css ===== */
+
+/* Honeymiood — Design Tokens
+   Prefixed .hm-root scope so this survives being pasted into Cargo's
+   global CSS editor alongside Cargo's own stylesheet. */
+
+.hm-root {
+  /* Color Palette */
+  --hm-color-bg: #FAF7F2;          /* Warm linen background */
+  --hm-color-surface: #FFFFFF;     /* Card background */
+  --hm-color-surface-soft: #F3ECE1;/* Pill badge / accent container fill */
+  --hm-color-text: #1F2923;        /* Deep forest pine */
+  --hm-color-text-muted: #5A675E;  /* Secondary / metadata text */
+  --hm-color-accent: #9B6323;      /* Raw golden amber, darkened from #C57D2C to clear WCAG AA (4.5:1) as both text-on-linen and background under white button labels */
+  --hm-color-accent-hover: #8B581F;
+  --hm-color-border: #E8E2D8;      /* Organic border */
+  --hm-color-overlay: rgba(31, 41, 35, 0.45);
+  --hm-color-focus: #1F6F5C;       /* Focus ring — distinct from accent for AA contrast on amber */
+
+  /* Typography */
+  --hm-font-serif: 'Playfair Display', Georgia, serif;
+  --hm-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Typography Scale */
+  --hm-fs-hero: clamp(2.4rem, 5vw, 4rem);
+  --hm-fs-h1: clamp(1.8rem, 3.5vw, 2.8rem);
+  --hm-fs-h2: clamp(1.4rem, 2.8vw, 2rem);
+  --hm-fs-h3: clamp(1.15rem, 2vw, 1.45rem);
+  --hm-fs-body: 1rem;              /* 16px */
+  --hm-fs-small: 0.875rem;         /* 14px */
+  --hm-fs-micro: 0.75rem;          /* 12px */
+
+  /* Spacing & Layout */
+  --hm-max-width: 1200px;
+  --hm-max-width-narrow: 840px;
+  --hm-nav-height: 72px;
+  --hm-radius-sm: 4px;
+  --hm-radius-md: 8px;
+  --hm-space-1: 0.5rem;
+  --hm-space-2: 1rem;
+  --hm-space-3: 1.5rem;
+  --hm-space-4: 2.5rem;
+  --hm-space-5: 4rem;
+  --hm-space-6: 6rem;
+
+  --hm-transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  background: var(--hm-color-bg);
+  color: var(--hm-color-text);
+  font-family: var(--hm-font-sans);
+  font-size: var(--hm-fs-body);
+  line-height: 1.6;
+}
+
+
+/* ===== layout.css ===== */
+
+/* Honeymiood — Layout System
+   Container bounds, navigation, footer, base grid. Everything scoped
+   under .hm-root so it coexists with Cargo's own page chrome. */
+
+.hm-root * { box-sizing: border-box; }
+
+.hm-root img { max-width: 100%; display: block; }
+
+.hm-root a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hm-root h1, .hm-root h2, .hm-root h3 {
+  font-family: var(--hm-font-serif);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 var(--hm-space-2);
+  color: var(--hm-color-text);
+}
+
+.hm-root h1 { font-size: var(--hm-fs-h1); }
+.hm-root h2 { font-size: var(--hm-fs-h2); }
+.hm-root h3 { font-size: var(--hm-fs-h3); }
+
+.hm-root p { margin: 0 0 var(--hm-space-2); }
+
+.hm-root :focus-visible {
+  outline: 3px solid var(--hm-color-focus);
+  outline-offset: 3px;
+  border-radius: var(--hm-radius-sm);
+}
+
+/* Skip link */
+.hm-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--hm-color-accent);
+  color: #fff;
+  padding: var(--hm-space-1) var(--hm-space-2);
+  z-index: 1000;
+  border-radius: 0 0 var(--hm-radius-sm) 0;
+}
+.hm-skip-link:focus {
+  left: 0;
+}
+
+/* Container */
+.hm-container {
+  max-width: var(--hm-max-width);
+  margin-inline: auto;
+  padding-inline: var(--hm-space-3);
+}
+.hm-container--narrow {
+  max-width: var(--hm-max-width-narrow);
+}
+
+.hm-section {
+  padding-block: var(--hm-space-5);
+}
+.hm-section--tight { padding-block: var(--hm-space-4); }
+
+/* ===== Header ===== */
+.hm-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--hm-nav-height);
+  display: flex;
+  align-items: center;
+  background: rgba(250, 247, 242, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hm-color-border);
+}
+
+.hm-header__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--hm-space-3);
+}
+
+.hm-header__brand {
+  font-family: var(--hm-font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.hm-header__nav {
+  display: flex;
+  gap: var(--hm-space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hm-header__nav a {
+  font-size: var(--hm-fs-small);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: var(--hm-space-1) 0;
+  position: relative;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hm-header__nav a[aria-current="page"] {
+  color: var(--hm-color-accent);
+}
+
+.hm-header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  height: 1px;
+  background: var(--hm-color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--hm-transition-base);
+}
+.hm-header__nav a:hover::after,
+.hm-header__nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.hm-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--hm-space-2);
+}
+
+.hm-langswitch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--hm-fs-small);
+  letter-spacing: 0.03em;
+}
+.hm-langswitch a {
+  padding: var(--hm-space-1);
+  min-height: 44px;
+  min-width: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hm-langswitch [aria-current="true"] {
+  color: var(--hm-color-accent);
+  font-weight: 700;
+}
+
+.hm-header__menu-toggle {
+  display: none;
+}
+
+/* ===== Mobile nav ===== */
+@media (max-width: 767px) {
+  .hm-header__nav {
+    position: fixed;
+    inset: var(--hm-nav-height) 0 0 0;
+    background: var(--hm-color-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--hm-space-4) var(--hm-space-3);
+    gap: var(--hm-space-3);
+    transform: translateX(100%);
+    transition: transform var(--hm-transition-base);
+    overflow-y: auto;
+  }
+  .hm-header__nav a { font-size: var(--hm-fs-h3); }
+  .hm-root[data-nav-open="true"] .hm-header__nav {
+    transform: translateX(0);
+  }
+  .hm-header__menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: 1px solid var(--hm-color-border);
+    border-radius: var(--hm-radius-sm);
+    cursor: pointer;
+  }
+  .hm-header__menu-toggle span,
+  .hm-header__menu-toggle span::before,
+  .hm-header__menu-toggle span::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--hm-color-text);
+    position: relative;
+    transition: transform var(--hm-transition-base), opacity var(--hm-transition-base);
+  }
+  .hm-header__menu-toggle span::before { position: absolute; top: -6px; }
+  .hm-header__menu-toggle span::after { position: absolute; top: 6px; }
+  .hm-root[data-nav-open="true"] .hm-header__menu-toggle span { background: transparent; }
+  .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::before { transform: rotate(45deg) translate(4px, 5px); }
+  .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::after { transform: rotate(-45deg) translate(4px, -5px); }
+}
+
+/* ===== Footer ===== */
+.hm-footer {
+  border-top: 1px solid var(--hm-color-border);
+  padding-block: var(--hm-space-4);
+  background: var(--hm-color-surface-soft);
+}
+
+.hm-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--hm-space-4);
+}
+
+.hm-footer__col h3 {
+  font-family: var(--hm-font-sans);
+  font-size: var(--hm-fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--hm-color-text-muted);
+  margin-bottom: var(--hm-space-2);
+}
+
+.hm-footer__col a,
+.hm-footer__col p {
+  display: block;
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+  margin-bottom: var(--hm-space-1);
+  min-height: 24px;
+}
+.hm-footer__col a:hover { color: var(--hm-color-accent); }
+
+.hm-footer__bottom {
+  margin-top: var(--hm-space-4);
+  padding-top: var(--hm-space-3);
+  border-top: 1px solid var(--hm-color-border);
+  font-size: var(--hm-fs-micro);
+  color: var(--hm-color-text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hm-space-2);
+  justify-content: space-between;
+}
+
+/* ===== Grid utilities ===== */
+.hm-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hm-space-4);
+}
+.hm-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--hm-space-3);
+}
+.hm-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--hm-space-3);
+}
+
+@media (max-width: 767px) {
+  .hm-grid-2, .hm-grid-3, .hm-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== components.css ===== */
+
+/* Honeymiood — Components
+   Product cards, buttons, badges, modal, stockist cards. */
+
+/* ===== Buttons ===== */
+.hm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--hm-font-sans);
+  font-size: var(--hm-fs-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--hm-radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--hm-transition-base), color var(--hm-transition-base), border-color var(--hm-transition-base), transform var(--hm-transition-base);
+  text-align: center;
+}
+.hm-btn:active { transform: translateY(1px); }
+
+.hm-btn--primary {
+  background: var(--hm-color-accent);
+  color: #fff;
+}
+.hm-btn--primary:hover { background: var(--hm-color-accent-hover); }
+
+.hm-btn--secondary {
+  background: transparent;
+  color: var(--hm-color-text);
+  border-color: var(--hm-color-border);
+}
+.hm-btn--secondary:hover {
+  border-color: var(--hm-color-accent);
+  color: var(--hm-color-accent);
+}
+
+.hm-btn--block { width: 100%; }
+.hm-btn--sm { min-height: 36px; padding: 0.5rem 1rem; font-size: var(--hm-fs-micro); }
+
+/* Cargo shop-product buttons don't take CSS classes reliably in the
+   builder, so we also target the tag directly for the pasted variant. */
+shop-product {
+  display: inline-flex;
+  width: 100%;
+}
+
+/* ===== Badge ===== */
+.hm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: var(--hm-color-surface-soft);
+  color: var(--hm-color-text-muted);
+  font-size: var(--hm-fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35em 0.85em;
+  border-radius: 999px;
+}
+.hm-badge--accent {
+  background: var(--hm-color-accent);
+  color: #fff;
+}
+
+/* ===== Product Card (alternating editorial grid) ===== */
+.hm-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-6);
+}
+
+.hm-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hm-space-4);
+  align-items: center;
+}
+
+.hm-product:nth-child(even) .hm-product__media { order: 2; }
+.hm-product:nth-child(even) .hm-product__content { order: 1; }
+
+.hm-product__media {
+  border-radius: var(--hm-radius-md);
+  overflow: hidden;
+  background: var(--hm-color-surface-soft);
+  aspect-ratio: 4 / 5;
+}
+.hm-product__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hm-product__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-2);
+}
+
+.hm-product__price {
+  font-size: var(--hm-fs-body);
+  color: var(--hm-color-text-muted);
+}
+
+.hm-product__meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em var(--hm-space-2);
+  font-size: var(--hm-fs-small);
+  margin-block: var(--hm-space-1) var(--hm-space-2);
+}
+.hm-product__meta dt {
+  color: var(--hm-color-text-muted);
+  font-weight: 600;
+}
+.hm-product__meta dd { margin: 0; }
+
+.hm-product__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hm-space-2);
+  margin-top: var(--hm-space-2);
+}
+.hm-product__actions > * { flex: 1 1 160px; }
+
+@media (max-width: 767px) {
+  .hm-product {
+    grid-template-columns: 1fr;
+  }
+  .hm-product:nth-child(even) .hm-product__media,
+  .hm-product:nth-child(even) .hm-product__content {
+    order: initial;
+  }
+}
+
+/* ===== Inert local buy-button placeholder (build-cargo.py swaps
+   this for <shop-product> before pasting into Cargo) ===== */
+.hm-buy {
+  display: block;
+  width: 100%;
+}
+.hm-buy__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  background: var(--hm-color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--hm-radius-sm);
+  font-size: var(--hm-fs-small);
+  font-weight: 600;
+  cursor: pointer;
+}
+.hm-buy__btn:hover { background: var(--hm-color-accent-hover); }
+
+/* ===== Modal (Quick View) ===== */
+.hm-modal {
+  border: none;
+  border-radius: var(--hm-radius-md);
+  padding: 0;
+  max-width: min(760px, 92vw);
+  width: 100%;
+  max-height: 88vh;
+  color: var(--hm-color-text);
+  background: var(--hm-color-surface);
+}
+.hm-modal::backdrop {
+  background: var(--hm-color-overlay);
+}
+
+.hm-modal__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 88vh;
+}
+
+.hm-modal__media {
+  background: var(--hm-color-surface-soft);
+  min-height: 260px;
+}
+.hm-modal__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hm-modal__body {
+  padding: var(--hm-space-4);
+  overflow-y: auto;
+  position: relative;
+}
+
+.hm-modal__close {
+  position: absolute;
+  top: var(--hm-space-2);
+  right: var(--hm-space-2);
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--hm-color-border);
+  background: var(--hm-color-surface);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hm-modal__close:hover { border-color: var(--hm-color-accent); color: var(--hm-color-accent); }
+
+.hm-modal__sizes {
+  display: flex;
+  gap: var(--hm-space-1);
+  margin-block: var(--hm-space-2);
+}
+.hm-pill {
+  min-height: 44px;
+  padding: 0.5em 1.1em;
+  border-radius: 999px;
+  border: 1px solid var(--hm-color-border);
+  background: transparent;
+  font-size: var(--hm-fs-small);
+  cursor: pointer;
+}
+.hm-pill[aria-pressed="true"] {
+  background: var(--hm-color-accent);
+  border-color: var(--hm-color-accent);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .hm-modal__inner { grid-template-columns: 1fr; }
+  .hm-modal__media { min-height: 200px; }
+  .hm-modal { max-height: 92vh; }
+}
+
+/* ===== Stockist directory ===== */
+.hm-stockist-city h3 {
+  border-bottom: 1px solid var(--hm-color-border);
+  padding-bottom: var(--hm-space-1);
+  margin-bottom: var(--hm-space-2);
+}
+.hm-stockist {
+  padding: var(--hm-space-2) 0;
+  border-bottom: 1px solid var(--hm-color-border);
+}
+.hm-stockist:last-child { border-bottom: none; }
+.hm-stockist__name { font-weight: 600; }
+.hm-stockist__address {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+  margin: 0.2em 0 0.5em;
+}
+.hm-stockist__map {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  min-height: 32px;
+}
+.hm-stockist__map:hover { text-decoration: underline; }
+
+/* ===== Gift set card ===== */
+.hm-giftcard {
+  background: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-1);
+}
+.hm-giftcard__price {
+  font-family: var(--hm-font-serif);
+  font-size: var(--hm-fs-h3);
+  color: var(--hm-color-accent);
+  margin-block: var(--hm-space-1);
+}
+.hm-giftcard ul {
+  margin: 0 0 var(--hm-space-2);
+  padding-left: 1.1em;
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+}
+
+/* ===== Cookie-free notice (footer honesty strip, no consent needed) ===== */
+.hm-privacy-note {
+  font-size: var(--hm-fs-micro);
+  color: var(--hm-color-text-muted);
+}
+
+
+/* ===== pages.css ===== */
+
+/* Honeymiood — Page-specific editorial layouts */
+
+/* ===== Hero ===== */
+.hm-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--hm-space-4);
+  align-items: center;
+  padding-block: var(--hm-space-5);
+}
+.hm-hero__eyebrow {
+  color: var(--hm-color-accent);
+  font-size: var(--hm-fs-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--hm-space-2);
+  display: block;
+}
+.hm-hero h1 { font-size: var(--hm-fs-hero); }
+.hm-hero__lead {
+  font-size: 1.15rem;
+  color: var(--hm-color-text-muted);
+  max-width: 46ch;
+}
+.hm-hero__media {
+  border-radius: var(--hm-radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--hm-color-surface-soft);
+}
+.hm-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+.hm-hero__actions { display: flex; gap: var(--hm-space-2); flex-wrap: wrap; margin-top: var(--hm-space-3); }
+
+@media (max-width: 767px) {
+  .hm-hero { grid-template-columns: 1fr; padding-block: var(--hm-space-4); }
+}
+
+/* ===== Section heading ===== */
+.hm-section-head {
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-bottom: var(--hm-space-4);
+}
+.hm-section-head p { color: var(--hm-color-text-muted); }
+
+/* ===== About page ===== */
+.hm-about__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hm-space-4);
+  align-items: center;
+}
+.hm-about__media {
+  border-radius: var(--hm-radius-md);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.hm-about__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.hm-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-3);
+  margin-top: var(--hm-space-5);
+}
+.hm-timeline__item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--hm-space-3);
+  padding-bottom: var(--hm-space-3);
+  border-bottom: 1px solid var(--hm-color-border);
+}
+.hm-timeline__item:last-child { border-bottom: none; }
+.hm-timeline__gen {
+  font-family: var(--hm-font-serif);
+  color: var(--hm-color-accent);
+}
+
+@media (max-width: 767px) {
+  .hm-about__intro { grid-template-columns: 1fr; }
+  .hm-timeline__item { grid-template-columns: 1fr; gap: var(--hm-space-1); }
+}
+
+/* ===== Reserve / origin strip ===== */
+.hm-origin-strip {
+  background: var(--hm-color-surface-soft);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--hm-space-3);
+  text-align: center;
+}
+.hm-origin-strip h3 { font-size: var(--hm-fs-small); text-transform: uppercase; letter-spacing: 0.05em; color: var(--hm-color-text-muted); }
+@media (max-width: 767px) {
+  .hm-origin-strip { grid-template-columns: 1fr; }
+}
+
+/* ===== Contact page ===== */
+.hm-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hm-space-5);
+}
+.hm-contact__card {
+  background: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-4);
+}
+.hm-contact__b2b {
+  background: var(--hm-color-surface-soft);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-4);
+  margin-top: var(--hm-space-3);
+}
+@media (max-width: 767px) {
+  .hm-contact { grid-template-columns: 1fr; }
+}
+
+/* ===== Stockists page layout ===== */
+.hm-stockist-cities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--hm-space-4);
+}
+@media (max-width: 767px) {
+  .hm-stockist-cities { grid-template-columns: 1fr; }
+}
+
+/* ===== Legal pages ===== */
+.hm-legal {
+  max-width: var(--hm-max-width-narrow);
+  margin-inline: auto;
+}
+.hm-legal h2 { margin-top: var(--hm-space-4); }
+.hm-legal ul, .hm-legal ol { padding-left: 1.3em; }
+.hm-legal .hm-updated {
+  color: var(--hm-color-text-muted);
+  font-size: var(--hm-fs-small);
+}
+
+/* ===== Gift sets grid ===== */
+.hm-gift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--hm-space-3);
+}
+@media (max-width: 767px) {
+  .hm-gift-grid { grid-template-columns: 1fr; }
+}

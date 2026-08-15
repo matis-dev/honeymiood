@@ -1,0 +1,298 @@
+/* Honeymiood — Components
+   Product cards, buttons, badges, modal, stockist cards. */
+
+/* ===== Buttons ===== */
+.hm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--hm-font-sans);
+  font-size: var(--hm-fs-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--hm-radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--hm-transition-base), color var(--hm-transition-base), border-color var(--hm-transition-base), transform var(--hm-transition-base);
+  text-align: center;
+}
+.hm-btn:active { transform: translateY(1px); }
+
+.hm-btn--primary {
+  background: var(--hm-color-accent);
+  color: #fff;
+}
+.hm-btn--primary:hover { background: var(--hm-color-accent-hover); }
+
+.hm-btn--secondary {
+  background: transparent;
+  color: var(--hm-color-text);
+  border-color: var(--hm-color-border);
+}
+.hm-btn--secondary:hover {
+  border-color: var(--hm-color-accent);
+  color: var(--hm-color-accent);
+}
+
+.hm-btn--block { width: 100%; }
+.hm-btn--sm { min-height: 36px; padding: 0.5rem 1rem; font-size: var(--hm-fs-micro); }
+
+/* Cargo shop-product buttons don't take CSS classes reliably in the
+   builder, so we also target the tag directly for the pasted variant. */
+shop-product {
+  display: inline-flex;
+  width: 100%;
+}
+
+/* ===== Badge ===== */
+.hm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  background: var(--hm-color-surface-soft);
+  color: var(--hm-color-text-muted);
+  font-size: var(--hm-fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35em 0.85em;
+  border-radius: 999px;
+}
+.hm-badge--accent {
+  background: var(--hm-color-accent);
+  color: #fff;
+}
+
+/* ===== Product Card (alternating editorial grid) ===== */
+.hm-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-6);
+}
+
+.hm-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hm-space-4);
+  align-items: center;
+}
+
+.hm-product:nth-child(even) .hm-product__media { order: 2; }
+.hm-product:nth-child(even) .hm-product__content { order: 1; }
+
+.hm-product__media {
+  border-radius: var(--hm-radius-md);
+  overflow: hidden;
+  background: var(--hm-color-surface-soft);
+  aspect-ratio: 4 / 5;
+}
+.hm-product__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hm-product__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-2);
+}
+
+.hm-product__price {
+  font-size: var(--hm-fs-body);
+  color: var(--hm-color-text-muted);
+}
+
+.hm-product__meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em var(--hm-space-2);
+  font-size: var(--hm-fs-small);
+  margin-block: var(--hm-space-1) var(--hm-space-2);
+}
+.hm-product__meta dt {
+  color: var(--hm-color-text-muted);
+  font-weight: 600;
+}
+.hm-product__meta dd { margin: 0; }
+
+.hm-product__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hm-space-2);
+  margin-top: var(--hm-space-2);
+}
+.hm-product__actions > * { flex: 1 1 160px; }
+
+@media (max-width: 767px) {
+  .hm-product {
+    grid-template-columns: 1fr;
+  }
+  .hm-product:nth-child(even) .hm-product__media,
+  .hm-product:nth-child(even) .hm-product__content {
+    order: initial;
+  }
+}
+
+/* ===== Inert local buy-button placeholder (build-cargo.py swaps
+   this for <shop-product> before pasting into Cargo) ===== */
+.hm-buy {
+  display: block;
+  width: 100%;
+}
+.hm-buy__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  background: var(--hm-color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--hm-radius-sm);
+  font-size: var(--hm-fs-small);
+  font-weight: 600;
+  cursor: pointer;
+}
+.hm-buy__btn:hover { background: var(--hm-color-accent-hover); }
+
+/* ===== Modal (Quick View) ===== */
+.hm-modal {
+  border: none;
+  border-radius: var(--hm-radius-md);
+  padding: 0;
+  max-width: min(760px, 92vw);
+  width: 100%;
+  max-height: 88vh;
+  color: var(--hm-color-text);
+  background: var(--hm-color-surface);
+}
+.hm-modal::backdrop {
+  background: var(--hm-color-overlay);
+}
+
+.hm-modal__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 88vh;
+}
+
+.hm-modal__media {
+  background: var(--hm-color-surface-soft);
+  min-height: 260px;
+}
+.hm-modal__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hm-modal__body {
+  padding: var(--hm-space-4);
+  overflow-y: auto;
+  position: relative;
+}
+
+.hm-modal__close {
+  position: absolute;
+  top: var(--hm-space-2);
+  right: var(--hm-space-2);
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--hm-color-border);
+  background: var(--hm-color-surface);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hm-modal__close:hover { border-color: var(--hm-color-accent); color: var(--hm-color-accent); }
+
+.hm-modal__sizes {
+  display: flex;
+  gap: var(--hm-space-1);
+  margin-block: var(--hm-space-2);
+}
+.hm-pill {
+  min-height: 44px;
+  padding: 0.5em 1.1em;
+  border-radius: 999px;
+  border: 1px solid var(--hm-color-border);
+  background: transparent;
+  font-size: var(--hm-fs-small);
+  cursor: pointer;
+}
+.hm-pill[aria-pressed="true"] {
+  background: var(--hm-color-accent);
+  border-color: var(--hm-color-accent);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .hm-modal__inner { grid-template-columns: 1fr; }
+  .hm-modal__media { min-height: 200px; }
+  .hm-modal { max-height: 92vh; }
+}
+
+/* ===== Stockist directory ===== */
+.hm-stockist-city h3 {
+  border-bottom: 1px solid var(--hm-color-border);
+  padding-bottom: var(--hm-space-1);
+  margin-bottom: var(--hm-space-2);
+}
+.hm-stockist {
+  padding: var(--hm-space-2) 0;
+  border-bottom: 1px solid var(--hm-color-border);
+}
+.hm-stockist:last-child { border-bottom: none; }
+.hm-stockist__name { font-weight: 600; }
+.hm-stockist__address {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+  margin: 0.2em 0 0.5em;
+}
+.hm-stockist__map {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  min-height: 32px;
+}
+.hm-stockist__map:hover { text-decoration: underline; }
+
+/* ===== Gift set card ===== */
+.hm-giftcard {
+  background: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-md);
+  padding: var(--hm-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-1);
+}
+.hm-giftcard__price {
+  font-family: var(--hm-font-serif);
+  font-size: var(--hm-fs-h3);
+  color: var(--hm-color-accent);
+  margin-block: var(--hm-space-1);
+}
+.hm-giftcard ul {
+  margin: 0 0 var(--hm-space-2);
+  padding-left: 1.1em;
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+}
+
+/* ===== Cookie-free notice (footer honesty strip, no consent needed) ===== */
+.hm-privacy-note {
+  font-size: var(--hm-fs-micro);
+  color: var(--hm-color-text-muted);
+}
