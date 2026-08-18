@@ -12,13 +12,17 @@
     pl: { profile: "Profil smakowy", consistency: "Konsystencja", usage: "Zastosowanie", origin: "Pochodzenie",
           inquiry: "Zapytaj o ten miód", close: "Zamknij", buy: "Kup: ", subjectPrefix: "Zapytanie o " },
     en: { profile: "Tasting profile", consistency: "Consistency", usage: "Usage", origin: "Origin",
-          inquiry: "Ask about this honey", close: "Close", buy: "Add to Cart: ", subjectPrefix: "Inquiry regarding " }
+          inquiry: "Ask about this honey", close: "Close", buy: "Add to Cart: ", subjectPrefix: "Inquiry regarding " },
+    de: { profile: "Geschmacksprofil", consistency: "Konsistenz", usage: "Verwendung", origin: "Herkunft",
+          inquiry: "Diesen Honig anfragen", close: "Schließen", buy: "In den Warenkorb: ", subjectPrefix: "Anfrage zu " }
   };
 
   function lang() {
     var root = document.querySelector(".hm-root[data-hm-lang]");
     var value = (root && root.getAttribute("data-hm-lang")) || document.documentElement.lang;
-    return value === "en" ? "en" : "pl";
+    if (value === "de") return "de";
+    if (value === "en") return "en";
+    return "pl";
   }
 
   function buildModal() {

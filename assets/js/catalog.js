@@ -11,13 +11,17 @@
     pl: { consistency: "Konsystencja", usage: "Zastosowanie", details: "Zobacz Partię / Szczegóły",
           whereToBuy: "Gdzie Kupić", buy: "Kup: " },
     en: { consistency: "Consistency", usage: "Usage", details: "View Batch / Details",
-          whereToBuy: "Where to Buy", buy: "Add to Cart: " }
+          whereToBuy: "Where to Buy", buy: "Add to Cart: " },
+    de: { consistency: "Konsistenz", usage: "Verwendung", details: "Ernte / Details ansehen",
+          whereToBuy: "Verkaufsstellen", buy: "In den Warenkorb: " }
   };
 
   function lang() {
     var root = document.querySelector(".hm-root[data-hm-lang]");
     var value = (root && root.getAttribute("data-hm-lang")) || document.documentElement.lang;
-    return value === "en" ? "en" : "pl";
+    if (value === "de") return "de";
+    if (value === "en") return "en";
+    return "pl";
   }
 
   function el(tag, className, text) {
@@ -29,8 +33,8 @@
 
   function buildCard(product, currentLang) {
     var d = product[currentLang] || product.pl;
-    var t = LABELS[currentLang];
-    var whereHref = currentLang === "en" ? "stockists.html" : "gdzie-kupic.html";
+    var t = LABELS[currentLang] || LABELS.pl;
+    var whereHref = currentLang === "de" ? "verkaufsstellen.html" : (currentLang === "en" ? "stockists.html" : "gdzie-kupic.html");
 
     var article = el("article", "hm-product");
     article.id = product.id;

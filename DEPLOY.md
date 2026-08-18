@@ -31,11 +31,11 @@ Update. This is every script (`products-data.js`, `app.js`,
 `commerce.js`, `catalog.js`, `modal.js`) wrapped in `<script>` tags —
 it now runs on every page of the site.
 
-## 3. Header and footer (four pastes, once each)
+## 3. Header and footer (six pastes, once each)
 
 The design uses one responsive header/footer, but Cargo pins are
-scoped per **Set**, and this site already has two Sets — *Pages
-Polish* and *Pages English* — so each language gets its own pinned
+scoped per **Set**, and this site has three Sets — *Pages
+Polish*, *Pages English*, and *Pages German* — so each language gets its own pinned
 pair rather than fighting over one global pin:
 
 1. New page inside **Pages Polish** → paste `cargo/pages/_header-pl.html`
@@ -44,15 +44,17 @@ pair rather than fighting over one global pin:
    → Pin (this Set).
 3. Repeat with `_header-en.html` / `_footer-en.html` inside **Pages
    English**.
+4. Repeat with `_header-de.html` / `_footer-de.html` inside **Pages
+   German**.
 
-> **Known limitation:** the language switch (`PL | EN`) in a pinned
+> **Known limitation:** the language switch (`PL | EN | DE`) in a pinned
 > header can't vary per page — Cargo pins are one fixed piece of
 > content per Set. It's wired to jump to the other language's
-> **homepage** (`/home` ↔ `/eng`), not the exact page counterpart.
+> **homepage** (`/home` ↔ `/eng` ↔ `/de`), not the exact page counterpart.
 > The local standalone site (`index.html` etc.) does the precise
 > per-page version, since each page there is authored individually.
 
-## 4. The 12 new pages
+## 4. The 27 pages
 
 For each row below: create the page inside the matching Set, open
 **Code View**, paste the file, Update.
@@ -63,20 +65,29 @@ For each row below: create the page inside the matching Set, open
 | `o-nas` | Pages Polish | `cargo/pages/o-nas.html` |
 | `miody` | Pages Polish | `cargo/pages/miody.html` |
 | `zestawy-i-prezenty-1` | Pages Polish | `cargo/pages/zestawy-i-prezenty-1.html` *(already exists — replace its content)* |
-| `gdzie-kupic` | Pages Polish | `cargo/pages/gdzie-kupic.html` *(new — was buried inside `kontakt`)* |
+| `gdzie-kupic` | Pages Polish | `cargo/pages/gdzie-kupic.html` |
 | `kontakt` | Pages Polish | `cargo/pages/kontakt.html` |
-| `polityka-prywatnosci` | Pages Polish | `cargo/pages/polityka-prywatnosci.html` *(review before publishing — see below)* |
+| `polityka-prywatnosci` | Pages Polish | `cargo/pages/polityka-prywatnosci.html` *(review before publishing)* |
 | `regulamin` | Pages Polish | `cargo/pages/regulamin.html` *(review before publishing)* |
 | `zwroty-i-wysylka` | Pages Polish | `cargo/pages/zwroty-i-wysylka.html` *(review before publishing)* |
 | `eng` | Pages English | `cargo/pages/eng.html` |
 | `about` | Pages English | `cargo/pages/about.html` |
 | `honeys` | Pages English | `cargo/pages/honeys.html` |
 | `gift-sets` | Pages English | `cargo/pages/gift-sets.html` |
-| `stockists` | Pages English | `cargo/pages/stockists.html` *(new)* |
+| `stockists` | Pages English | `cargo/pages/stockists.html` |
 | `contact` | Pages English | `cargo/pages/contact.html` |
 | `privacy-policy` | Pages English | `cargo/pages/privacy-policy.html` *(review before publishing)* |
 | `terms` | Pages English | `cargo/pages/terms.html` *(review before publishing)* |
 | `shipping-returns` | Pages English | `cargo/pages/shipping-returns.html` *(review before publishing)* |
+| `de` | Pages German | `cargo/pages/de.html` |
+| `ueber-uns` | Pages German | `cargo/pages/ueber-uns.html` |
+| `honige` | Pages German | `cargo/pages/honige.html` |
+| `geschenksets` | Pages German | `cargo/pages/geschenksets.html` |
+| `verkaufsstellen` | Pages German | `cargo/pages/verkaufsstellen.html` |
+| `kontakt-de` | Pages German | `cargo/pages/kontakt-de.html` |
+| `datenschutz` | Pages German | `cargo/pages/datenschutz.html` *(review before publishing)* |
+| `agb` | Pages German | `cargo/pages/agb.html` *(review before publishing)* |
+| `versand-und-rueckgabe` | Pages German | `cargo/pages/versand-und-rueckgabe.html` *(review before publishing)* |
 
 The existing 14 per-honey product pages (`rzepakowy`, `akacjowy`,
 `wielokwiatowy`, `lipowy`, and their EN counterparts, etc.) are **not**
