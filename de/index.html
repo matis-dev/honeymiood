@@ -63,53 +63,55 @@
 </header>
 
 <main id="hm-main">
-<section class="hm-hero-cover">
-  <div class="hm-hero-cover__bg-media">
-    <img src="../assets/images/hero-bg-scraped.jpg" alt="Imkerei Honeymiood am Naturschutzgebiet Kępa Redłowska" fetchpriority="high" />
-    <div class="hm-hero-cover__overlay"></div>
-  </div>
-  
-  <div class="hm-container hm-hero-cover__container">
-    <div class="hm-hero-cover__content">
-      <div class="hm-hero-cover__meta">
-        <span class="hm-hero-cover__coords">54°29'N 18°33'E · Gdynia, Polen</span>
-        <span class="hm-hero-cover__badge">
-          <span class="hm-hero-cover__dot" aria-hidden="true"></span>
-          Frische Ernte 2026
-        </span>
+<div class="hm-container--wide hm-hero-island-wrap">
+  <section class="hm-hero-card">
+    <div class="hm-hero-card__content">
+      <div class="hm-hero-card__meta">
+        <span class="hm-hero-card__coords">54°29'N 18°33'E · Gdynia, Polen</span>
       </div>
       
-      <h1 class="hm-hero-cover__title">Naturbelassener Rohhonig aus dem Naturschutzgebiet Kępa Redłowska</h1>
+      <h1 class="hm-hero-card__title">Naturbelassener Rohhonig aus dem Naturschutzgebiet Kępa Redłowska</h1>
       
-      <p class="hm-hero-cover__lead">Gewonnen in unserer Familienimkerei an den Küstenklippen von Gdynia – wo die frische Ostseebrise auf geschützte Lindenkronen, Robinien und blühende Wildwiesen trifft. Vier Generationen imkerliches Wissen seit 1923.</p>
+      <p class="hm-hero-card__lead">Gewonnen in unserer Familienimkerei an den Küstenklippen von Gdynia – wo die frische Ostseebrise auf geschützte Lindenkronen, Robinien und blühende Wildwiesen trifft. Vier Generationen imkerliches Wissen seit 1923.</p>
       
-      <div class="hm-hero-cover__chips">
-        <span class="hm-hero-cover__chip">100% Roh &amp; Unpasteurisiert</span>
-        <span class="hm-hero-cover__chip">Küsten-Mikroklima</span>
-        <span class="hm-hero-cover__chip">Vier Generationen Handwerk</span>
+      <div class="hm-hero-card__chips">
+        <span class="hm-hero-card__chip">100% Roh &amp; Unpasteurisiert</span>
+        <span class="hm-hero-card__chip">Küsten-Mikroklima</span>
+        <span class="hm-hero-card__chip">Vier Generationen Handwerk</span>
       </div>
       
-      <div class="hm-hero-cover__actions">
-        <a class="hm-btn hm-btn--glow" href="honige.html">
+      <div class="hm-hero-card__actions">
+        <a class="hm-hero-btn-primary" href="honige.html">
           <span>Honigernten entdecken</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a class="hm-btn hm-btn--ghost" href="ueber-uns.html">
+        <a class="hm-hero-btn-secondary" href="ueber-uns.html">
           <span>Geschichte der Imkerei</span>
         </a>
       </div>
     </div>
-  </div>
-  
-  <div class="hm-hero-cover__footer-bar">
-    <div class="hm-container hm-hero-cover__footer-inner">
-      <span class="hm-hero-cover__terroir-note">Trachten des Reservats: Linde · Robinie (Akazie) · Nachtkerze · Wildrose · Kornblume</span>
-      <span class="hm-hero-cover__provenance-note">Familienimkerei · Gegründet 1923</span>
-    </div>
-  </div>
-</section>
 
-<section class="hm-container hm-section--tight">
+    <div class="hm-hero-card__visual">
+      <img class="hm-hero-card__visual-img" src="../assets/images/bg.jpeg" alt="Imkerei Honeymiood am Naturschutzgebiet Kępa Redłowska" fetchpriority="high" />
+      <div class="hm-hero-card__visual-overlay"></div>
+      <div class="hm-hero-card__floating-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Naturschutzgebiet Kępa Redłowska</span>
+      </div>
+      <div class="hm-hero-card__floating-provenance">
+        <strong>Familienimkerei</strong>
+        <span>Gdynia, Polen · Seit 1923 · 4 Generationen Imkerhandwerk</span>
+      </div>
+    </div>
+    
+    <div class="hm-hero-card__footer">
+      <span class="hm-hero-card__terroir">Trachten des Reservats: Linde · Robinie (Akazie) · Nachtkerze · Wildrose · Kornblume</span>
+      <span class="hm-hero-card__provenance">Familienimkerei · Gegründet 1923</span>
+    </div>
+  </section>
+</div>
+
+<section class="hm-container--wide hm-provenance-section">
   <div class="hm-provenance">
     <div class="hm-provenance__grid">
       <div class="hm-provenance__item">
@@ -131,18 +133,29 @@
   </div>
 </section>
 
-<section class="hm-container hm-section">
-  <div class="hm-section-head hm-section-head--center">
-    <h2>Saisonale Ernten</h2>
-    <p>Sieben naturbelassene Sorten- und Blütenhonige. Jedes Glas spiegelt das authentische Wetter, den Boden und die Blütenpracht des Naturschutzgebiets wider.</p>
+<div class="hm-container--wide">
+  <div class="hm-values-strip">
+    <div class="hm-values-strip__item"><span class="hm-values-strip__dot">●</span> 100% Roh &amp; Ungefiltert</div>
+    <div class="hm-values-strip__item"><span class="hm-values-strip__dot">●</span> Naturschutzgebiet Kępa Redłowska, Gdynia</div>
+    <div class="hm-values-strip__item"><span class="hm-values-strip__dot">●</span> Über 100 Jahre Erfahrung (seit 1923)</div>
+    <div class="hm-values-strip__item"><span class="hm-values-strip__dot">●</span> Sicherer Glas-Versand</div>
   </div>
-  <div id="hm-catalog" class="hm-showcase" data-limit="3"></div>
-  <p style="text-align:center; margin-top: var(--hm-space-4)">
-    <a class="hm-btn hm-btn--secondary" href="honige.html">Alle 7 Honige ansehen</a>
-  </p>
+</div>
+
+<section class="hm-container--wide">
+  <div class="hm-showcase-wrap">
+    <div class="hm-section-head hm-section-head--center">
+      <h2>Saisonale Ernten</h2>
+      <p>Sieben naturbelassene Sorten- und Blütenhonige. Jedes Glas spiegelt das authentische Wetter, den Boden und die Blütenpracht des Naturschutzgebiets wider.</p>
+    </div>
+    <div id="hm-catalog" class="hm-showcase" data-limit="3"></div>
+    <p style="text-align:center; margin-top: var(--hm-space-4)">
+      <a class="hm-btn hm-btn--secondary" href="honige.html">Alle 7 Honige ansehen</a>
+    </p>
+  </div>
 </section>
 
-<section class="hm-container hm-section--tight">
+<section class="hm-container--wide">
   <div class="hm-about__intro">
     <div class="hm-about__media">
       <img src="https://freight.cargo.site/w/1000/i/L2665618281113204590861333244662/DSC03172.JPG" alt="Jarek an den Bienenstöcken der Imkerei Honeymiood, Gdynia" width="1000" height="1000" loading="lazy" />

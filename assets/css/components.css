@@ -7,13 +7,13 @@
   align-items: center;
   justify-content: center;
   gap: 0.55em;
-  min-height: 48px;
-  padding: 0.75rem 1.6rem;
+  min-height: 50px;
+  padding: 0.8rem 1.8rem;
   font-family: var(--hm-font-sans);
   font-size: var(--hm-fs-small);
   font-weight: 600;
-  letter-spacing: 0.015em;
-  border-radius: var(--hm-radius-sm);
+  letter-spacing: 0.02em;
+  border-radius: var(--hm-radius-pill);
   border: 1px solid transparent;
   cursor: pointer;
   text-align: center;
@@ -23,7 +23,7 @@
               color var(--hm-transition-base),
               border-color var(--hm-transition-base),
               box-shadow var(--hm-transition-base),
-              transform var(--hm-transition-base);
+              transform var(--hm-transition-bounce);
 }
 
 .hm-btn:active, .hm-btn.is-active {
@@ -123,7 +123,7 @@ shop-product {
 .hm-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4em;
+  gap: 0.45em;
   background-color: var(--hm-color-surface-soft);
   color: var(--hm-color-text-muted);
   font-family: var(--hm-font-sans);
@@ -131,8 +131,8 @@ shop-product {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
-  padding: 0.3em 0.85em;
-  border-radius: var(--hm-radius-xs);
+  padding: 0.4em 1em;
+  border-radius: var(--hm-radius-pill);
   border: 1px solid var(--hm-color-border);
   width: fit-content;
 }
@@ -153,7 +153,7 @@ shop-product {
 .hm-showcase {
   display: flex;
   flex-direction: column;
-  gap: clamp(3rem, 6vw, var(--hm-space-6));
+  gap: clamp(2rem, 4vw, var(--hm-space-4));
 }
 
 .hm-product {
@@ -161,10 +161,10 @@ shop-product {
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
   gap: clamp(2rem, 5vw, var(--hm-space-5));
   align-items: center;
-  padding: clamp(1.5rem, 3vw, var(--hm-space-4));
+  padding: clamp(1.75rem, 3.5vw, var(--hm-space-4));
   background-color: var(--hm-color-surface);
   border: 1px solid var(--hm-color-border);
-  border-radius: var(--hm-radius-md);
+  border-radius: var(--hm-radius-card);
   box-shadow: var(--hm-shadow-subtle);
   transition: transform var(--hm-transition-base), box-shadow var(--hm-transition-base), border-color var(--hm-transition-base);
 }
@@ -172,6 +172,7 @@ shop-product {
 .hm-product:hover {
   border-color: var(--hm-color-border-dark);
   box-shadow: var(--hm-shadow-card);
+  transform: translateY(-2px);
 }
 
 .hm-product:nth-child(even) .hm-product__media {
@@ -183,7 +184,7 @@ shop-product {
 }
 
 .hm-product__media {
-  border-radius: var(--hm-radius-sm);
+  border-radius: calc(var(--hm-radius-card) - 6px);
   overflow: hidden;
   background-color: var(--hm-color-surface-soft);
   aspect-ratio: 4 / 5;

@@ -45,12 +45,16 @@
 
   /* Spacing & Layout Rhythm */
   --hm-max-width: 1200px;
+  --hm-max-width-wide: 1340px;
   --hm-max-width-narrow: 840px;
   --hm-nav-height: 76px;
   --hm-radius-xs: 3px;
   --hm-radius-sm: 6px;
   --hm-radius-md: 10px;
   --hm-radius-lg: 16px;
+  --hm-radius-card: clamp(20px, 2.5vw, 32px);
+  --hm-radius-xl: clamp(24px, 3.5vw, 40px);
+  --hm-radius-pill: 9999px;
 
   --hm-space-1: 0.5rem;                 /* 8px */
   --hm-space-2: 1rem;                   /* 16px */
@@ -61,9 +65,12 @@
 
   --hm-transition-base: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   --hm-transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --hm-transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   
   --hm-shadow-subtle: 0 2px 8px rgba(28, 38, 32, 0.04);
   --hm-shadow-card: 0 4px 20px rgba(28, 38, 32, 0.06);
+  --hm-shadow-float: 0 14px 40px -10px rgba(28, 38, 32, 0.12), 0 4px 12px rgba(28, 38, 32, 0.04);
+  --hm-shadow-hover: 0 20px 50px -12px rgba(28, 38, 32, 0.18), 0 8px 20px rgba(28, 38, 32, 0.06);
 
   background-color: var(--hm-color-bg);
   color: var(--hm-color-text);

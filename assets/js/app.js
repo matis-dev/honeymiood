@@ -50,19 +50,15 @@
     var header = document.querySelector(".hm-header");
     if (!header) return;
 
-    var hasHeroBg = document.querySelector(".hm-hero-cover");
-    if (hasHeroBg) {
-      header.classList.add("hm-header--overlay");
-      var handleScroll = function () {
-        if (window.scrollY > 30) {
-          header.classList.add("hm-header--scrolled");
-        } else {
-          header.classList.remove("hm-header--scrolled");
-        }
-      };
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      handleScroll();
-    }
+    var handleScroll = function () {
+      if (window.scrollY > 15) {
+        header.classList.add("hm-header--scrolled");
+      } else {
+        header.classList.remove("hm-header--scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
   }
 
   function setFooterYear() {
