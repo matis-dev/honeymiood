@@ -137,6 +137,8 @@ def rewrite_href(href, lang):
 
 
 IMAGE_MAP = {
+    "assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
+    "../assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
     "assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
     "../assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
     "assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/w/1200/i/O2665675402324908920199793132646/DSC04179.JPG",
@@ -161,6 +163,10 @@ IMAGE_MAP = {
     "../assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
     "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
     "../assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
+    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/w/1200/i/X2847188493824277131163436526326/DSC03151.JPG",
+    "../assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/w/1200/i/X2847188493824277131163436526326/DSC03151.JPG",
+    "assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/w/1200/i/L2665618281113204590861333244662/DSC03172.JPG",
+    "../assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/w/1200/i/L2665618281113204590861333244662/DSC03172.JPG",
     "assets/images/logo_w.png": "https://freight.cargo.site/w/1200/i/X2156015466378587388984278854390/logo_honeymiood.png",
     "../assets/images/logo_w.png": "https://freight.cargo.site/w/1200/i/X2156015466378587388984278854390/logo_honeymiood.png",
     "assets/images/logo_b.png": "https://freight.cargo.site/w/1200/i/D2056736702074654142009068169974/honeymood_logo.png",
