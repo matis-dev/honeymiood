@@ -50,7 +50,7 @@
     var header = document.querySelector(".hm-header");
     if (!header) return;
 
-    var hasHeroBg = document.querySelector(".hm-hero-bacanha");
+    var hasHeroBg = document.querySelector(".hm-hero-cover");
     if (hasHeroBg) {
       header.classList.add("hm-header--overlay");
       var handleScroll = function () {

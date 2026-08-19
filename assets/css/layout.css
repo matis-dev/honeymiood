@@ -108,14 +108,12 @@ html, body {
 }
 
 /* ===== Header / Masthead (Hallmark N6 Archetype) ===== */
-/* ===== Header / Split Centered Navigation (Bacanha / High-End Editorial Style) ===== */
 #hm-main {
   min-height: 70vh;
   padding-top: var(--hm-nav-height);
 }
 
-/* ===== Header / Masthead (Hallmark N6 Archetype) ===== */
-/* ===== Header / Split Centered Navigation (Bacanha / High-End Editorial Style) ===== */
+/* ===== Header / Navigation ===== */
 .hm-header {
   position: fixed;
   top: 0;

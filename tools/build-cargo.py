@@ -137,8 +137,8 @@ def rewrite_href(href, lang):
 
 
 IMAGE_MAP = {
-    "assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/V2068509248785881701117978684150/64649669791__DF27E753-71BC-493E-96BB-50366C30FF2A.JPG",
-    "../assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/V2068509248785881701117978684150/64649669791__DF27E753-71BC-493E-96BB-50366C30FF2A.JPG",
+    "assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
+    "../assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
     "assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/w/1200/i/O2665675402324908920199793132646/DSC04179.JPG",
     "../assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/w/1200/i/O2665675402324908920199793132646/DSC04179.JPG",
     "assets/images/giftset-swieczka.jpg": "https://freight.cargo.site/w/1200/i/P2665674917637840135805561017446/DSC04183.JPG",
