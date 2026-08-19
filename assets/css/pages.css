@@ -1233,7 +1233,7 @@
   background: var(--hm-color-surface-soft);
   border: 1px solid var(--hm-color-border-subtle);
   border-radius: calc(var(--hm-radius-card) - 8px);
-  padding: 1rem 1.25rem;
+  padding: 1.1rem 1.35rem;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -1261,20 +1261,36 @@
 }
 
 .hm-stockist__map {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-top: 0.35rem;
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  font-size: 0.8rem;
+  font-family: var(--hm-font-sans);
+  font-size: 0.78rem;
   font-weight: 600;
-  color: var(--hm-color-accent);
+  letter-spacing: 0.02em;
+  color: var(--hm-color-text);
+  background-color: rgba(28, 38, 32, 0.06);
+  border: 1px solid rgba(28, 38, 32, 0.12);
+  border-radius: var(--hm-radius-pill);
+  padding: 0.35rem 0.95rem;
   text-decoration: none;
-  margin-top: 0.35rem;
-  transition: color var(--hm-transition-base);
+  transition: background-color var(--hm-transition-base),
+              border-color var(--hm-transition-base),
+              color var(--hm-transition-base),
+              transform var(--hm-transition-bounce),
+              box-shadow var(--hm-transition-base);
 }
 
 .hm-stockist__map:hover {
-  color: var(--hm-color-text);
-  text-decoration: underline;
+  background-color: var(--hm-color-accent);
+  color: #FFFFFF !important;
+  border-color: var(--hm-color-accent);
+  transform: translateX(2px);
+  box-shadow: 0 3px 10px rgba(155, 93, 26, 0.25);
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

@@ -113,6 +113,14 @@
   border-radius: var(--hm-radius-xs);
 }
 
+.hm-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: var(--hm-space-3);
+}
+
 /* Cargo shop-product tag integration */
 shop-product {
   display: inline-flex;
@@ -419,61 +427,7 @@ shop-product {
   }
 }
 
-/* ===== Stockist Cards ===== */
-.hm-stockist-city {
-  background-color: var(--hm-color-surface);
-  border: 1px solid var(--hm-color-border);
-  border-radius: var(--hm-radius-md);
-  padding: var(--hm-space-3);
-  box-shadow: var(--hm-shadow-subtle);
-}
-
-.hm-stockist-city h3 {
-  font-family: var(--hm-font-serif);
-  font-size: 1.35rem;
-  border-bottom: 1px solid var(--hm-color-border-subtle);
-  padding-bottom: var(--hm-space-1);
-  margin-bottom: var(--hm-space-2);
-  color: var(--hm-color-text);
-}
-
-.hm-stockist {
-  padding: var(--hm-space-2) 0;
-  border-bottom: 1px solid var(--hm-color-border-subtle);
-}
-
-.hm-stockist:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.hm-stockist__name {
-  font-weight: 600;
-  font-size: var(--hm-fs-body);
-  color: var(--hm-color-text);
-}
-
-.hm-stockist__address {
-  font-size: var(--hm-fs-small);
-  color: var(--hm-color-text-muted);
-  margin: 0.25em 0 0.6em;
-  line-height: 1.5;
-}
-
-.hm-stockist__map {
-  font-size: var(--hm-fs-small);
-  font-weight: 500;
-  color: var(--hm-color-accent);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35em;
-  min-height: 32px;
-}
-
-.hm-stockist__map:hover {
-  text-decoration: underline;
-  color: var(--hm-color-accent-hover);
-}
+/* ===== Stockist Cards (Handled in pages.css) ===== */
 
 /* ===== Gift Set Card ===== */
 .hm-giftcard {
