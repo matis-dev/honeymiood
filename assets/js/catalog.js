@@ -2,7 +2,12 @@
    Builds the alternating editorial product grid from the single
    PRODUCTS source (assets/js/products-data.js), so the 7-product
    bilingual catalog is authored exactly once. Runs only on pages
-   that contain a #hm-catalog container. */
+   that contain a #hm-catalog container.
+
+   tools/build-site.py now server-renders the same cards into
+   #hm-catalog at build time (so crawlers without JS see the full
+   catalog); this script becomes a no-op fallback in that case and
+   only builds the grid itself if the container is still empty. */
 
 (function () {
   "use strict";
@@ -99,6 +104,7 @@
   function renderCatalog() {
     var container = document.getElementById("hm-catalog");
     if (!container || !window.PRODUCTS) return;
+    if (container.querySelector(".hm-product")) return; // already server-rendered
     var currentLang = lang();
     var limit = parseInt(container.getAttribute("data-limit"), 10);
     var items = limit ? window.PRODUCTS.slice(0, limit) : window.PRODUCTS;

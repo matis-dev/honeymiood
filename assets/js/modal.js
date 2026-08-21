@@ -33,7 +33,7 @@
     dialog.innerHTML =
       '<div class="hm-modal__inner">' +
         '<div class="hm-modal__media"><img id="hm-modal-img" alt="" /></div>' +
-        '<div class="hm-modal__body">' +
+        '<div class="hm-modal__body" tabindex="-1">' +
           '<button type="button" class="hm-modal__close modal-close-btn" aria-label="Close">&times;</button>' +
           '<span class="hm-badge" id="hm-modal-harvest"></span>' +
           '<h2 id="hm-modal-title"></h2>' +
@@ -46,8 +46,10 @@
           '</dl>' +
           '<p id="hm-modal-desc"></p>' +
           '<div class="hm-modal__sizes" id="hm-modal-sizes" role="group" aria-label="Size"></div>' +
-          '<div class="hm-modal__buy" id="hm-modal-buy"></div>' +
-          '<a class="hm-btn hm-btn--secondary hm-btn--block" id="hm-modal-inquiry-btn" href="#"></a>' +
+          '<div class="hm-modal__actions">' +
+            '<div class="hm-modal__buy" id="hm-modal-buy"></div>' +
+            '<a class="hm-btn hm-btn--secondary hm-btn--block" id="hm-modal-inquiry-btn" href="#"></a>' +
+          '</div>' +
         '</div>' +
       '</div>';
     document.body.appendChild(dialog);
@@ -102,6 +104,12 @@
     sizesWrap.innerHTML = "";
     buyWrap.innerHTML = "";
 
+    if (product.sizes.length <= 1) {
+      sizesWrap.style.display = "none";
+    } else {
+      sizesWrap.style.display = "flex";
+    }
+
     product.sizes.forEach(function (size, i) {
       var pill = document.createElement("button");
       pill.type = "button";
@@ -115,6 +123,7 @@
         pill.setAttribute("aria-pressed", "true");
         Array.prototype.forEach.call(buyWrap.querySelectorAll("shop-product"), function (sp, j) {
           sp.hidden = j !== i;
+          sp.style.display = j === i ? "" : "none";
         });
       });
       sizesWrap.appendChild(pill);
@@ -128,6 +137,9 @@
       sp.className = "hm-btn hm-btn--primary hm-btn--block";
       sp.textContent = buyLabel;
       sp.hidden = i !== 0;
+      if (i !== 0) {
+        sp.style.display = "none";
+      }
       buyWrap.appendChild(sp);
     });
 
@@ -146,9 +158,13 @@
     lastTrigger = trigger || null;
     populateModalData(product);
     modal.showModal();
-    document.body.style.overflow = "hidden";
-    var focusable = getFocusable();
-    (focusable[0] || modal).focus();
+    var body = modal.querySelector(".hm-modal__body");
+    if (body) {
+      body.scrollTop = 0;
+      body.focus();
+    }
+    document.documentElement.classList.add("hm-modal-open");
+    document.body.classList.add("hm-modal-open");
     modal.addEventListener("keydown", trapFocus);
   }
 
@@ -166,10 +182,21 @@
     });
 
     modal.addEventListener("close", function () {
-      document.body.style.overflow = "";
+      document.documentElement.classList.remove("hm-modal-open");
+      document.body.classList.remove("hm-modal-open");
       modal.removeEventListener("keydown", trapFocus);
       if (lastTrigger) lastTrigger.focus();
     });
+
+    // Forward wheel events anywhere inside modal (e.g. over media image) directly to modal body
+    modal.addEventListener("wheel", function (e) {
+      var body = modal.querySelector(".hm-modal__body");
+      if (!body) return;
+      if (e.target !== body && !body.contains(e.target)) {
+        body.scrollTop += e.deltaY;
+        e.preventDefault();
+      }
+    }, { passive: false });
 
     document.addEventListener("click", function (e) {
       var trigger = e.target.closest && e.target.closest("[data-open-product]");

@@ -127,6 +127,12 @@ shop-product {
   width: 100%;
 }
 
+[hidden],
+shop-product[hidden],
+.hm-btn[hidden] {
+  display: none !important;
+}
+
 /* ===== Badges & Apothecary Tags ===== */
 .hm-badge {
   display: inline-flex;
@@ -258,6 +264,13 @@ shop-product {
   color: var(--hm-color-text);
 }
 
+.hm-product__description {
+  font-size: var(--hm-fs-small);
+  color: var(--hm-color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
 .hm-product__actions {
   display: flex;
   flex-wrap: wrap;
@@ -310,38 +323,56 @@ shop-product {
 }
 
 /* ===== Modal (Quick View) ===== */
+html.hm-modal-open,
+body.hm-modal-open {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+}
+
 .hm-modal {
   border: none;
   border-radius: var(--hm-radius-lg);
   padding: 0;
   max-width: min(840px, 94vw);
   width: 100%;
-  max-height: 90vh;
+  height: min(88vh, 740px);
+  max-height: 88vh;
   color: var(--hm-color-text);
   background-color: var(--hm-color-surface);
   box-shadow: 0 16px 48px rgba(28, 38, 32, 0.22);
+  overflow: hidden;
+  overscroll-behavior: contain;
 }
 
 .hm-modal::backdrop {
   background-color: var(--hm-color-overlay);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  overscroll-behavior: contain;
 }
 
 .hm-modal__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
-  max-height: 90vh;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr);
+  grid-template-rows: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  position: relative;
 }
 
 .hm-modal__media {
   background-color: var(--hm-color-surface-soft);
-  min-height: 320px;
+  height: 100%;
+  min-height: 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--hm-space-3);
+  overflow: hidden;
 }
 
 .hm-modal__media img {
@@ -353,10 +384,33 @@ shop-product {
 .hm-modal__body {
   padding: clamp(1.5rem, 3vw, var(--hm-space-4));
   overflow-y: auto;
+  min-height: 0;
+  height: 100%;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--hm-space-2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--hm-color-border-dark) transparent;
+}
+
+.hm-modal__body:focus {
+  outline: none;
+}
+
+.hm-modal__body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hm-modal__body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hm-modal__body::-webkit-scrollbar-thumb {
+  background-color: var(--hm-color-border-dark);
+  border-radius: 9999px;
 }
 
 .hm-modal__close {
@@ -389,7 +443,21 @@ shop-product {
   display: flex;
   flex-wrap: wrap;
   gap: var(--hm-space-1);
-  margin-block: var(--hm-space-2);
+  margin-top: var(--hm-space-1);
+  margin-bottom: var(--hm-space-1);
+}
+
+.hm-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: var(--hm-space-2);
+}
+
+.hm-modal__buy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .hm-pill {
@@ -418,12 +486,25 @@ shop-product {
 }
 
 @media (max-width: 680px) {
+  .hm-modal {
+    height: 92vh;
+    max-height: 92vh;
+  }
   .hm-modal__inner {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 200px minmax(0, 1fr);
+    height: 100%;
+    max-height: 100%;
   }
   .hm-modal__media {
-    min-height: 220px;
-    max-height: 280px;
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .hm-modal__body {
+    min-height: 0;
+    height: 100%;
+    overflow-y: auto;
   }
 }
 
@@ -490,4 +571,144 @@ shop-product {
 
 .hm-giftcard li {
   margin-bottom: 0.35em;
+}
+
+/* ===== Atomic Answer (Island Test callout) ===== */
+.hm-atomic {
+  background: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-left: 4px solid var(--hm-color-accent);
+  border-radius: var(--hm-radius-card);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  margin-block: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--hm-shadow-subtle);
+}
+
+.hm-atomic h2 {
+  font-family: var(--hm-font-serif);
+  font-size: var(--hm-fs-h3);
+  font-weight: 500;
+  margin: 0 0 var(--hm-space-1);
+}
+
+.hm-atomic__answer {
+  font-size: var(--hm-fs-body);
+  color: var(--hm-color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 68ch;
+}
+
+/* ===== Fact Matrix (Product Comparison Table) ===== */
+.hm-fact-matrix-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-card);
+  background: var(--hm-color-surface);
+}
+
+.hm-fact-matrix {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: var(--hm-fs-small);
+}
+
+.hm-fact-matrix caption {
+  text-align: left;
+  font-size: var(--hm-fs-micro);
+  color: var(--hm-color-text-light);
+  padding: var(--hm-space-2) var(--hm-space-3) 0;
+}
+
+.hm-fact-matrix th,
+.hm-fact-matrix td {
+  text-align: left;
+  padding: 0.9rem var(--hm-space-3);
+  border-bottom: 1px solid var(--hm-color-border-subtle);
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.hm-fact-matrix thead th {
+  background: var(--hm-color-surface-soft);
+  color: var(--hm-color-text);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.hm-fact-matrix tbody th {
+  font-family: var(--hm-font-serif);
+  font-weight: 600;
+  color: var(--hm-color-accent);
+  white-space: nowrap;
+}
+
+.hm-fact-matrix tbody tr:last-child th,
+.hm-fact-matrix tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.hm-fact-matrix tbody tr:hover {
+  background: var(--hm-color-surface-soft);
+}
+
+@media (max-width: 768px) {
+  .hm-fact-matrix {
+    min-width: 560px;
+  }
+}
+
+/* ===== FAQ (native details/summary accordion) ===== */
+.hm-faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hm-space-2);
+}
+
+.hm-faq details {
+  background: var(--hm-color-surface);
+  border: 1px solid var(--hm-color-border);
+  border-radius: var(--hm-radius-card);
+  padding: var(--hm-space-2) var(--hm-space-3);
+}
+
+.hm-faq summary {
+  cursor: pointer;
+  font-family: var(--hm-font-serif);
+  font-size: var(--hm-fs-h3);
+  font-weight: 500;
+  color: var(--hm-color-text);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--hm-space-2);
+}
+
+.hm-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.hm-faq summary::after {
+  content: "+";
+  font-family: var(--hm-font-sans);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--hm-color-accent);
+  flex-shrink: 0;
+  transition: transform var(--hm-transition-base);
+}
+
+.hm-faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.hm-faq__answer {
+  color: var(--hm-color-text-muted);
+  line-height: 1.7;
+  margin: var(--hm-space-2) 0 0;
+  max-width: 68ch;
 }

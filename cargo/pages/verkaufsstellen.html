@@ -60,8 +60,8 @@
 <section class="hm-container--wide" id="hm-stockists-list">
   <div class="hm-showcase-wrap">
     <div class="hm-section-head hm-section-head--center">
-      <h2>Orte mit Honeymiood Honig</h2>
-      <p>Specialty Cafés und handwerkliche Bäckereien, in denen Sie unsere Rohhonige im Regal finden oder auf der Karte genießen können.</p>
+      <h2>Wo kann ich Honeymiood-Honig vor Ort kaufen?</h2>
+      <p class="hm-atomic__answer">Unseren Honig finden Sie in ausgewählten Specialty-Cafés und handwerklichen Bäckereien in vier polnischen Städten — Gdynia, Warschau, Toruń und Szamotuły. Unten finden Sie die vollständige, aktuelle Adressliste mit Kartenlink zu jedem Ort.</p>
     </div>
 
     <div class="hm-stockist-cities">
@@ -144,4 +144,71 @@
   </div>
 </section>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness"
+      ],
+      "@id": "https://honeymiood.com/#organization",
+      "name": "Honeymiood",
+      "legalName": "Honeymiood Pasieka Rodzinna",
+      "url": "https://honeymiood.com/",
+      "logo": "https://freight.cargo.site/w/1200/i/D2056736702074654142009068169974/honeymood_logo.png",
+      "image": "https://freight.cargo.site/w/1200/i/X2847188493824277131163436526326/DSC03151.JPG",
+      "foundingDate": "1923",
+      "email": "mailto:honeymiood@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gdynia",
+        "addressRegion": "Pomorskie",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 54.4833,
+        "longitude": 18.55
+      },
+      "sameAs": [
+        "https://www.instagram.com/honeymiood/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://honeymiood.com/#website",
+      "url": "https://honeymiood.com/",
+      "name": "Honeymiood",
+      "publisher": {
+        "@id": "https://honeymiood.com/#organization"
+      },
+      "inLanguage": [
+        "pl",
+        "en",
+        "de"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://honeymiood.com/verkaufsstellen#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Honeymiood",
+          "item": "https://honeymiood.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Verkaufsstellen",
+          "item": "https://honeymiood.com/verkaufsstellen"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </div>

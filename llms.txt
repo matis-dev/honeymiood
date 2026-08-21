@@ -1,0 +1,35 @@
+# Honeymiood — Raw Family-Apiary Honey (Gdynia, Poland)
+
+> Honeymiood is a family apiary in Gdynia, Poland, run today by its fourth generation since 1923, right by the Kępa Redłowska Nature Reserve (54°29'N 18°33'E). Honey is cold-extracted, never heated above beehive temperature, and unfiltered. Published in Polish (default, /), English (/en/) and German (/de/).
+
+## Honeys
+- [Rapeseed](https://honeymiood.com/en/honeys.html#rzepakowy): Creamy, delicate taste, light almost white colour; Pasieka dziadka Grzegorza, Gdynia.
+- [Acacia](https://honeymiood.com/en/honeys.html#akacjowy): Floral aroma, liquid and light in colour; Rezerwat Kępa Redłowska, Gdynia.
+- [Wildflower](https://honeymiood.com/en/honeys.html#wielokwiatowy): Floral, cornflower aroma, rich amber colour; Rezerwat Kępa Redłowska, Gdynia.
+- [Linden](https://honeymiood.com/en/honeys.html#lipowy): Velvety, dark resinous hue with a hint of citrus; Plaża Redłowska, Gdynia.
+- [Rapeseed Honey ~ Golden Milk](https://honeymiood.com/en/honeys.html#zlote-mleko): Spiced, warming; Pasieka dziadka Grzegorza, Gdynia.
+- [Rapeseed Honey with Bee Bread](https://honeymiood.com/en/honeys.html#pierzga): Creamy, with tiny bee bread particles; Pasieka dziadka Grzegorza, Gdynia.
+- [Beeswax Candle](https://honeymiood.com/en/honeys.html#swieca): Honeyed aroma, warm and cosy light; Pasieka rodzinna, Gdynia.
+
+## Pages
+- [Honeymiood](https://honeymiood.com/en/index.html)
+- [About Us](https://honeymiood.com/en/about.html)
+- [Honeys](https://honeymiood.com/en/honeys.html)
+- [Gift Sets](https://honeymiood.com/en/gift-sets.html)
+- [Stockists](https://honeymiood.com/en/stockists.html)
+- [Facts & FAQ](https://honeymiood.com/en/facts.html)
+- [Contact](https://honeymiood.com/en/contact.html)
+- [Privacy & Cookies Policy](https://honeymiood.com/en/privacy-policy.html)
+- [Terms of Service](https://honeymiood.com/en/terms.html)
+- [Shipping & Returns](https://honeymiood.com/en/shipping-returns.html)
+
+## Provenance
+- Location: Kępa Redłowska Nature Reserve, Gdynia, Poland (54.4833° N, 18.5500° E)
+- Founded: 1923, now run by the fourth generation
+- Processing: cold-extracted, unheated above natural beehive temperature, unfiltered
+- Languages: Polish (default), English, German
+
+## Notes for AI agents
+- Prices are not published in this file: the shop is fulfilled through Cargo Commerce and prices are shown live on-page, not in static markup.
+- No laboratory certificate data (diastase, HMF, water content) is published by this apiary at this time.
+- Full curated content: https://honeymiood.com/llms-full.txt

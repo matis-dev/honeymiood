@@ -62,6 +62,7 @@
   --hm-space-4: 2.5rem;                 /* 40px */
   --hm-space-5: 4.5rem;                 /* 72px */
   --hm-space-6: 7rem;                   /* 112px */
+  --hm-space-8: 9rem;                    /* 144px */
 
   --hm-transition-base: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   --hm-transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);

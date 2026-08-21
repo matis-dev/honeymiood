@@ -14,14 +14,41 @@ the real Cargo slugs. Header and footer are emitted separately
 (cargo/pages/_header-pl.html etc.) for pasting into their own pinned
 pages, since on Cargo those live apart from each page's own content.
 
+Cargo owns the document <head> completely (no per-page <head> injection
+point exists), so canonical/hreflang/geo meta from tools/build-site.py never
+reach the live site — only body-level content does. To keep Cargo pages
+carrying the same server-rendered catalog cards, fact-comparison table, FAQ
+accordion and JSON-LD as the standalone build, this script loads
+build-site.py as a module (hyphenated filename, hence importlib) and reuses
+its render/inject functions and PRODUCTS/FAQS data directly, rather than
+re-implementing them. See DESIGN_RATIONALE.md for what Cargo's hosting model
+rules out for this site (root files, per-page <head>).
+
 Run from anywhere:  python3 tools/build-cargo.py
 """
+import importlib.util
 import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES = os.path.join(ROOT, "templates")
 OUT = os.path.join(ROOT, "cargo")
+
+
+def _load_build_site():
+    path = os.path.join(ROOT, "tools", "build-site.py")
+    spec = importlib.util.spec_from_file_location("hm_build_site", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+bs = _load_build_site()
+
+TITLE_BY_CONTENT = {}
+for _group_id, _pl, _en, _de in bs.PAGE_GROUPS:
+    for _entry in (_pl, _en, _de):
+        TITLE_BY_CONTENT[_entry["content"]] = _entry["title"]
 
 # Local basename (as used in templates/content hrefs) -> Cargo flat slug.
 SLUG_MAP = {
@@ -30,6 +57,7 @@ SLUG_MAP = {
     "miody.html": "miody",
     "zestawy.html": "zestawy-i-prezenty-1",
     "gdzie-kupic.html": "gdzie-kupic",
+    "fakty.html": "fakty",
     "kontakt.html": "kontakt",
     "polityka-prywatnosci.html": "polityka-prywatnosci",
     "regulamin.html": "regulamin",
@@ -41,6 +69,7 @@ SLUG_MAP_EN = {
     "honeys.html": "honeys",
     "gift-sets.html": "gift-sets",
     "stockists.html": "stockists",
+    "facts.html": "facts",
     "contact.html": "contact",
     "privacy-policy.html": "privacy-policy",
     "terms.html": "terms",
@@ -52,6 +81,7 @@ SLUG_MAP_DE = {
     "honige.html": "honige",
     "geschenksets.html": "geschenksets",
     "verkaufsstellen.html": "verkaufsstellen",
+    "fakten.html": "fakten",
     "kontakt.html": "kontakt-de",
     "datenschutz.html": "datenschutz",
     "agb.html": "agb",
@@ -66,6 +96,7 @@ PAGES = [
     ("honeys-pl", "miody", "pl", "honeys-pl.html"),
     ("gift-sets-pl", "zestawy-i-prezenty-1", "pl", "gift-sets-pl.html"),
     ("stockists-pl", "gdzie-kupic", "pl", "stockists-pl.html"),
+    ("facts-pl", "fakty", "pl", "facts-pl.html"),
     ("contact-pl", "kontakt", "pl", "contact-pl.html"),
     ("privacy-policy-pl", "polityka-prywatnosci", "pl", "privacy-policy-pl.html"),
     ("terms-pl", "regulamin", "pl", "terms-pl.html"),
@@ -77,6 +108,7 @@ PAGES = [
     ("honeys-en", "honeys", "en", "honeys-en.html"),
     ("gift-sets-en", "gift-sets", "en", "gift-sets-en.html"),
     ("stockists-en", "stockists", "en", "stockists-en.html"),
+    ("facts-en", "facts", "en", "facts-en.html"),
     ("contact-en", "contact", "en", "contact-en.html"),
     ("privacy-policy-en", "privacy-policy", "en", "privacy-policy-en.html"),
     ("terms-en", "terms", "en", "terms-en.html"),
@@ -88,6 +120,7 @@ PAGES = [
     ("honeys-de", "honige", "de", "honeys-de.html"),
     ("gift-sets-de", "geschenksets", "de", "gift-sets-de.html"),
     ("stockists-de", "verkaufsstellen", "de", "stockists-de.html"),
+    ("facts-de", "fakten", "de", "facts-de.html"),
     ("contact-de", "kontakt-de", "de", "contact-de.html"),
     ("privacy-policy-de", "datenschutz", "de", "privacy-policy-de.html"),
     ("terms-de", "agb", "de", "terms-de.html"),
@@ -110,30 +143,26 @@ def write(path, text):
 
 def rewrite_href(href, lang):
     """Rewrite one local href to its Cargo flat-slug equivalent.
-    Leaves external/mailto/anchor links untouched."""
+    Leaves external/mailto/anchor links untouched. A "#fragment" suffix
+    (e.g. "miody.html#akacjowy", used by the SSR fact-matrix and product
+    anchors) is preserved across the slug rewrite."""
     if href.startswith(("http://", "https://", "mailto:", "#")):
         return href
-    if href.startswith("en/"):
-        target = href[len("en/"):]
-        slug = SLUG_MAP_EN.get(target)
-        return "/" + slug if slug else href
-    if href.startswith("de/"):
-        target = href[len("de/"):]
-        slug = SLUG_MAP_DE.get(target)
-        return "/" + slug if slug else href
-    if href.startswith("../"):
-        target = href[len("../"):]
-        slug = SLUG_MAP.get(target)
-        return "/" + slug if slug else href
-    # same-directory link: resolve against the current page's own language
-    if lang == "en":
-        slug_map = SLUG_MAP_EN
-    elif lang == "de":
-        slug_map = SLUG_MAP_DE
+    base, _, frag = href.partition("#")
+    frag_suffix = f"#{frag}" if frag else ""
+
+    if base.startswith("en/"):
+        slug = SLUG_MAP_EN.get(base[len("en/"):])
+    elif base.startswith("de/"):
+        slug = SLUG_MAP_DE.get(base[len("de/"):])
+    elif base.startswith("../"):
+        slug = SLUG_MAP.get(base[len("../"):])
     else:
-        slug_map = SLUG_MAP
-    slug = slug_map.get(href)
-    return "/" + slug if slug else href
+        # same-directory link: resolve against the current page's own language
+        slug_map = {"en": SLUG_MAP_EN, "de": SLUG_MAP_DE}.get(lang, SLUG_MAP)
+        slug = slug_map.get(base)
+
+    return f"/{slug}{frag_suffix}" if slug else href
 
 
 IMAGE_MAP = {
@@ -195,10 +224,25 @@ def wrap(fragment, lang):
     return f'<div class="hm-root" data-hm-lang="{lang}">\n{fragment}\n</div>'
 
 
+def page_jsonld(slug, lang, content_file):
+    canonical_url = f"{bs.SITE_BASE}/{slug}"
+    page_stub = {
+        "content": content_file,
+        "canonical": slug,
+        "title": TITLE_BY_CONTENT.get(content_file, "Honeymiood"),
+    }
+    jsonld = bs.build_jsonld(page_stub, lang, canonical_url)
+    return f'<script type="application/ld+json">\n{bs.dumps_ld(jsonld)}\n</script>'
+
+
 def build_pages():
     for page_id, slug, lang, content_file in PAGES:
         content = read(os.path.join(TEMPLATES, "content", content_file))
+        content = bs.inject_catalog(content, lang)
+        content = bs.inject_fact_matrix(content, lang)
+        content = bs.inject_faq(content, lang)
         content = rewrite_links(content, lang)
+        content += "\n" + page_jsonld(slug, lang, content_file)
         write(os.path.join(OUT, "pages", f"{slug}.html"), wrap(content, lang))
 
 

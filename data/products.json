@@ -1,0 +1,297 @@
+{
+  "_comment": "Canonical product data for Honeymiood. Generated JS (assets/js/products-data.js) and all HTML (product cards, fact matrix, JSON-LD) are derived from this file by tools/build-site.py — edit here, not in the generated files. `price` is intentionally omitted per size: no price data exists in this repo or on the live Cargo shop (commerce.products is empty there). Fill it in once you have the real figures from Cargo's shop admin; the static price display and Offer.price in JSON-LD both pick it up automatically. Copy was rewritten to remove EU Reg. 1924/2006 health/medicinal claims — see DESIGN_RATIONALE.md.",
+  "products": [
+    {
+      "id": "rzepakowy",
+      "slug": { "pl": "rzepakowy", "en": "rapeseed", "de": "rapshonig" },
+      "image": { "hash": "F2206538491760859771258602203894", "name": "1rzepakowy_honeymiood.png" },
+      "gallery": [
+        { "hash": "L2847189092291995114522419604214", "name": "07520012-1.JPG" },
+        { "hash": "L2206538101981157493775776557814", "name": "IMG_8066.JPG" }
+      ],
+      "origin": "Pasieka dziadka Grzegorza, Gdynia",
+      "harvest": "Zbiór 2025",
+      "sizes": [
+        { "label": "320g", "product": "P2253798137", "variant": "O3892207573", "price": null },
+        { "label": "1000g", "product": "I3861649604", "variant": "O3892207573", "price": null }
+      ],
+      "pl": {
+        "title": "Rzepakowy",
+        "subtitle": "Z mazowieckiej równiny — tradycyjny od czterech pokoleń",
+        "profile": "Kremowy, delikatny smak, barwa jasna prawie biała",
+        "consistency": "Kremowany, gęsty",
+        "benefits": ["Szybko krystalizuje", "Kremowa, gładka konsystencja", "Łagodny, delikatny smak"],
+        "usage": "Świetny do słodzenia porannej kawy — łyżeczka miodu rzepakowego rewelacyjnie podbija jej smak.",
+        "description": "Klasyk z pasieki dziadka Grzegorza, gdzie pszczoły tworzą miód o delikatnej, kremowej konsystencji i subtelnym, kwiatowym aromacie. Jego jasna, niemal biała barwa i gładka, aksamitna tekstura powstają dzięki naturalnej, szybkiej krystalizacji charakterystycznej dla nektaru rzepaku. Doskonały do słodzenia porannej kawy lub herbaty."
+      },
+      "en": {
+        "title": "Rapeseed",
+        "subtitle": "From the Mazovian plain — a family tradition for four generations",
+        "profile": "Creamy, delicate taste, light almost white colour",
+        "consistency": "Creamed, thick",
+        "benefits": ["Crystallises quickly", "Creamy, smooth texture", "Mild, delicate taste"],
+        "usage": "Perfect for sweetening morning coffee — a spoonful of rapeseed honey beautifully enhances its flavour.",
+        "description": "A classic from Grandpa Grzegorz's apiary, where bees create honey with a delicate, creamy texture and a subtle floral aroma. Its light, almost white colour and smooth, velvety texture come from the fast, natural crystallisation typical of rapeseed nectar. Perfect for sweetening morning coffee or tea."
+      },
+      "de": {
+        "title": "Rapshonig",
+        "subtitle": "Aus der masowischen Tiefebene – Familientradition in vierter Generation",
+        "profile": "Cremiger, feiner Geschmack, helle, fast weiße Farbe",
+        "consistency": "Cremig gerührt, feincremig",
+        "benefits": ["Kristallisiert schnell", "Cremige, feine Textur", "Milder, zarter Geschmack"],
+        "usage": "Hervorragend zum Süßen des Morgenkaffees – ein Löffel Rapshonig unterstreicht dessen Aroma wunderbar.",
+        "description": "Ein Klassiker aus der Imkerei von Großvater Grzegorz, wo die Bienen einen Honig mit zarter, cremiger Textur und dezentem Blütenaroma schaffen. Seine helle, beinahe weiße Farbe und die feincremige Textur entstehen durch die für Rapsnektar typische schnelle, natürliche Kristallisation. Perfekt zum Süßen von Morgenkaffee oder Tee."
+      }
+    },
+    {
+      "id": "akacjowy",
+      "slug": { "pl": "akacjowy", "en": "acacia", "de": "akazienhonig" },
+      "image": { "hash": "K2200886183016678636153551923958", "name": "akacjowy_honeymiood.png" },
+      "gallery": [
+        { "hash": "G2665639863029007579940922796790", "name": "DSC01494.JPG" },
+        { "hash": "Z2665641093021008926746405448438", "name": "DSC01515.JPG" }
+      ],
+      "origin": "Rezerwat Kępa Redłowska, Gdynia",
+      "harvest": "Zbiór 2025",
+      "sizes": [
+        { "label": "320g", "product": "P0180139165", "variant": "O3892207573", "price": null },
+        { "label": "1000g", "product": "C0132495884", "variant": "O3892207573", "price": null }
+      ],
+      "pl": {
+        "title": "Akacjowy",
+        "subtitle": "Skarb Rezerwatu Kępa Redłowska",
+        "profile": "Kwiecisty, słodki aromat",
+        "consistency": "Płynny i jasny, podczas krystalizacji barwa ciemnieje",
+        "benefits": ["Bardzo wolno krystalizuje", "Delikatny, kwiatowy aromat", "Jasny, złocisty kolor"],
+        "usage": "To tym miodem w naszym domu polewamy owsiankę, słodzimy napary ziołowe i kłócimy się o jego ostatnią łyżkę.",
+        "description": "Nasz miód akacjowy to prawdziwy skarb tutejszego Rezerwatu Kępa Redłowska. Jego subtelnie słodki smak z delikatnym, kwiatowym aromatem czyni go jednym z najbardziej cenionych miodów w Polsce. Pozostaje płynny i przejrzysty przez wiele miesięcy, krystalizując wyjątkowo powoli — dzięki wysokiej zawartości fruktozy."
+      },
+      "en": {
+        "title": "Acacia",
+        "subtitle": "A treasure of the Kępa Redłowska Nature Reserve",
+        "profile": "Floral aroma, liquid and light in colour",
+        "consistency": "Darkens during crystallisation",
+        "benefits": ["Crystallises very slowly", "Delicate floral aroma", "Light, golden colour"],
+        "usage": "At home, this is the honey we drizzle over oatmeal, sweeten herbal infusions with, and sometimes argue over the last spoonful.",
+        "description": "Our acacia honey is a true treasure of the Kępa Redłowska Nature Reserve. Its subtly sweet taste with a delicate floral aroma makes it one of the most prized honeys in Poland. Thanks to its high fructose content it stays liquid and clear for many months, crystallising unusually slowly."
+      },
+      "de": {
+        "title": "Akazienhonig",
+        "subtitle": "Ein Schatz aus dem Naturschutzgebiet Kępa Redłowska",
+        "profile": "Blumig-süßes Aroma, flüssig und hell",
+        "consistency": "Flüssig und klar, dunkelt bei Kristallisation nach",
+        "benefits": ["Kristallisiert sehr langsam", "Zartes Blütenaroma", "Helle, goldene Farbe"],
+        "usage": "Mit diesem Honig verfeinern wir zu Hause unser Porridge, süßen Kräutertees und streiten uns um den letzten Löffel.",
+        "description": "Unser Akazienhonig ist ein wahrer Schatz des hiesigen Naturschutzgebiets Kępa Redłowska. Sein fein-süßer Geschmack mit zartem Blütenaroma macht ihn zu einem der beliebtesten Honige. Dank seines hohen Fruktosegehalts bleibt er über viele Monate flüssig und klar und kristallisiert außergewöhnlich langsam."
+      }
+    },
+    {
+      "id": "wielokwiatowy",
+      "slug": { "pl": "wielokwiatowy", "en": "wildflower", "de": "bluetenhonig" },
+      "image": { "hash": "N2206609269704261305963006601974", "name": "jasnywielokwiatowy_honeymiood.png" },
+      "gallery": [
+        { "hash": "B2665652472466939860768315878134", "name": "07520011.JPG" },
+        { "hash": "L2847186016242080591233558981366", "name": "DSC03468.JPG" }
+      ],
+      "origin": "Rezerwat Kępa Redłowska, Gdynia",
+      "harvest": "Zbiór 2025",
+      "sizes": [
+        { "label": "320g", "product": "B1423604264", "variant": "O3892207573", "price": null },
+        { "label": "1000g", "product": "U1488523096", "variant": "O3892207573", "price": null }
+      ],
+      "pl": {
+        "title": "Wielokwiatowy",
+        "subtitle": "Pyłki chabrów, wiesiołka i roślin bobowatych",
+        "profile": "Kwiatowy, chabrowy aromat, mocny kolor bursztynu",
+        "consistency": "Płynny, z czasem krystalizuje drobnoziarniście",
+        "benefits": ["Kwiecisty, chabrowy aromat", "Krystalizuje drobnoziarniście", "Orzechowo-ziołowe nuty"],
+        "usage": "Doskonale nadaje się do słodzenia herbaty, polewania naleśników czy jako dodatek do jogurtów.",
+        "description": "Nasz miód wielokwiatowy zawiera pyłki chabrów, wiesiołka i roślin bobowatych. Wyróżnia się mocno kwiecistym aromatem oraz łagodnym, słodkim smakiem z lekko orzechowymi i ziołowymi nutami — prawdopodobnie najbardziej aromatyczny i wyrazisty smakowo z naszych miodów. Z czasem krystalizuje drobnoziarniście, zachowując bursztynową barwę."
+      },
+      "en": {
+        "title": "Wildflower",
+        "subtitle": "Pollens from cornflowers, evening primrose and legumes",
+        "profile": "Floral, cornflower aroma, rich amber colour",
+        "consistency": "Liquid, crystallises over time",
+        "benefits": ["Floral, cornflower aroma", "Fine-grain crystallisation", "Nutty, herbal notes"],
+        "usage": "Perfect for sweetening tea, topping pancakes, or adding to yoghurt.",
+        "description": "Our wildflower honey contains pollen from cornflowers, evening primrose and leguminous plants. It stands out with a rich floral aroma and a mild, sweet taste, with subtle nutty and herbal notes — probably the most aromatic and flavourful of our honeys. Over time it crystallises finely, keeping its amber colour."
+      },
+      "de": {
+        "title": "Blütenhonig",
+        "subtitle": "Pollen von Kornblumen, Nachtkerze und Schmetterlingsblütlern",
+        "profile": "Blumiges Kornblumenaroma, sattes Bernstein",
+        "consistency": "Flüssig, kristallisiert mit der Zeit feinkörnig",
+        "benefits": ["Blumiges Kornblumenaroma", "Feinkörnige Kristallisation", "Nussig-kräuterige Noten"],
+        "usage": "Ideal zum Süßen von Tee, über Pfannkuchen oder als Zutat im Naturjoghurt.",
+        "description": "Unser Blütenhonig enthält Pollen von Kornblumen, Nachtkerzen und Hülsenfrüchtlern. Er besticht durch sein intensiv blumiges Aroma und einen milden, süßen Geschmack mit dezent nussigen und kräuterigen Noten — wahrscheinlich der aromatischste unserer Honige. Mit der Zeit kristallisiert er feinkörnig und behält seine Bernsteinfarbe."
+      }
+    },
+    {
+      "id": "lipowy",
+      "slug": { "pl": "lipowy", "en": "linden", "de": "lindenhonig" },
+      "image": { "hash": "C2206609741608868199600756042486", "name": "jasniejszy_lipowy_honeymiood.png" },
+      "gallery": [
+        { "hash": "A2665647448182596736718870883062", "name": "DSC01436.JPG" },
+        { "hash": "Q2847186554186031268751503207158", "name": "DSC03482.JPG" }
+      ],
+      "origin": "Plaża Redłowska, Gdynia",
+      "harvest": "Zbiór 2025",
+      "sizes": [
+        { "label": "320g", "product": "L1279405861", "variant": "O3892207573", "price": null },
+        { "label": "1000g", "product": "N3972097711", "variant": "O3892207573", "price": null }
+      ],
+      "pl": {
+        "title": "Lipowy",
+        "subtitle": "Nektar kwiatów lipy znad plaży Redłowskiej",
+        "profile": "Aksamitny, lekko ziołowy z nutą cytrusów, ciemna żywiczna barwa",
+        "consistency": "Gęsty i długo płynny",
+        "benefits": ["Intensywny lipowy aromat", "Nuta cytrusów", "Długo pozostaje płynny"],
+        "usage": "Warto go na chwilę zatrzymać pod językiem, by w pełni wyczuć jego żywiczny, lipowy aromat.",
+        "description": "Nasz miód lipowy pochodzi z nektaru kwiatów lipy, które rosną przy plaży Redłowskiej. Jest to miód o intensywnym lipowym smaku i zapachu — nie jest gorzki jak niektóre miody lipowe, ma za to lekko ziołowy smak z delikatną nutą cytrusów. Krystalizuje średnio szybko, przechodząc w gęstą, żywiczną w kolorze konsystencję."
+      },
+      "en": {
+        "title": "Linden",
+        "subtitle": "Nectar of linden flowers growing near Redłowo Beach",
+        "profile": "Velvety, dark resinous hue with a hint of citrus",
+        "consistency": "Long-flowing, thick",
+        "benefits": ["Intense linden aroma", "Hint of citrus", "Stays liquid for a long time"],
+        "usage": "Worth letting it linger under the tongue for a moment to fully savour its resinous, linden aroma.",
+        "description": "Our linden honey is made from the nectar of linden flowers growing near Redłowo Beach. It has an intense linden flavour and aroma — unlike some linden honeys, it is not bitter; instead, it offers a slightly herbal taste with a delicate hint of citrus. It crystallises at a moderate pace into a thick, resin-coloured texture."
+      },
+      "de": {
+        "title": "Lindenhonig",
+        "subtitle": "Nektar der Lindenblüten am Redłowo-Strand",
+        "profile": "Samtig, leicht kräuterig mit einer feinen Zitrusnote, dunkler Harzton",
+        "consistency": "Dickflüssig und lange flüssig bleibend",
+        "benefits": ["Intensives Lindenaroma", "Feine Zitrusnote", "Bleibt lange flüssig"],
+        "usage": "Es lohnt sich, ihn kurz unter der Zunge zergehen zu lassen, um sein harziges Lindenaroma voll auszukosten.",
+        "description": "Unser Lindenhonig stammt aus dem Nektar von Lindenblüten, die direkt am Strand von Redłowo wachsen. Er zeichnet sich durch einen intensiven Lindengeschmack und -duft aus – keineswegs bitter, sondern angenehm kräuterig mit einer frischen Zitrusnote. Er kristallisiert gemäßigt schnell zu einer dickflüssigen, harzfarbenen Textur."
+      }
+    },
+    {
+      "id": "zlote-mleko",
+      "slug": { "pl": "rzepakowy-~-złote-mleko", "en": "rapeseed-~-golden-milk-2", "de": "rapshonig-~-goldene-milch" },
+      "image": { "hash": "I2206606725437084939573099965174", "name": "uciety_zlotemleko_hoenymiood.png" },
+      "gallery": [
+        { "hash": "N2665618674619149171233488317174", "name": "DSC03196.JPG" },
+        { "hash": "B2114152700123516451763151645430", "name": "IMG_3994.jpg" }
+      ],
+      "origin": "Pasieka dziadka Grzegorza, Gdynia",
+      "harvest": "Zbiór 2025",
+      "sizes": [
+        { "label": "320g", "product": "H4158849584", "variant": "O3892207573", "price": null }
+      ],
+      "pl": {
+        "title": "Rzepakowy ~ Złote Mleko",
+        "subtitle": "Miód rzepakowy z kurkumą, cynamonem i kardamonem",
+        "profile": "Korzenny, rozgrzewający",
+        "consistency": "Kremowany",
+        "benefits": ["Korzenny aromat", "Nuty kurkumy i cynamonu", "Kremowa konsystencja"],
+        "usage": "Wystarczy łyżeczka do ciepłego mleka lub napoju roślinnego, by przygotować kojący napój inspirowany ajurwedą.",
+        "description": "Nasz miód rzepakowy z dodatkiem przypraw korzennych — kurkumy, cynamonu, kardamonu i czarnego pieprzu — inspirowany tradycyjną recepturą „złotego mleka”, znanego napoju łączącego mleko z przyprawami i miodem. Ciepły, korzenny aromat i kremowa konsystencja sprawiają, że to idealny dodatek do gorącego mleka lub napoju roślinnego w chłodne wieczory."
+      },
+      "en": {
+        "title": "Rapeseed Honey ~ Golden Milk",
+        "subtitle": "Rapeseed honey with turmeric, cinnamon and cardamom",
+        "profile": "Spiced, warming",
+        "consistency": "Creamed",
+        "benefits": ["Spiced, warming aroma", "Turmeric and cinnamon notes", "Creamy texture"],
+        "usage": "Just one teaspoon in warm milk or a plant-based drink makes a soothing, Ayurveda-inspired beverage.",
+        "description": "Our rapeseed honey blended with warming spices — turmeric, cinnamon, cardamom and black pepper — inspired by the traditional 'golden milk' drink that combines milk, spices and honey. Its warm, spiced aroma and creamy texture make it a lovely addition to hot milk or a plant-based drink on a cold evening."
+      },
+      "de": {
+        "title": "Rapshonig ~ Goldene Milch",
+        "subtitle": "Rapshonig verfeinert mit Kurkuma, Zimt und Kardamom",
+        "profile": "Würzig, wärmend",
+        "consistency": "Cremig gerührt",
+        "benefits": ["Würziges, wärmendes Aroma", "Kurkuma- und Zimtnoten", "Cremige Textur"],
+        "usage": "Ein Teelöffel in warmer Milch oder Pflanzendrink genügt für ein wohltuendes, von der Ayurveda-Tradition inspiriertes Heißgetränk.",
+        "description": "Unser Rapshonig verfeinert mit wärmenden Gewürzen — Kurkuma, Zimt, Kardamom und schwarzem Pfeffer — inspiriert vom traditionellen Getränk „Goldene Milch“, das Milch, Gewürze und Honig verbindet. Sein warmes, würziges Aroma und die cremige Textur machen ihn zur idealen Zutat für heiße Milch oder einen Pflanzendrink an kalten Abenden."
+      }
+    },
+    {
+      "id": "pierzga",
+      "slug": { "pl": "rzepakowy-z-pierzgą", "en": "rapeseed-with-bee-bread-1", "de": "rapshonig-mit-bienenbrot" },
+      "image": { "hash": "P2206590371715934065328338971382", "name": "uciety_pierzga_honeymiood.png" },
+      "gallery": [
+        { "hash": "V2665630592082817759068181179126", "name": "DSC01616.JPG" },
+        { "hash": "B2665629354361630645378396400374", "name": "DSC01600.JPG" }
+      ],
+      "origin": "Pasieka dziadka Grzegorza, Gdynia",
+      "harvest": "Zbiór 2025",
+      "sizes": [
+        { "label": "320g", "product": "A3125722797", "variant": "O3892207573", "price": null }
+      ],
+      "pl": {
+        "title": "Rzepakowy z Pierzgą",
+        "subtitle": "Mały słoiczek zawiera ok. 40 g pierzgi",
+        "profile": "Kremowy, z drobinkami pierzgi",
+        "consistency": "Aksamitna, intensywna, lekko ziołowa",
+        "benefits": ["Drobinki pierzgi w miodzie", "Intensywny, lekko ziołowy smak", "Kremowa konsystencja"],
+        "usage": "Idealny do porannej herbaty, jako dodatek do jogurtów, lub po prostu łyżeczka prosto ze słoika.",
+        "description": "Naturalnie kremowy miód rzepakowy z dodatkiem pierzgi — pyłku kwiatowego poddanego naturalnej fermentacji mlekowej w plastrze ula. Pierzga nadaje miodowi intensywny, lekko ziołowy posmak i drobną, widoczną teksturę. To sposób pszczół na konserwowanie pyłku — u nas trafia prosto do słoika, bez podgrzewania ani filtrowania."
+      },
+      "en": {
+        "title": "Rapeseed Honey with Bee Bread",
+        "subtitle": "A small jar contains roughly 40 g of bee bread",
+        "profile": "Creamy, with tiny bee bread particles",
+        "consistency": "Velvety, intense, slightly herbal",
+        "benefits": ["Visible bee bread flecks", "Intense, slightly herbal taste", "Creamy texture"],
+        "usage": "Perfect for morning tea, as a topping for yoghurt, or simply a spoonful straight from the jar.",
+        "description": "Naturally creamy rapeseed honey with the addition of bee bread — pollen naturally fermented by lactic acid bacteria inside the honeycomb. Bee bread gives the honey an intense, slightly herbal aftertaste and a fine, visible texture. It's the bees' own way of preserving pollen — here it goes straight into the jar, unheated and unfiltered."
+      },
+      "de": {
+        "title": "Rapshonig mit Bienenbrot",
+        "subtitle": "Ein 320g-Glas enthält ca. 40 g wertvolles Bienenbrot (Perga)",
+        "profile": "Cremig, mit feinen Bienenbrot-Stückchen",
+        "consistency": "Samtig, intensiv, leicht kräuterig",
+        "benefits": ["Sichtbare Bienenbrot-Stückchen", "Intensiver, leicht kräuteriger Geschmack", "Cremige Textur"],
+        "usage": "Ideal im Morgentee, als Zutat im Joghurt oder einfach löffelweise direkt aus dem Glas.",
+        "description": "Naturbelassener, cremiger Rapshonig kombiniert mit Bienenbrot (Perga) — Blütenpollen, der im Bienenstock auf natürliche Weise milchsauer fermentiert wurde. Bienenbrot verleiht dem Honig einen intensiven, leicht kräuterigen Nachgeschmack und eine feine, sichtbare Textur. So konservieren die Bienen selbst ihren Pollen — bei uns wandert er unerhitzt und ungefiltert direkt ins Glas."
+      }
+    },
+    {
+      "id": "swieca",
+      "slug": { "pl": "świeca-z-wosku-pszczelego", "en": "beeswax-candle-1", "de": "bienenwachskerze" },
+      "image": { "hash": "W2206618273043534849531282926326", "name": "swieczkaucieta.png" },
+      "gallery": [
+        { "hash": "X2665654410297404803956713138934", "name": "07520013-1.JPG" },
+        { "hash": "B2066381379576109531372069268214", "name": "IMG_8939.jpg" }
+      ],
+      "origin": "Pasieka rodzinna, Gdynia",
+      "harvest": "Ręcznie odlewana",
+      "sizes": [
+        { "label": "1 x świeca", "product": "O0287863125", "variant": "O3892207573", "price": null },
+        { "label": "zestaw 3 x świec", "product": "C0547502541", "variant": "O3892207573", "price": null }
+      ],
+      "pl": {
+        "title": "Świeca z wosku pszczelego",
+        "subtitle": "Wysokość 10 cm, waga 35 g",
+        "profile": "Miodowy aromat, ciepłe, przytulne światło",
+        "consistency": "Naturalny wosk pszczeli",
+        "benefits": ["Naturalny miodowy aromat", "Spala się bez dymu i kopcenia", "Ręcznie odlewana"],
+        "usage": "Mały luksus dzielony przy każdej wyjątkowej okazji — od codziennej kolacji po długie zimowe wieczory przy książce.",
+        "description": "Nasze świece z wosku pszczelego wykonujemy z węzy wytworzonej z przetopionego wosku naszych pszczół. Ich ciepły, miodowy aromat, przypominający wnętrze ula, tworzy w domu przytulną atmosferę. Naturalny wosk pszczeli pali się czysto, bez kopcenia i sztucznych dodatków."
+      },
+      "en": {
+        "title": "Beeswax Candle",
+        "subtitle": "10 cm tall, weighs 35 g",
+        "profile": "Honeyed aroma, warm and cosy light",
+        "consistency": "Natural beeswax",
+        "benefits": ["Natural honey scent", "Burns clean, no soot", "Hand-poured"],
+        "usage": "A small luxury we share on every special occasion — from a daily dinner to long winter evenings with a book.",
+        "description": "Our beeswax candles are made from beeswax foundation created by melting down the wax of our own bees. Their warm, honeyed aroma, reminiscent of the inside of a beehive, creates a cosy atmosphere at home. Natural beeswax burns cleanly, without soot or artificial additives."
+      },
+      "de": {
+        "title": "Bienenwachskerze",
+        "subtitle": "Höhe 10 cm, Gewicht 35 g",
+        "profile": "Honigsüßer Duft, warmes, gemütliches Licht",
+        "consistency": "100% reines Bienenwachs",
+        "benefits": ["Natürlicher Honigduft", "Brennt rußfrei", "Handgegossen"],
+        "usage": "Ein kleiner Luxus für besondere Augenblicke – vom gemeinsamen Abendessen bis zu gemütlichen Winterabenden mit einem Buch.",
+        "description": "Unsere Bienenwachskerzen werden aus Mittelwänden aus dem reinen, eingeschmolzenen Wachs unserer eigenen Bienen handgefertigt. Ihr warmer, honigsüßer Duft, der an das Innere eines Bienenstocks erinnert, schafft eine gemütliche Atmosphäre zu Hause. Naturbelassenes Bienenwachs brennt sauber, ohne Ruß und ohne künstliche Zusätze."
+      }
+    }
+  ]
+}
