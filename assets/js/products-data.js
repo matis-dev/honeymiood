@@ -20,7 +20,7 @@ const PRODUCTS = [
       hmFreight("L2206538101981157493775776557814", "IMG_8066.JPG")
     ],
     origin: "Pasieka dziadka Grzegorza, Gdynia",
-    harvest: "Zbiór 2025",
+    harvest: "Zbiór 2026",
     sizes: [
       { label: "320g", product: "P2253798137", variant: "O3892207573" },
       { label: "1000g", product: "I3861649604", variant: "O3892207573" }
@@ -62,7 +62,7 @@ const PRODUCTS = [
       hmFreight("Z2665641093021008926746405448438", "DSC01515.JPG")
     ],
     origin: "Rezerwat Kępa Redłowska, Gdynia",
-    harvest: "Zbiór 2025",
+    harvest: "Zbiór 2026",
     sizes: [
       { label: "320g", product: "P0180139165", variant: "O3892207573" },
       { label: "1000g", product: "C0132495884", variant: "O3892207573" }
@@ -104,7 +104,7 @@ const PRODUCTS = [
       hmFreight("L2847186016242080591233558981366", "DSC03468.JPG")
     ],
     origin: "Rezerwat Kępa Redłowska, Gdynia",
-    harvest: "Zbiór 2025",
+    harvest: "Zbiór 2026",
     sizes: [
       { label: "320g", product: "B1423604264", variant: "O3892207573" },
       { label: "1000g", product: "U1488523096", variant: "O3892207573" }
@@ -146,7 +146,7 @@ const PRODUCTS = [
       hmFreight("Q2847186554186031268751503207158", "DSC03482.JPG")
     ],
     origin: "Plaża Redłowska, Gdynia",
-    harvest: "Zbiór 2025",
+    harvest: "Zbiór 2026",
     sizes: [
       { label: "320g", product: "L1279405861", variant: "O3892207573" },
       { label: "1000g", product: "N3972097711", variant: "O3892207573" }
@@ -188,7 +188,7 @@ const PRODUCTS = [
       hmFreight("B2114152700123516451763151645430", "IMG_3994.jpg")
     ],
     origin: "Pasieka dziadka Grzegorza, Gdynia",
-    harvest: "Zbiór 2025",
+    harvest: "Zbiór 2026",
     sizes: [
       { label: "320g", product: "H4158849584", variant: "O3892207573" }
     ],
@@ -229,7 +229,7 @@ const PRODUCTS = [
       hmFreight("B2665629354361630645378396400374", "DSC01600.JPG")
     ],
     origin: "Pasieka dziadka Grzegorza, Gdynia",
-    harvest: "Zbiór 2025",
+    harvest: "Zbiór 2026",
     sizes: [
       { label: "320g", product: "A3125722797", variant: "O3892207573" }
     ],

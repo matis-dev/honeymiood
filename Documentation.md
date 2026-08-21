@@ -114,7 +114,8 @@ honeymiood/
 ├── de/                         # Standalone German pages
 ├── index.html                  # Standalone Polish homepage
 ├── DEPLOY.md                   # Cargo deployment instructions
-└── Documentation.md            # This master reference document
+├── Documentation.md            # This master reference document
+└── README.md                   # Project overview & harvest guide
 ```
 
 ---
@@ -196,6 +197,7 @@ honeymiood/
 * A dedicated Facts & FAQ page (`fakty.html` / `facts.html` / `fakten.html`) with a product fact-comparison table and six FAQ entries, linked from every page's footer.
 * `robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt` generated for a standalone static deployment (see 7.2 for why these don't reach the Cargo-hosted domain today).
 * Health/medicinal claims (disease claims, antibacterial/anti-inflammatory/immune-support/detox language) removed from all product copy in all three languages — see DESIGN_RATIONALE.md §7 for the legal basis (EU Reg. 1924/2006) and what was changed.
+* **Seasonal Harvest Year Synchronisation (2026 Fresh Crop)**: Updated all honey product entries and hero banners from the outdated legacy "Zbiór 2025" / "2025 Fresh Harvest" to the active "Zbiór 2026" / "2026 Fresh Harvest" / "Frische Ernte 2026".
 
 ### 7.2 Remaining Gaps — Cargo.site Hosting Ceiling, Not a To-Do List
 These are not oversights; they were checked against the live site and are

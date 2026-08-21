@@ -6,7 +6,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 ## The Seven Honeys
 ### Rapeseed
 - Origin: Pasieka dziadka Grzegorza, Gdynia
-- Harvest: Zbiór 2025
+- Harvest: Zbiór 2026
 - Flavour profile: Creamy, delicate taste, light almost white colour
 - Consistency: Creamed, thick
 - Description: A classic from Grandpa Grzegorz's apiary, where bees create honey with a delicate, creamy texture and a subtle floral aroma. Its light, almost white colour and smooth, velvety texture come from the fast, natural crystallisation typical of rapeseed nectar. Perfect for sweetening morning coffee or tea.
@@ -15,7 +15,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 
 ### Acacia
 - Origin: Rezerwat Kępa Redłowska, Gdynia
-- Harvest: Zbiór 2025
+- Harvest: Zbiór 2026
 - Flavour profile: Floral aroma, liquid and light in colour
 - Consistency: Darkens during crystallisation
 - Description: Our acacia honey is a true treasure of the Kępa Redłowska Nature Reserve. Its subtly sweet taste with a delicate floral aroma makes it one of the most prized honeys in Poland. Thanks to its high fructose content it stays liquid and clear for many months, crystallising unusually slowly.
@@ -24,7 +24,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 
 ### Wildflower
 - Origin: Rezerwat Kępa Redłowska, Gdynia
-- Harvest: Zbiór 2025
+- Harvest: Zbiór 2026
 - Flavour profile: Floral, cornflower aroma, rich amber colour
 - Consistency: Liquid, crystallises over time
 - Description: Our wildflower honey contains pollen from cornflowers, evening primrose and leguminous plants. It stands out with a rich floral aroma and a mild, sweet taste, with subtle nutty and herbal notes — probably the most aromatic and flavourful of our honeys. Over time it crystallises finely, keeping its amber colour.
@@ -33,7 +33,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 
 ### Linden
 - Origin: Plaża Redłowska, Gdynia
-- Harvest: Zbiór 2025
+- Harvest: Zbiór 2026
 - Flavour profile: Velvety, dark resinous hue with a hint of citrus
 - Consistency: Long-flowing, thick
 - Description: Our linden honey is made from the nectar of linden flowers growing near Redłowo Beach. It has an intense linden flavour and aroma — unlike some linden honeys, it is not bitter; instead, it offers a slightly herbal taste with a delicate hint of citrus. It crystallises at a moderate pace into a thick, resin-coloured texture.
@@ -42,7 +42,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 
 ### Rapeseed Honey ~ Golden Milk
 - Origin: Pasieka dziadka Grzegorza, Gdynia
-- Harvest: Zbiór 2025
+- Harvest: Zbiór 2026
 - Flavour profile: Spiced, warming
 - Consistency: Creamed
 - Description: Our rapeseed honey blended with warming spices — turmeric, cinnamon, cardamom and black pepper — inspired by the traditional 'golden milk' drink that combines milk, spices and honey. Its warm, spiced aroma and creamy texture make it a lovely addition to hot milk or a plant-based drink on a cold evening.
@@ -51,7 +51,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 
 ### Rapeseed Honey with Bee Bread
 - Origin: Pasieka dziadka Grzegorza, Gdynia
-- Harvest: Zbiór 2025
+- Harvest: Zbiór 2026
 - Flavour profile: Creamy, with tiny bee bread particles
 - Consistency: Velvety, intense, slightly herbal
 - Description: Naturally creamy rapeseed honey with the addition of bee bread — pollen naturally fermented by lactic acid bacteria inside the honeycomb. Bee bread gives the honey an intense, slightly herbal aftertaste and a fine, visible texture. It's the bees' own way of preserving pollen — here it goes straight into the jar, unheated and unfiltered.
