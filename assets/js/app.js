@@ -7,13 +7,17 @@
   "use strict";
 
   function markActiveNavLink() {
-    var here = window.location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
-    if (here === "") here = "/";
+    var path = window.location.pathname;
+    var filename = path.substring(path.lastIndexOf("/") + 1).replace(/\.html$/, "");
+    if (filename === "" || filename === "index") filename = "index";
+
     document.querySelectorAll(".hm-header__nav a[href], .hm-header__mobile-drawer a[href]").forEach(function (link) {
       var href = link.getAttribute("href");
-      if (!href) return;
-      var normalized = href.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
-      if (normalized === here || (href === "index.html" && (here === "/" || here === "/index"))) {
+      if (!href || href.startsWith("#") || href.startsWith("http://") || href.startsWith("https://")) return;
+      var linkFile = href.substring(href.lastIndexOf("/") + 1).replace(/\.html$/, "");
+      if (linkFile === "" || linkFile === "index") linkFile = "index";
+
+      if (linkFile === filename && !link.hasAttribute("hreflang")) {
         link.setAttribute("aria-current", "page");
       }
     });
@@ -24,24 +28,38 @@
     var toggle = document.querySelector(".hm-header__menu-toggle");
     if (!root || !toggle) return;
 
+    function setMenuState(open) {
+      root.setAttribute("data-nav-open", open ? "true" : "false");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Zamknij menu" : "Otwórz menu");
+      if (open) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    }
+
     toggle.addEventListener("click", function () {
       var open = root.getAttribute("data-nav-open") === "true";
-      root.setAttribute("data-nav-open", open ? "false" : "true");
-      toggle.setAttribute("aria-expanded", open ? "false" : "true");
+      setMenuState(!open);
     });
 
     document.querySelectorAll(".hm-header__nav a, .hm-header__mobile-drawer a").forEach(function (link) {
       link.addEventListener("click", function () {
-        root.setAttribute("data-nav-open", "false");
-        toggle.setAttribute("aria-expanded", "false");
+        setMenuState(false);
       });
     });
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && root.getAttribute("data-nav-open") === "true") {
-        root.setAttribute("data-nav-open", "false");
-        toggle.setAttribute("aria-expanded", "false");
+        setMenuState(false);
         toggle.focus();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 900 && root.getAttribute("data-nav-open") === "true") {
+        setMenuState(false);
       }
     });
   }
