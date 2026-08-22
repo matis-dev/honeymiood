@@ -193,7 +193,12 @@
       var body = modal.querySelector(".hm-modal__body");
       if (!body) return;
       if (e.target !== body && !body.contains(e.target)) {
-        body.scrollTop += e.deltaY;
+        // deltaY isn't always pixels: Firefox reports "lines" (mode 1) and
+        // some devices report "pages" (mode 2) — normalize to pixels.
+        var delta = e.deltaY;
+        if (e.deltaMode === 1) delta *= 16;
+        else if (e.deltaMode === 2) delta *= body.clientHeight;
+        body.scrollTop += delta;
         e.preventDefault();
       }
     }, { passive: false });

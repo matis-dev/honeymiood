@@ -3,25 +3,27 @@
 > Honeymiood is a family apiary in Gdynia, Poland, run today by its fourth generation since 1923, right by the Kępa Redłowska Nature Reserve (54°29'N 18°33'E). Honey is cold-extracted, never heated above beehive temperature, and unfiltered. Published in Polish (default, /), English (/en/) and German (/de/).
 
 ## Honeys
-- [Rapeseed](https://honeymiood.com/en/honeys.html#rzepakowy): Creamy, delicate taste, light almost white colour; Pasieka dziadka Grzegorza, Gdynia.
-- [Acacia](https://honeymiood.com/en/honeys.html#akacjowy): Floral aroma, liquid and light in colour; Rezerwat Kępa Redłowska, Gdynia.
-- [Wildflower](https://honeymiood.com/en/honeys.html#wielokwiatowy): Floral, cornflower aroma, rich amber colour; Rezerwat Kępa Redłowska, Gdynia.
-- [Linden](https://honeymiood.com/en/honeys.html#lipowy): Velvety, dark resinous hue with a hint of citrus; Plaża Redłowska, Gdynia.
-- [Rapeseed Honey ~ Golden Milk](https://honeymiood.com/en/honeys.html#zlote-mleko): Spiced, warming; Pasieka dziadka Grzegorza, Gdynia.
-- [Rapeseed Honey with Bee Bread](https://honeymiood.com/en/honeys.html#pierzga): Creamy, with tiny bee bread particles; Pasieka dziadka Grzegorza, Gdynia.
-- [Beeswax Candle](https://honeymiood.com/en/honeys.html#swieca): Honeyed aroma, warm and cosy light; Pasieka rodzinna, Gdynia.
+- [Rapeseed](https://honeymiood.com/honeys#rzepakowy): Creamy, delicate taste, light almost white colour; Pasieka dziadka Grzegorza, Gdynia.
+- [Acacia](https://honeymiood.com/honeys#akacjowy): Floral aroma, liquid and light in colour; Rezerwat Kępa Redłowska, Gdynia.
+- [Wildflower](https://honeymiood.com/honeys#wielokwiatowy): Floral, cornflower aroma, rich amber colour; Rezerwat Kępa Redłowska, Gdynia.
+- [Linden](https://honeymiood.com/honeys#lipowy): Velvety, dark resinous hue with a hint of citrus; Plaża Redłowska, Gdynia.
+- [Rapeseed Honey ~ Golden Milk](https://honeymiood.com/honeys#zlote-mleko): Spiced, warming; Pasieka dziadka Grzegorza, Gdynia.
+- [Rapeseed Honey with Bee Bread](https://honeymiood.com/honeys#pierzga): Creamy, with tiny bee bread particles; Pasieka dziadka Grzegorza, Gdynia.
+
+## Also from the Apiary
+- [Beeswax Candle](https://honeymiood.com/honeys#swieca): Honeyed aroma, warm and cosy light; Pasieka rodzinna, Gdynia.
 
 ## Pages
-- [Honeymiood](https://honeymiood.com/en/index.html)
-- [About Us](https://honeymiood.com/en/about.html)
-- [Honeys](https://honeymiood.com/en/honeys.html)
-- [Gift Sets](https://honeymiood.com/en/gift-sets.html)
-- [Stockists](https://honeymiood.com/en/stockists.html)
-- [Facts & FAQ](https://honeymiood.com/en/facts.html)
-- [Contact](https://honeymiood.com/en/contact.html)
-- [Privacy & Cookies Policy](https://honeymiood.com/en/privacy-policy.html)
-- [Terms of Service](https://honeymiood.com/en/terms.html)
-- [Shipping & Returns](https://honeymiood.com/en/shipping-returns.html)
+- [Honeymiood](https://honeymiood.com/eng)
+- [About Us](https://honeymiood.com/about)
+- [Honeys](https://honeymiood.com/honeys)
+- [Gift Sets](https://honeymiood.com/gift-sets)
+- [Stockists](https://honeymiood.com/stockists)
+- [Facts & FAQ](https://honeymiood.com/facts)
+- [Contact](https://honeymiood.com/contact)
+- [Privacy & Cookies Policy](https://honeymiood.com/privacy-policy)
+- [Terms of Service](https://honeymiood.com/terms)
+- [Shipping & Returns](https://honeymiood.com/shipping-returns)
 
 ## Provenance
 - Location: Kępa Redłowska Nature Reserve, Gdynia, Poland (54.4833° N, 18.5500° E)

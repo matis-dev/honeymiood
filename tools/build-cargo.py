@@ -192,8 +192,8 @@ IMAGE_MAP = {
     "../assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
     "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
     "../assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
-    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/w/1200/i/X2847188493824277131163436526326/DSC03151.JPG",
-    "../assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/w/1200/i/X2847188493824277131163436526326/DSC03151.JPG",
+    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/A2073310734350207666578871495414/IMG_2819.jpg",
+    "../assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/A2073310734350207666578871495414/IMG_2819.jpg",
     "assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/w/1200/i/L2665618281113204590861333244662/DSC03172.JPG",
     "../assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/w/1200/i/L2665618281113204590861333244662/DSC03172.JPG",
     "assets/images/logo_w.png": "https://freight.cargo.site/w/1200/i/X2156015466378587388984278854390/logo_honeymiood.png",
@@ -226,9 +226,13 @@ def wrap(fragment, lang):
 
 def page_jsonld(slug, lang, content_file):
     canonical_url = f"{bs.SITE_BASE}/{slug}"
+    is_home = slug == HOME_SLUG[lang]
     page_stub = {
         "content": content_file,
-        "canonical": slug,
+        # Empty for the homepage so breadcrumb_node doesn't add a second
+        # "Honeymiood" crumb pointing at itself (mirrors build-site.py's
+        # own PAGE_GROUPS, which uses canonical="" for the home entries).
+        "canonical": "" if is_home else slug,
         "title": TITLE_BY_CONTENT.get(content_file, "Honeymiood"),
     }
     jsonld = bs.build_jsonld(page_stub, lang, canonical_url)

@@ -367,21 +367,6 @@ if (typeof module !== "undefined" && module.exports) {
     });
   }
 
-  function initHeaderScroll() {
-    var header = document.querySelector(".hm-header");
-    if (!header) return;
-
-    var handleScroll = function () {
-      if (window.scrollY > 15) {
-        header.classList.add("hm-header--scrolled");
-      } else {
-        header.classList.remove("hm-header--scrolled");
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-  }
-
   function setFooterYear() {
     document.querySelectorAll("[data-hm-year]").forEach(function (el) {
       el.textContent = new Date().getFullYear();
@@ -391,7 +376,6 @@ if (typeof module !== "undefined" && module.exports) {
   document.addEventListener("DOMContentLoaded", function () {
     markActiveNavLink();
     initMobileNav();
-    initHeaderScroll();
     setFooterYear();
   });
 })();
@@ -761,7 +745,12 @@ if (typeof module !== "undefined" && module.exports) {
       var body = modal.querySelector(".hm-modal__body");
       if (!body) return;
       if (e.target !== body && !body.contains(e.target)) {
-        body.scrollTop += e.deltaY;
+        // deltaY isn't always pixels: Firefox reports "lines" (mode 1) and
+        // some devices report "pages" (mode 2) — normalize to pixels.
+        var delta = e.deltaY;
+        if (e.deltaMode === 1) delta *= 16;
+        else if (e.deltaMode === 2) delta *= body.clientHeight;
+        body.scrollTop += delta;
         e.preventDefault();
       }
     }, { passive: false });

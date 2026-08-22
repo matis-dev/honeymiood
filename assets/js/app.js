@@ -46,21 +46,6 @@
     });
   }
 
-  function initHeaderScroll() {
-    var header = document.querySelector(".hm-header");
-    if (!header) return;
-
-    var handleScroll = function () {
-      if (window.scrollY > 15) {
-        header.classList.add("hm-header--scrolled");
-      } else {
-        header.classList.remove("hm-header--scrolled");
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-  }
-
   function setFooterYear() {
     document.querySelectorAll("[data-hm-year]").forEach(function (el) {
       el.textContent = new Date().getFullYear();
@@ -70,7 +55,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     markActiveNavLink();
     initMobileNav();
-    initHeaderScroll();
     setFooterYear();
   });
 })();

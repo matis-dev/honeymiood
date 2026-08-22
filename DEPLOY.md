@@ -54,7 +54,7 @@ pair rather than fighting over one global pin:
 > The local standalone site (`index.html` etc.) does the precise
 > per-page version, since each page there is authored individually.
 
-## 4. The 27 pages
+## 4. The 30 pages
 
 For each row below: create the page inside the matching Set, open
 **Code View**, paste the file, Update.

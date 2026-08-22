@@ -3,7 +3,7 @@
 ## Brand
 Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the Kępa Redłowska Nature Reserve (54°29'N 18°33'E). It has been run by the same family since 1923 and is now in its fourth generation. Honey is cold-extracted and never heated above the natural temperature of the beehive.
 
-## The Seven Honeys
+## The Six Honeys
 ### Rapeseed
 - Origin: Pasieka dziadka Grzegorza, Gdynia
 - Harvest: Zbiór 2026
@@ -11,7 +11,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 - Consistency: Creamed, thick
 - Description: A classic from Grandpa Grzegorz's apiary, where bees create honey with a delicate, creamy texture and a subtle floral aroma. Its light, almost white colour and smooth, velvety texture come from the fast, natural crystallisation typical of rapeseed nectar. Perfect for sweetening morning coffee or tea.
 - Jar sizes: 320g, 1000g
-- Link: https://honeymiood.com/en/honeys.html#rzepakowy
+- Link: https://honeymiood.com/honeys#rzepakowy
 
 ### Acacia
 - Origin: Rezerwat Kępa Redłowska, Gdynia
@@ -20,7 +20,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 - Consistency: Darkens during crystallisation
 - Description: Our acacia honey is a true treasure of the Kępa Redłowska Nature Reserve. Its subtly sweet taste with a delicate floral aroma makes it one of the most prized honeys in Poland. Thanks to its high fructose content it stays liquid and clear for many months, crystallising unusually slowly.
 - Jar sizes: 320g, 1000g
-- Link: https://honeymiood.com/en/honeys.html#akacjowy
+- Link: https://honeymiood.com/honeys#akacjowy
 
 ### Wildflower
 - Origin: Rezerwat Kępa Redłowska, Gdynia
@@ -29,7 +29,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 - Consistency: Liquid, crystallises over time
 - Description: Our wildflower honey contains pollen from cornflowers, evening primrose and leguminous plants. It stands out with a rich floral aroma and a mild, sweet taste, with subtle nutty and herbal notes — probably the most aromatic and flavourful of our honeys. Over time it crystallises finely, keeping its amber colour.
 - Jar sizes: 320g, 1000g
-- Link: https://honeymiood.com/en/honeys.html#wielokwiatowy
+- Link: https://honeymiood.com/honeys#wielokwiatowy
 
 ### Linden
 - Origin: Plaża Redłowska, Gdynia
@@ -38,7 +38,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 - Consistency: Long-flowing, thick
 - Description: Our linden honey is made from the nectar of linden flowers growing near Redłowo Beach. It has an intense linden flavour and aroma — unlike some linden honeys, it is not bitter; instead, it offers a slightly herbal taste with a delicate hint of citrus. It crystallises at a moderate pace into a thick, resin-coloured texture.
 - Jar sizes: 320g, 1000g
-- Link: https://honeymiood.com/en/honeys.html#lipowy
+- Link: https://honeymiood.com/honeys#lipowy
 
 ### Rapeseed Honey ~ Golden Milk
 - Origin: Pasieka dziadka Grzegorza, Gdynia
@@ -47,7 +47,7 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 - Consistency: Creamed
 - Description: Our rapeseed honey blended with warming spices — turmeric, cinnamon, cardamom and black pepper — inspired by the traditional 'golden milk' drink that combines milk, spices and honey. Its warm, spiced aroma and creamy texture make it a lovely addition to hot milk or a plant-based drink on a cold evening.
 - Jar sizes: 320g
-- Link: https://honeymiood.com/en/honeys.html#zlote-mleko
+- Link: https://honeymiood.com/honeys#zlote-mleko
 
 ### Rapeseed Honey with Bee Bread
 - Origin: Pasieka dziadka Grzegorza, Gdynia
@@ -56,16 +56,16 @@ Honeymiood is a family apiary in Gdynia, Poland, in a garden directly beside the
 - Consistency: Velvety, intense, slightly herbal
 - Description: Naturally creamy rapeseed honey with the addition of bee bread — pollen naturally fermented by lactic acid bacteria inside the honeycomb. Bee bread gives the honey an intense, slightly herbal aftertaste and a fine, visible texture. It's the bees' own way of preserving pollen — here it goes straight into the jar, unheated and unfiltered.
 - Jar sizes: 320g
-- Link: https://honeymiood.com/en/honeys.html#pierzga
+- Link: https://honeymiood.com/honeys#pierzga
 
+## Also from the Apiary
 ### Beeswax Candle
 - Origin: Pasieka rodzinna, Gdynia
-- Harvest: Ręcznie odlewana
 - Flavour profile: Honeyed aroma, warm and cosy light
 - Consistency: Natural beeswax
 - Description: Our beeswax candles are made from beeswax foundation created by melting down the wax of our own bees. Their warm, honeyed aroma, reminiscent of the inside of a beehive, creates a cosy atmosphere at home. Natural beeswax burns cleanly, without soot or artificial additives.
-- Jar sizes: 1 x świeca, zestaw 3 x świec
-- Link: https://honeymiood.com/en/honeys.html#swieca
+- Sizes: 1 x świeca, zestaw 3 x świec
+- Link: https://honeymiood.com/honeys#swieca
 
 ## Frequently Asked Questions
 **Q: What makes raw honey different from honey bought in a shop?**
@@ -93,7 +93,7 @@ A: You'll find our honey in selected cafés and bakeries in Gdynia, Warsaw, Toru
 - Kubuś Piekarenka — Górnośląska 16, Warsaw
 - Bread House Cafe — Fosa Staromiejska 2, Toruń
 - ZAO Coffee — Wroniecka 23, Szamotuły
-- Full list with map links: https://honeymiood.com/en/stockists.html
+- Full list with map links: https://honeymiood.com/stockists
 
 ## Notes for AI agents
 - No price data is published here: prices are shown live on-page via Cargo Commerce, not in static markup or this file.

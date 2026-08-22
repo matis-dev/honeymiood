@@ -241,8 +241,8 @@ html, body {
 
 .hm-header__nav--left {
   display: flex;
-  justify-content: flex-start;
-  gap: clamp(1rem, 2vw, 1.75rem);
+  justify-content: flex-end;
+  gap: clamp(0.75rem, 1.6vw, 1.75rem);
   align-items: center;
 }
 
@@ -251,7 +251,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-inline: var(--hm-space-2);
+  padding-inline: var(--hm-space-3);
 }
 
 .hm-header__brand {
@@ -271,25 +271,10 @@ html, body {
   transition: opacity var(--hm-transition-base), transform var(--hm-transition-base);
 }
 
-.hm-header__brand .hm-header__logo--black {
-  display: block;
-}
-
-.hm-header__brand .hm-header__logo--white {
-  display: none;
-}
-
-.hm-header__right-group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: clamp(1rem, 2vw, 2rem);
-}
-
 .hm-header__nav--right {
   display: flex;
-  justify-content: flex-end;
-  gap: clamp(1rem, 2vw, 1.75rem);
+  justify-content: flex-start;
+  gap: clamp(0.75rem, 1.6vw, 1.75rem);
   align-items: center;
 }
 
@@ -338,6 +323,23 @@ html, body {
   display: flex;
   align-items: center;
   gap: var(--hm-space-1);
+  justify-content: flex-end;
+  padding-left: var(--hm-space-2);
+  flex-shrink: 0;
+}
+
+/* Pin actions to the viewport edge only once there's guaranteed slack
+   beyond the 1200px container for even the longest (DE) nav labels;
+   below that, actions stays in normal flow next to the nav so it can
+   never overlap it. */
+@media (min-width: 1150px) {
+  .hm-header__actions {
+    position: absolute;
+    right: clamp(1rem, 3vw, 2.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 102;
+  }
 }
 
 .hm-langswitch {
@@ -409,76 +411,6 @@ html, body {
 .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::before { transform: rotate(45deg) translate(3.5px, 3.5px); }
 .hm-root[data-nav-open="true"] .hm-header__menu-toggle span::after { transform: rotate(-45deg) translate(3.5px, -3.5px); }
 
-/* ===== Transparent Overlay Header State (At top of Dark Hero) ===== */
-.hm-header--overlay:not(.hm-header--scrolled) {
-  background: transparent;
-  background-image: linear-gradient(180deg, rgba(14, 20, 17, 0.6) 0%, rgba(14, 20, 17, 0) 100%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: none;
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__logo--white {
-  display: block;
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__logo--black {
-  display: none;
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__nav a {
-  color: #FAF7F2;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__nav a:hover {
-  color: #F5D38A;
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__nav a::after {
-  background: #F5D38A;
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-langswitch {
-  background: rgba(20, 28, 24, 0.45);
-  border-color: rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(8px);
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-langswitch a {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-langswitch a:hover {
-  color: #FFFFFF;
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-langswitch [aria-current="true"] {
-  color: #FAF7F2;
-  background: rgba(255, 255, 255, 0.22);
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__menu-toggle {
-  background: rgba(20, 28, 24, 0.45);
-  border-color: rgba(255, 255, 255, 0.28);
-}
-
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__menu-toggle span,
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__menu-toggle span::before,
-.hm-header--overlay:not(.hm-header--scrolled) .hm-header__menu-toggle span::after {
-  background: #FFFFFF;
-}
-
-/* Scrolled state over dark hero */
-.hm-header--overlay.hm-header--scrolled {
-  background: rgba(250, 247, 242, 0.95);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--hm-color-border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
 .hm-header__mobile-drawer {
   display: none;
 }
@@ -523,15 +455,7 @@ html, body {
     background: var(--hm-color-bg) !important;
     border-bottom: 1px solid var(--hm-color-border) !important;
   }
-  
-  .hm-root[data-nav-open="true"] .hm-header .hm-header__logo--white {
-    display: none !important;
-  }
-  
-  .hm-root[data-nav-open="true"] .hm-header .hm-header__logo--black {
-    display: block !important;
-  }
-  
+
   .hm-root[data-nav-open="true"] .hm-header .hm-header__menu-toggle span::before,
   .hm-root[data-nav-open="true"] .hm-header .hm-header__menu-toggle span::after {
     background: var(--hm-color-text) !important;
@@ -570,6 +494,21 @@ html, body {
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
   gap: clamp(2rem, 5vw, var(--hm-space-5));
   padding-bottom: var(--hm-space-4);
+}
+
+.hm-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: var(--hm-space-2);
+}
+
+.hm-footer__logo {
+  height: clamp(26px, 3.2vw, 34px);
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  display: block;
 }
 
 .hm-footer__brand-block h2 {

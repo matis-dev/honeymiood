@@ -37,7 +37,7 @@ OG_IMAGE = "https://freight.cargo.site/w/1200/i/X2847188493824277131163436526326
 HERO_IMAGE_URLS = {
     "assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
     "assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/T2665650558211413843780725582582/07520010.JPG",
-    "assets/images/honey-jar-kepa-cliff.jpg": OG_IMAGE,
+    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/A2073310734350207666578871495414/IMG_2819.jpg",
     "assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/w/1200/i/F2665675685816999266185802271846/DSC04169.JPG",
     "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
     "assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
@@ -231,13 +231,13 @@ CATALOG_LABELS = {
 }
 
 FACT_MATRIX_LABELS = {
-    "pl": {"caption": "Zestawienie 7 miodów Honeymiood, Rezerwat Kępa Redłowska, Gdynia",
+    "pl": {"caption": "Zestawienie 6 miodów Honeymiood, Rezerwat Kępa Redłowska, Gdynia",
            "variety": "Odmiana", "origin": "Pochodzenie", "harvest": "Zbiór",
            "profile": "Profil Smakowy", "consistency": "Konsystencja"},
-    "en": {"caption": "Comparison of Honeymiood's 7 honeys, Kępa Redłowska Nature Reserve, Gdynia",
+    "en": {"caption": "Comparison of Honeymiood's 6 honeys, Kępa Redłowska Nature Reserve, Gdynia",
            "variety": "Variety", "origin": "Origin", "harvest": "Harvest",
            "profile": "Flavour Profile", "consistency": "Consistency"},
-    "de": {"caption": "Vergleich der 7 Honigsorten von Honeymiood, Naturschutzgebiet Kępa Redłowska, Gdynia",
+    "de": {"caption": "Vergleich der 6 Honigsorten von Honeymiood, Naturschutzgebiet Kępa Redłowska, Gdynia",
            "variety": "Sorte", "origin": "Herkunft", "harvest": "Ernte",
            "profile": "Geschmacksprofil", "consistency": "Konsistenz"},
 }
@@ -622,26 +622,28 @@ def product_node(p, lang, canonical_url):
     item_url = f'{canonical_url}#{p["id"]}'
     offers = []
     for s in p["sizes"]:
-        offer = {
+        if s.get("price") is None:
+            continue
+        offers.append({
             "@type": "Offer",
             "url": item_url,
             "sku": s["product"],
+            "price": s["price"],
             "priceCurrency": "PLN",
             "availability": "https://schema.org/InStock",
-        }
-        if s.get("price") is not None:
-            offer["price"] = s["price"]
-        offers.append(offer)
-    return {
+        })
+    node = {
         "@type": "Product",
-        "@id": f"{SITE_BASE}/#product-{p['id']}",
+        "@id": f"{SITE_BASE}/#product-{p['id']}-{lang}",
         "name": d["title"],
         "description": d["description"],
         "image": hm_freight(p["image"]["hash"], p["image"]["name"]),
         "brand": {"@id": f"{SITE_BASE}/#organization"},
-        "category": "Honey",
-        "offers": offers,
+        "category": "Candle" if p["id"] == "swieca" else "Honey",
     }
+    if offers:
+        node["offers"] = offers
+    return node
 
 
 def faqpage_node(lang, canonical_url):
@@ -655,10 +657,11 @@ def faqpage_node(lang, canonical_url):
     }
 
 
-def build_jsonld(page, lang, canonical_url):
+def build_jsonld(page, lang, canonical_url, catalog_limit=None):
     graph = [org_node(), website_node(), breadcrumb_node(page, canonical_url)]
     if page["content"].startswith("home-") or page["content"].startswith("honeys-"):
-        for p in PRODUCTS:
+        products = PRODUCTS[:catalog_limit] if catalog_limit else PRODUCTS
+        for p in products:
             graph.append(product_node(p, lang, canonical_url))
     if page["content"].startswith("facts-"):
         graph.append(faqpage_node(lang, canonical_url))
@@ -674,6 +677,9 @@ def build_page(page, counterparts, canonicals):
     header_tpl = read(os.path.join(TEMPLATES, f"header-{lang}.html"))
     footer_tpl = read(os.path.join(TEMPLATES, f"footer-{lang}.html"))
     content = read(os.path.join(TEMPLATES, "content", page["content"]))
+
+    catalog_limit_match = re.search(r'<div id="hm-catalog"[^>]*data-limit="(\d+)"', content)
+    catalog_limit = int(catalog_limit_match.group(1)) if catalog_limit_match else None
 
     content = inject_catalog(content, lang)
     content = inject_fact_matrix(content, lang)
@@ -701,7 +707,7 @@ def build_page(page, counterparts, canonicals):
         for l in ("pl", "en", "de")
     ) + f'\n  <link rel="alternate" hreflang="x-default" href="{full_url(canonicals["pl"])}">'
 
-    jsonld = build_jsonld(page, lang, canonical_url)
+    jsonld = build_jsonld(page, lang, canonical_url, catalog_limit)
     jsonld_script = f'<script type="application/ld+json">\n{dumps_ld(jsonld)}\n  </script>'
 
     og_image = page.get("og_image") or OG_IMAGE
@@ -792,7 +798,7 @@ def build_robots_txt():
 
 
 def build_llms_txt(out_by_group):
-    honeys_en = out_by_group["honeys"]["en"]["out"]
+    honeys_en_url = full_url(out_by_group["honeys"]["en"]["canonical"])
     lines = [
         "# Honeymiood — Raw Family-Apiary Honey (Gdynia, Poland)",
         "",
@@ -805,13 +811,20 @@ def build_llms_txt(out_by_group):
         "## Honeys",
     ]
     for p in PRODUCTS:
+        if p["id"] == "swieca":
+            continue
         d = p["en"]
-        lines.append(f"- [{d['title']}]({SITE_BASE}/{honeys_en}#{p['id']}): {d['profile']}; {p['origin']}.")
+        lines.append(f"- [{d['title']}]({honeys_en_url}#{p['id']}): {d['profile']}; {p['origin']}.")
+    lines.append("")
+    lines.append("## Also from the Apiary")
+    candle = next(p for p in PRODUCTS if p["id"] == "swieca")
+    d = candle["en"]
+    lines.append(f"- [{d['title']}]({honeys_en_url}#{candle['id']}): {d['profile']}; {candle['origin']}.")
     lines.append("")
     lines.append("## Pages")
     for group_id, entries in out_by_group.items():
         en = entries["en"]
-        lines.append(f"- [{en['title'].split(' — ')[0]}]({SITE_BASE}/{en['out']})")
+        lines.append(f"- [{en['title'].split(' — ')[0]}]({full_url(en['canonical'])})")
     lines.append("")
     lines.append("## Provenance")
     lines.append("- Location: Kępa Redłowska Nature Reserve, Gdynia, Poland (54.4833° N, 18.5500° E)")
@@ -834,8 +847,8 @@ def build_llms_txt(out_by_group):
 
 
 def build_llms_full_txt(out_by_group):
-    honeys_en = out_by_group["honeys"]["en"]["out"]
-    stockists_en = out_by_group["stockists"]["en"]["out"]
+    honeys_en_url = full_url(out_by_group["honeys"]["en"]["canonical"])
+    stockists_en_url = full_url(out_by_group["stockists"]["en"]["canonical"])
     lines = [
         "# Honeymiood: Complete Product & Provenance Documentation",
         "",
@@ -846,9 +859,11 @@ def build_llms_full_txt(out_by_group):
         "Honey is cold-extracted and never heated above the natural temperature "
         "of the beehive.",
         "",
-        "## The Seven Honeys",
+        "## The Six Honeys",
     ]
     for p in PRODUCTS:
+        if p["id"] == "swieca":
+            continue
         d = p["en"]
         lines.append(f"### {d['title']}")
         lines.append(f"- Origin: {p['origin']}")
@@ -857,8 +872,19 @@ def build_llms_full_txt(out_by_group):
         lines.append(f"- Consistency: {d['consistency']}")
         lines.append(f"- Description: {d['description']}")
         lines.append(f"- Jar sizes: {', '.join(s['label'] for s in p['sizes'])}")
-        lines.append(f"- Link: {SITE_BASE}/{honeys_en}#{p['id']}")
+        lines.append(f"- Link: {honeys_en_url}#{p['id']}")
         lines.append("")
+    candle = next(p for p in PRODUCTS if p["id"] == "swieca")
+    d = candle["en"]
+    lines.append("## Also from the Apiary")
+    lines.append(f"### {d['title']}")
+    lines.append(f"- Origin: {candle['origin']}")
+    lines.append(f"- Flavour profile: {d['profile']}")
+    lines.append(f"- Consistency: {d['consistency']}")
+    lines.append(f"- Description: {d['description']}")
+    lines.append(f"- Sizes: {', '.join(s['label'] for s in candle['sizes'])}")
+    lines.append(f"- Link: {honeys_en_url}#{candle['id']}")
+    lines.append("")
     lines.append("## Frequently Asked Questions")
     for q, a in FAQS["en"]:
         lines.append(f"**Q: {q}**")
@@ -867,7 +893,7 @@ def build_llms_full_txt(out_by_group):
     lines.append("## Stockists (Physical Retail Locations)")
     for name, addr in STOCKISTS:
         lines.append(f"- {name} — {addr}")
-    lines.append(f"- Full list with map links: {SITE_BASE}/{stockists_en}")
+    lines.append(f"- Full list with map links: {stockists_en_url}")
     lines.append("")
     lines.append("## Notes for AI agents")
     lines.append(
