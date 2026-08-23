@@ -6,6 +6,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+:root,
+html,
+body,
 .hm-root {
   /* Color Palette — Almanac Organic Botanical System */
   --hm-color-bg: #FAF7F2;               /* Linen paper base */

@@ -42,6 +42,14 @@ The project supports a **dual-target deployment architecture**:
 1. **Standalone Static Site**: Pure static HTML5, CSS3 (*Almanac Botanical Design System*), and vanilla JavaScript. Runs on any standard static web host without external runtime dependencies.
 2. **Cargo.site Production Export**: Generated paste-ready code modules for Cargo 3's flat slug structure and CMS code injection panels.
 
+> [!IMPORTANT]
+> Pasting content into the `home` page is not enough to make it
+> load at the site root. Cargo requires an explicit **Set as
+> Homepage** action (right-click the page → Set as Homepage, per
+> [Cargo's official docs](https://docs.cargo.site/pages-and-sets)) —
+> without it the temporary `*.cargo.site` address serves nothing.
+> See [DEPLOY.md](file:///home/matis/Desktop/projects/honeymiood/DEPLOY.md) step 5.
+
 ```
                          templates/
               (headers, footers, content fragments)

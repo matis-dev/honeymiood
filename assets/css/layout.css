@@ -4,7 +4,44 @@
 
 html, body {
   margin: 0;
+  padding: 0;
+  background-color: var(--hm-color-bg, #FAF7F2) !important;
+  color: var(--hm-color-text, #1C2620);
+  font-family: var(--hm-font-sans);
   overflow-x: clip;
+}
+
+/* ===== Cargo Platform Container Resets ===== */
+/* Resets Cargo's native wrapping containers so pages are full-bleed and no white background gaps appear */
+.content,
+.pages,
+.page,
+.page-layout,
+.page-content,
+bodycopy {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.page.pinned-top,
+.page.pinned-bottom {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+}
+
+.hm-root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--hm-color-bg);
 }
 
 .hm-root * {
@@ -117,10 +154,19 @@ html, body {
   padding-block: clamp(1rem, 2vw, 1.5rem);
 }
 
-/* ===== Header / Masthead (Hallmark N6 Archetype) ===== */
+/* ===== Main Content Area & Header Offset ===== */
 #hm-main {
   min-height: 70vh;
   padding-top: var(--hm-nav-height);
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Resilient fallback: if .hm-root is pasted directly into Cargo without #hm-main */
+.hm-root:not(:has(.hm-header)):not(:has(.hm-footer)):not(:has(#hm-main)) {
+  padding-top: var(--hm-nav-height);
+  box-sizing: border-box;
 }
 
 /* ===== Header / Navigation ===== */
@@ -430,6 +476,9 @@ html, body {
 
 /* ===== Footer Colophon (Hallmark Ft1 Archetype) ===== */
 .hm-footer {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
   border-top: 1px solid var(--hm-color-border);
   padding-top: clamp(3rem, 6vw, var(--hm-space-5));
   padding-bottom: var(--hm-space-4);

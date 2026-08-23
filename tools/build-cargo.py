@@ -218,7 +218,11 @@ def rewrite_links(html, lang):
     return html
 
 
-def wrap(fragment, lang):
+def wrap_page(fragment, lang):
+    return f'<div class="hm-root" data-hm-lang="{lang}">\n<main id="hm-main">\n{fragment}\n</main>\n</div>'
+
+
+def wrap_fragment(fragment, lang):
     return f'<div class="hm-root" data-hm-lang="{lang}">\n{fragment}\n</div>'
 
 
@@ -247,7 +251,7 @@ def build_pages():
         content = bs.inject_faq(content, lang)
         content = rewrite_links(content, lang)
         content += "\n" + page_jsonld(slug, lang, content_file, catalog_limit)
-        write(os.path.join(OUT, "pages", f"{slug}.html"), wrap(content, lang))
+        write(os.path.join(OUT, "pages", f"{slug}.html"), wrap_page(content, lang))
 
 
 def build_header_footer():
@@ -262,11 +266,11 @@ def build_header_footer():
         # standalone site (index.html etc.) does the precise per-page
         # version; this is a disclosed limitation of Cargo's pin model.
         header = rewrite_links(header, lang)
-        write(os.path.join(OUT, "pages", f"_header-{lang}.html"), wrap(header, lang))
+        write(os.path.join(OUT, "pages", f"_header-{lang}.html"), wrap_fragment(header, lang))
 
         footer = read(os.path.join(TEMPLATES, f"footer-{lang}.html"))
         footer = rewrite_links(footer, lang)
-        write(os.path.join(OUT, "pages", f"_footer-{lang}.html"), wrap(footer, lang))
+        write(os.path.join(OUT, "pages", f"_footer-{lang}.html"), wrap_fragment(footer, lang))
 
 
 def build_global_css():
