@@ -102,7 +102,7 @@ PAGE_GROUPS = [
         dict(out="zestawy.html", content="gift-sets-pl.html",
              title="Zestawy — Honeymiood",
              description="Cztery gotowe zestawy prezentowe z miodem Honeymiood — idealne na prezent lub do poznania całej naszej oferty.",
-             canonical="zestawy-i-prezenty-1", og_image=hero_og_image("assets/images/giftset-swiateczny.jpg")),
+             canonical="zestawy", og_image=hero_og_image("assets/images/giftset-swiateczny.jpg")),
         dict(out="en/gift-sets.html", content="gift-sets-en.html",
              title="Gift Sets — Honeymiood",
              description="Four ready-made Honeymiood gift sets — a great present, or a way to try our whole range at once.",

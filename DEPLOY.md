@@ -64,7 +64,7 @@ For each row below: create the page inside the matching Set, open
 | `home` | Pages Polish | `cargo/pages/home.html` |
 | `o-nas` | Pages Polish | `cargo/pages/o-nas.html` |
 | `miody` | Pages Polish | `cargo/pages/miody.html` |
-| `zestawy-i-prezenty-1` | Pages Polish | `cargo/pages/zestawy-i-prezenty-1.html` *(already exists — replace its content)* |
+| `zestawy` | Pages Polish | `cargo/pages/zestawy.html` *(existing page is currently titled "Zestawy i Prezenty" at slug `zestawy-i-prezenty-1` and hidden from nav — rename its title/URL to `zestawy` and paste the new content, rather than creating a fresh page; it's unpublished so there's no old URL to redirect)* |
 | `gdzie-kupic` | Pages Polish | `cargo/pages/gdzie-kupic.html` |
 | `fakty` | Pages Polish | `cargo/pages/fakty.html` |
 | `kontakt` | Pages Polish | `cargo/pages/kontakt.html` |

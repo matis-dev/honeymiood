@@ -127,7 +127,7 @@ honeymiood/
 | **Homepage** | `index.html` | `en/index.html` | `de/index.html` | `home` / `eng` / `de` |
 | **About Us** | `o-nas.html` | `en/about.html` | `de/ueber-uns.html` | `o-nas` / `about` / `ueber-uns` |
 | **All Honeys** | `miody.html` | `en/honeys.html` | `de/honige.html` | `miody` / `honeys` / `honige` |
-| **Gift Sets** | `zestawy.html` | `en/gift-sets.html` | `de/geschenksets.html` | `zestawy-i-prezenty-1` / `gift-sets` / `geschenksets` |
+| **Gift Sets** | `zestawy.html` | `en/gift-sets.html` | `de/geschenksets.html` | `zestawy` / `gift-sets` / `geschenksets` |
 | **Stockists** | `gdzie-kupic.html` | `en/stockists.html` | `de/verkaufsstellen.html` | `gdzie-kupic` / `stockists` / `verkaufsstellen` |
 | **Contact & B2B**| `kontakt.html` | `en/contact.html` | `de/kontakt.html` | `kontakt` / `contact` / `kontakt-de` |
 | **Privacy Policy**| `polityka-prywatnosci.html` | `en/privacy-policy.html` | `de/datenschutz.html` | `polityka-prywatnosci` / `privacy-policy` / `datenschutz` |
