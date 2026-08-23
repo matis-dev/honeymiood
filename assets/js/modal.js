@@ -82,7 +82,7 @@
     var d = product[currentLang] || product.pl;
     var t = LABELS[currentLang];
 
-    modal.querySelector("#hm-modal-harvest").textContent = product.harvest;
+    modal.querySelector("#hm-modal-harvest").textContent = d.harvest;
     modal.querySelector("#hm-modal-title").textContent = d.title;
     modal.querySelector("#hm-modal-subtitle").textContent = d.subtitle;
     modal.querySelector("#hm-modal-profile-label").textContent = t.profile;
@@ -92,12 +92,12 @@
     modal.querySelector("#hm-modal-usage-label").textContent = t.usage;
     modal.querySelector("#hm-modal-usage").textContent = d.usage;
     modal.querySelector("#hm-modal-origin-label").textContent = t.origin;
-    modal.querySelector("#hm-modal-origin").textContent = product.origin;
+    modal.querySelector("#hm-modal-origin").textContent = d.origin;
     modal.querySelector("#hm-modal-desc").textContent = d.description;
 
     var img = modal.querySelector("#hm-modal-img");
     img.src = product.image;
-    img.alt = d.title + (currentLang === "en" ? " honey jar — " : " — słoik miodu, ") + product.origin;
+    img.alt = d.title + (currentLang === "en" ? " honey jar — " : " — słoik miodu, ") + d.origin;
 
     var sizesWrap = modal.querySelector("#hm-modal-sizes");
     var buyWrap = modal.querySelector("#hm-modal-buy");

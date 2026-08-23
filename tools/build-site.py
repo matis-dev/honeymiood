@@ -35,12 +35,13 @@ OG_IMAGE = "https://freight.cargo.site/w/1200/i/X2847188493824277131163436526326
 # its own og:image instead of every page sharing one. Mirrors (a subset of)
 # IMAGE_MAP in tools/build-cargo.py — keep in sync if hero images change.
 HERO_IMAGE_URLS = {
-    "assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
-    "assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/T2665650558211413843780725582582/07520010.JPG",
-    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/A2073310734350207666578871495414/IMG_2819.jpg",
-    "assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/w/1200/i/F2665675685816999266185802271846/DSC04169.JPG",
-    "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
-    "assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
+    "assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/I3097646919633818814890486849098/bg.jpeg",
+    "assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/Q3097646919560031838595648642634/apiary-kepa-redlowska.jpg",
+    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/Z3097646919615372070816777297482/honey-jar-kepa-cliff.jpg",
+    "assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/t/original/i/W3097646919578478582669358194250/giftset-swiateczny.jpg",
+    "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/t/original/i/R3097646919541585094521939091018/stockists-cafe-shelf.jpg",
+    "assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/t/original/i/R3097646919523138350448229539402/contact-apiary-corner.jpg",
+    "assets/images/honey-varieties-three-jars.jpg": "https://freight.cargo.site/t/original/i/T3097646919596925326743067745866/honey-varieties-three-jars.jpg",
 }
 
 
@@ -85,15 +86,15 @@ PAGE_GROUPS = [
         "honeys",
         dict(out="miody.html", content="honeys-pl.html",
              title="Miody — Honeymiood",
-             description="Siedem miodów z jednej pasieki przy Rezerwacie Kępa Redłowska: wielokwiatowy, lipowy, akacjowy, rzepakowy i więcej.",
+             description="Sześć miodów z jednej pasieki przy Rezerwacie Kępa Redłowska: wielokwiatowy, lipowy, akacjowy, rzepakowy i więcej.",
              canonical="miody", og_image=hero_og_image("assets/images/honey-jar-kepa-cliff.jpg")),
         dict(out="en/honeys.html", content="honeys-en.html",
              title="Honeys — Honeymiood",
-             description="Seven honeys from one apiary by the Kępa Redłowska Nature Reserve: wildflower, linden, acacia, rapeseed and more.",
+             description="Six honeys from one apiary by the Kępa Redłowska Nature Reserve: wildflower, linden, acacia, rapeseed and more.",
              canonical="honeys", og_image=hero_og_image("assets/images/honey-jar-kepa-cliff.jpg")),
         dict(out="de/honige.html", content="honeys-de.html",
              title="Unsere Honige — Honeymiood",
-             description="Sieben Honigsorten aus einer Imkerei am Schutzgebiet Kępa Redłowska: Blütenhonig, Lindenhonig, Akazienhonig, Rapshonig und mehr.",
+             description="Sechs Honigsorten aus einer Imkerei am Schutzgebiet Kępa Redłowska: Blütenhonig, Lindenhonig, Akazienhonig, Rapshonig und mehr.",
              canonical="honige", og_image=hero_og_image("assets/images/honey-jar-kepa-cliff.jpg")),
     ),
     (
@@ -130,15 +131,15 @@ PAGE_GROUPS = [
         "facts",
         dict(out="fakty.html", content="facts-pl.html",
              title="Fakty i Pytania — Honeymiood",
-             description="Skąd pochodzi nasz miód, jak różnią się nasze siedem odmian i odpowiedzi na najczęstsze pytania — w jednym miejscu.",
+             description="Skąd pochodzi nasz miód, jak różnią się nasze sześć odmian i odpowiedzi na najczęstsze pytania — w jednym miejscu.",
              canonical="fakty", og_image=hero_og_image("assets/images/apiary-kepa-redlowska.jpg")),
         dict(out="en/facts.html", content="facts-en.html",
              title="Facts & FAQ — Honeymiood",
-             description="Where our honey comes from, how the seven varieties differ, and answers to the questions we're asked most.",
+             description="Where our honey comes from, how the six varieties differ, and answers to the questions we're asked most.",
              canonical="facts", og_image=hero_og_image("assets/images/apiary-kepa-redlowska.jpg")),
         dict(out="de/fakten.html", content="facts-de.html",
              title="Fakten & FAQ — Honeymiood",
-             description="Woher unser Honig stammt, wie sich die sieben Sorten unterscheiden, und Antworten auf die häufigsten Fragen.",
+             description="Woher unser Honig stammt, wie sich die sechs Sorten unterscheiden, und Antworten auf die häufigsten Fragen.",
              canonical="fakten", og_image=hero_og_image("assets/images/apiary-kepa-redlowska.jpg")),
     ),
     (
@@ -254,7 +255,7 @@ FAQS = {
          "Krystalizacja to naturalny proces, w którym glukoza zawarta w miodzie stopniowo przechodzi w stan stały — to dowód, że miód jest surowy i niefiltrowany na gorąco, a nie oznaka jego zepsucia. Miody z wysoką zawartością glukozy, jak nasz rzepakowy, krystalizują szybko; miody bogate we fruktozę, jak akacjowy, pozostają płynne miesiącami."),
         ("Skąd pochodzi miód Honeymiood?",
          "Nasza pasieka znajduje się w ogrodzie rodzinnym w Gdyni, tuż przy Rezerwacie Kępa Redłowska (54°29'N 18°33'E), gdzie morska bryza Bałtyku spotyka kwitnące lipy, akacje, wiesiołki i dzikie łąki. To właśnie ta nadmorska roślinność nadaje naszym miodom ich charakterystyczny bukiet smakowy."),
-        ("Czym różni się siedem miodów Honeymiood?",
+        ("Czym różni się sześć miodów Honeymiood?",
          "Każdy miód pochodzi z innego pożytku i innej pory zbioru: rzepakowy jest kremowy i szybko krystalizuje, akacjowy pozostaje płynny i jasny przez wiele miesięcy, lipowy ma żywiczną barwę i nutę cytrusów, a wielokwiatowy łączy pyłki chabrów i wiesiołka w jeden aromatyczny bukiet. Pełne zestawienie znajdziesz w tabeli powyżej."),
         ("W jakich rozmiarach dostępny jest miód?",
          "Większość naszych miodów sprzedajemy w słoikach 320 g i 1000 g, a Złote Mleko i miód z pierzgą — w mniejszym, 320-gramowym słoiku ze względu na dodatek przypraw lub pierzgi. Zamówienia wysyłamy zabezpieczone w szkle, w opakowaniach dostosowanych do kruchej zawartości."),
@@ -268,7 +269,7 @@ FAQS = {
          "Crystallisation is a natural process in which the glucose in honey gradually turns solid — a sign that the honey is raw and unfiltered, not that it has spoiled. High-glucose honeys like our rapeseed crystallise quickly, while fructose-rich honeys like acacia stay liquid for months."),
         ("Where does Honeymiood honey come from?",
          "Our apiary sits in a family garden in Gdynia, right by the Kępa Redłowska Nature Reserve (54°29'N 18°33'E), where the Baltic sea breeze meets flowering lindens, acacias, evening primrose and wild meadows. That coastal flora gives our honeys their distinctive flavour bouquet."),
-        ("How do Honeymiood's seven honeys differ?",
+        ("How do Honeymiood's six honeys differ?",
          "Each honey comes from a different bloom and harvest window: rapeseed is creamy and crystallises fast, acacia stays liquid and pale for many months, linden has a resinous hue with a hint of citrus, and wildflower blends cornflower and evening primrose pollen into one aromatic bouquet. See the full comparison in the table above."),
         ("What jar sizes are available?",
          "Most of our honeys come in 320 g and 1000 g jars; Golden Milk and the bee bread honey are sold only in the smaller 320 g jar, given their added spices or bee bread. Orders ship packed in glass-safe protective packaging."),
@@ -282,7 +283,7 @@ FAQS = {
          "Kristallisation ist ein natürlicher Vorgang, bei dem die im Honig enthaltene Glukose nach und nach fest wird — ein Zeichen dafür, dass der Honig roh und unfiltriert ist, nicht, dass er verdorben ist. Honige mit hohem Glukoseanteil wie unser Rapshonig kristallisieren schnell, fruktosereiche Sorten wie Akazienhonig bleiben monatelang flüssig."),
         ("Woher stammt der Honeymiood-Honig?",
          "Unsere Imkerei liegt in einem Familiengarten in Gdynia, direkt am Naturschutzgebiet Kępa Redłowska (54°29'N 18°33'E), wo die Ostseebrise auf blühende Linden, Akazien, Nachtkerzen und wilde Wiesen trifft. Diese Küstenflora verleiht unseren Honigen ihr charakteristisches Aroma."),
-        ("Wie unterscheiden sich die sieben Honigsorten von Honeymiood?",
+        ("Wie unterscheiden sich die sechs Honigsorten von Honeymiood?",
          "Jeder Honig stammt aus einer anderen Blüte und Erntezeit: Rapshonig ist cremig und kristallisiert schnell, Akazienhonig bleibt monatelang flüssig und hell, Lindenhonig hat einen harzigen Ton mit Zitrusnote, und Blütenhonig vereint Kornblumen- und Nachtkerzenpollen zu einem aromatischen Bukett. Die vollständige Übersicht finden Sie in der Tabelle oben."),
         ("Welche Glasgrößen gibt es?",
          "Die meisten unserer Honige gibt es in 320-g- und 1000-g-Gläsern; Goldene Milch und der Honig mit Bienenbrot werden aufgrund der zugesetzten Gewürze bzw. des Bienenbrots nur im kleineren 320-g-Glas angeboten. Bestellungen werden bruchsicher verpackt versendet."),
@@ -390,8 +391,6 @@ def write_products_js():
         ]
         block.append(",\n".join(gallery_lines))
         block.append("    ],")
-        block.append(f'    origin: {json.dumps(p["origin"], ensure_ascii=False)},')
-        block.append(f'    harvest: {json.dumps(p["harvest"], ensure_ascii=False)},')
         block.append("    sizes: [")
         size_lines = []
         for s in p["sizes"]:
@@ -410,6 +409,8 @@ def write_products_js():
             block.append(f"    {lang}: {{")
             block.append(f'      title: {json.dumps(d["title"], ensure_ascii=False)},')
             block.append(f'      subtitle: {json.dumps(d["subtitle"], ensure_ascii=False)},')
+            block.append(f'      origin: {json.dumps(d["origin"], ensure_ascii=False)},')
+            block.append(f'      harvest: {json.dumps(d["harvest"], ensure_ascii=False)},')
             block.append(f'      profile: {json.dumps(d["profile"], ensure_ascii=False)},')
             block.append(f'      consistency: {json.dumps(d["consistency"], ensure_ascii=False)},')
             block.append(f'      benefits: {json.dumps(d["benefits"], ensure_ascii=False)},')
@@ -449,7 +450,7 @@ def render_product_card(p, lang):
     t = CATALOG_LABELS[lang]
     img_url = hm_freight(p["image"]["hash"], p["image"]["name"])
     alt_suffix = {"pl": " — słoik miodu, ", "en": " honey jar — ", "de": " — Honigglas, "}[lang]
-    alt = esc_attr(d["title"] + alt_suffix + p["origin"])
+    alt = esc_attr(d["title"] + alt_suffix + d["origin"])
 
     size_buttons = "\n".join(
         f'          <shop-product product="{s["product"]}" variant="{s["variant"]}" '
@@ -463,7 +464,7 @@ def render_product_card(p, lang):
           <img src="{img_url}" alt="{alt}" loading="lazy" width="800" height="1000">
         </div>
         <div class="hm-product__content">
-          <span class="hm-badge hm-badge--accent">{esc(p['harvest'])}</span>
+          <span class="hm-badge hm-badge--accent">{esc(d['harvest'])}</span>
           <h2 class="hm-product__title">{esc(d['title'])}</h2>
           <p class="hm-product__profile">{esc(d['profile'])}</p>
           <dl class="hm-product__meta">
@@ -510,8 +511,8 @@ def render_fact_matrix(lang):
         rows.append(
             f'          <tr>\n'
             f'            <th scope="row"><a href="{href}">{esc(d["title"])}</a></th>\n'
-            f'            <td>{esc(p["origin"])}</td>\n'
-            f'            <td>{esc(p["harvest"])}</td>\n'
+            f'            <td>{esc(d["origin"])}</td>\n'
+            f'            <td>{esc(d["harvest"])}</td>\n'
             f'            <td>{esc(d["profile"])}</td>\n'
             f'            <td>{esc(d["consistency"])}</td>\n'
             f'          </tr>'
@@ -536,11 +537,8 @@ def render_fact_matrix(lang):
 
 def inject_fact_matrix(content, lang):
     table = render_fact_matrix(lang)
-    return re.sub(
-        r'<div id="hm-fact-matrix"></div>',
-        f'<div id="hm-fact-matrix" class="hm-fact-matrix-scroll">\n      {table}\n    </div>',
-        content,
-    )
+    replacement = f'<div id="hm-fact-matrix" class="hm-fact-matrix-scroll">\n      {table}\n    </div>'
+    return re.sub(r'<div id="hm-fact-matrix"></div>', lambda m: replacement, content)
 
 
 def render_faq(lang):
@@ -557,11 +555,8 @@ def render_faq(lang):
 
 def inject_faq(content, lang):
     faq_html = render_faq(lang)
-    return re.sub(
-        r'<div id="hm-faq"></div>',
-        f'<div id="hm-faq" class="hm-faq">\n{faq_html}\n    </div>',
-        content,
-    )
+    replacement = f'<div id="hm-faq" class="hm-faq">\n{faq_html}\n    </div>'
+    return re.sub(r'<div id="hm-faq"></div>', lambda m: replacement, content)
 
 
 # ---------------------------------------------------------------------------
@@ -607,7 +602,7 @@ def website_node():
 
 def breadcrumb_node(page, canonical_url):
     items = [{"@type": "ListItem", "position": 1, "name": "Honeymiood", "item": f"{SITE_BASE}/"}]
-    if page["canonical"]:
+    if not page["content"].startswith("home-"):
         name = page["title"].split(" — ")[0].strip()
         items.append({"@type": "ListItem", "position": 2, "name": name, "item": canonical_url})
     return {
@@ -711,28 +706,31 @@ def build_page(page, counterparts, canonicals):
     jsonld_script = f'<script type="application/ld+json">\n{dumps_ld(jsonld)}\n  </script>'
 
     og_image = page.get("og_image") or OG_IMAGE
+    page_title = esc(page["title"])
+    page_title_attr = esc_attr(page["title"])
+    page_description_attr = esc_attr(page["description"])
 
     html_out = f"""<!doctype html>
 <html lang="{lang}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{page['title']}</title>
-  <meta name="description" content="{page['description']}">
+  <title>{page_title}</title>
+  <meta name="description" content="{page_description_attr}">
   <link rel="canonical" href="{canonical_url}">
   {hreflang_links}
   <meta name="geo.region" content="PL-22">
   <meta name="geo.placename" content="Gdynia, Kępa Redłowska">
   <meta name="geo.position" content="54.4833;18.5500">
   <meta name="ICBM" content="54.4833, 18.5500">
-  <meta property="og:title" content="{page['title']}">
-  <meta property="og:description" content="{page['description']}">
+  <meta property="og:title" content="{page_title_attr}">
+  <meta property="og:description" content="{page_description_attr}">
   <meta property="og:image" content="{og_image}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{canonical_url}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{page['title']}">
-  <meta name="twitter:description" content="{page['description']}">
+  <meta name="twitter:title" content="{page_title_attr}">
+  <meta name="twitter:description" content="{page_description_attr}">
   <meta name="twitter:image" content="{og_image}">
   <link rel="icon" href="{FAVICON}" sizes="any">
   {style_links}
@@ -806,7 +804,7 @@ def build_llms_txt(out_by_group):
         "generation since 1923, right by the Kępa Redłowska Nature Reserve "
         "(54°29'N 18°33'E). Honey is cold-extracted, never heated above beehive "
         "temperature, and unfiltered. Published in Polish (default, /), English "
-        "(/en/) and German (/de/).",
+        "(/eng) and German (/de).",
         "",
         "## Honeys",
     ]
@@ -814,12 +812,12 @@ def build_llms_txt(out_by_group):
         if p["id"] == "swieca":
             continue
         d = p["en"]
-        lines.append(f"- [{d['title']}]({honeys_en_url}#{p['id']}): {d['profile']}; {p['origin']}.")
+        lines.append(f"- [{d['title']}]({honeys_en_url}#{p['id']}): {d['profile']}; {d['origin']}.")
     lines.append("")
     lines.append("## Also from the Apiary")
     candle = next(p for p in PRODUCTS if p["id"] == "swieca")
     d = candle["en"]
-    lines.append(f"- [{d['title']}]({honeys_en_url}#{candle['id']}): {d['profile']}; {candle['origin']}.")
+    lines.append(f"- [{d['title']}]({honeys_en_url}#{candle['id']}): {d['profile']}; {d['origin']}.")
     lines.append("")
     lines.append("## Pages")
     for group_id, entries in out_by_group.items():
@@ -866,8 +864,8 @@ def build_llms_full_txt(out_by_group):
             continue
         d = p["en"]
         lines.append(f"### {d['title']}")
-        lines.append(f"- Origin: {p['origin']}")
-        lines.append(f"- Harvest: {p['harvest']}")
+        lines.append(f"- Origin: {d['origin']}")
+        lines.append(f"- Harvest: {d['harvest']}")
         lines.append(f"- Flavour profile: {d['profile']}")
         lines.append(f"- Consistency: {d['consistency']}")
         lines.append(f"- Description: {d['description']}")
@@ -878,7 +876,7 @@ def build_llms_full_txt(out_by_group):
     d = candle["en"]
     lines.append("## Also from the Apiary")
     lines.append(f"### {d['title']}")
-    lines.append(f"- Origin: {candle['origin']}")
+    lines.append(f"- Origin: {d['origin']}")
     lines.append(f"- Flavour profile: {d['profile']}")
     lines.append(f"- Consistency: {d['consistency']}")
     lines.append(f"- Description: {d['description']}")

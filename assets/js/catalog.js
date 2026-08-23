@@ -47,7 +47,7 @@
     var media = el("div", "hm-product__media");
     var img = document.createElement("img");
     img.src = product.image;
-    img.alt = d.title + (currentLang === "en" ? " honey jar — " : " — słoik miodu, ") + product.origin;
+    img.alt = d.title + (currentLang === "en" ? " honey jar — " : " — słoik miodu, ") + d.origin;
     img.loading = "lazy";
     img.width = 800;
     img.height = 1000;
@@ -56,7 +56,7 @@
 
     var content = el("div", "hm-product__content");
 
-    content.appendChild(el("span", "hm-badge hm-badge--accent", product.harvest));
+    content.appendChild(el("span", "hm-badge hm-badge--accent", d.harvest));
     content.appendChild(el("h2", "hm-product__title", d.title));
     content.appendChild(el("p", "hm-product__profile", d.profile));
 

@@ -28,10 +28,15 @@
     var toggle = document.querySelector(".hm-header__menu-toggle");
     if (!root || !toggle) return;
 
+    var labelOpen = toggle.getAttribute("data-label-open");
+    var labelClose = toggle.getAttribute("data-label-close");
+
     function setMenuState(open) {
       root.setAttribute("data-nav-open", open ? "true" : "false");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.setAttribute("aria-label", open ? "Zamknij menu" : "Otwórz menu");
+      if (labelOpen && labelClose) {
+        toggle.setAttribute("aria-label", open ? labelClose : labelOpen);
+      }
       if (open) {
         document.body.style.overflow = "hidden";
       } else {

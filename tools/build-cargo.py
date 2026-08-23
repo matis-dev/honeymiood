@@ -166,46 +166,44 @@ def rewrite_href(href, lang):
 
 
 IMAGE_MAP = {
-    "assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
-    "../assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
-    "assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
-    "../assets/images/hero-bg-scraped.jpg": "https://freight.cargo.site/t/original/i/T2068100808246618789267660548854/f1e07510-ca35-42bb-99d8-eb1f00ab5e60.JPG",
-    "assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/w/1200/i/O2665675402324908920199793132646/DSC04179.JPG",
-    "../assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/w/1200/i/O2665675402324908920199793132646/DSC04179.JPG",
-    "assets/images/giftset-swieczka.jpg": "https://freight.cargo.site/w/1200/i/P2665674917637840135805561017446/DSC04183.JPG",
-    "../assets/images/giftset-swieczka.jpg": "https://freight.cargo.site/w/1200/i/P2665674917637840135805561017446/DSC04183.JPG",
-    "assets/images/giftset-trojmioodek.jpg": "https://freight.cargo.site/w/1200/i/W2665674697793467406180598818406/DSC04184.JPG",
-    "../assets/images/giftset-trojmioodek.jpg": "https://freight.cargo.site/w/1200/i/W2665674697793467406180598818406/DSC04184.JPG",
-    "assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/w/1200/i/F2665675685816999266185802271846/DSC04169.JPG",
-    "../assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/w/1200/i/F2665675685816999266185802271846/DSC04169.JPG",
-    "assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/T2665650558211413843780725582582/07520010.JPG",
-    "../assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/T2665650558211413843780725582582/07520010.JPG",
-    "assets/images/jarek-hives.jpg": "https://freight.cargo.site/w/1200/i/U2665660857904724278458999815270/DSC03178.JPG",
-    "../assets/images/jarek-hives.jpg": "https://freight.cargo.site/w/1200/i/U2665660857904724278458999815270/DSC03178.JPG",
-    "assets/images/about-honeycomb.jpg": "https://freight.cargo.site/w/1200/i/C2665665809796068285511062635622/DSC03174.JPG",
-    "../assets/images/about-honeycomb.jpg": "https://freight.cargo.site/w/1200/i/C2665665809796068285511062635622/DSC03174.JPG",
-    "assets/images/about-hives-smoker.jpg": "https://freight.cargo.site/w/1200/i/L2665662191544719230559640994918/DSC03175.JPG",
-    "../assets/images/about-hives-smoker.jpg": "https://freight.cargo.site/w/1200/i/L2665662191544719230559640994918/DSC03175.JPG",
-    "assets/images/kepa-meadows.jpg": "https://freight.cargo.site/w/1200/i/L2665617795318199409720291437302/DSC03179.JPG",
-    "../assets/images/kepa-meadows.jpg": "https://freight.cargo.site/w/1200/i/L2665617795318199409720291437302/DSC03179.JPG",
-    "assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
-    "../assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/w/1200/i/F2665638948144288500242000849654/DSC01511.JPG",
-    "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
-    "../assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/w/1200/i/I2665639148722230232497678668902/DSC01514.JPG",
-    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/A2073310734350207666578871495414/IMG_2819.jpg",
-    "../assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/A2073310734350207666578871495414/IMG_2819.jpg",
-    "assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/w/1200/i/L2665618281113204590861333244662/DSC03172.JPG",
-    "../assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/w/1200/i/L2665618281113204590861333244662/DSC03172.JPG",
-    "assets/images/logo_w.png": "https://freight.cargo.site/w/1200/i/X2156015466378587388984278854390/logo_honeymiood.png",
-    "../assets/images/logo_w.png": "https://freight.cargo.site/w/1200/i/X2156015466378587388984278854390/logo_honeymiood.png",
-    "assets/images/logo_b.png": "https://freight.cargo.site/w/1200/i/D2056736702074654142009068169974/honeymood_logo.png",
-    "../assets/images/logo_b.png": "https://freight.cargo.site/w/1200/i/D2056736702074654142009068169974/honeymood_logo.png",
-    "assets/images/about-gallery-meadow-hives.jpg": "https://freight.cargo.site/t/original/i/U2093942810256049917248090090230/IMG_5976.JPG",
-    "../assets/images/about-gallery-meadow-hives.jpg": "https://freight.cargo.site/t/original/i/U2093942810256049917248090090230/IMG_5976.JPG",
-    "assets/images/about-gallery-path-beekeeper.jpg": "https://freight.cargo.site/t/original/i/I2073308781928368161086218906358/IMG_3791.jpg",
-    "../assets/images/about-gallery-path-beekeeper.jpg": "https://freight.cargo.site/t/original/i/I2073308781928368161086218906358/IMG_3791.jpg",
-    "assets/images/about-gallery-sunny-hives.jpg": "https://freight.cargo.site/t/original/i/T2066401620671872778799190059766/IMG_3648.jpg",
-    "../assets/images/about-gallery-sunny-hives.jpg": "https://freight.cargo.site/t/original/i/T2066401620671872778799190059766/IMG_3648.jpg",
+    "assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/I3097646919633818814890486849098/bg.jpeg",
+    "../assets/images/bg.jpeg": "https://freight.cargo.site/t/original/i/I3097646919633818814890486849098/bg.jpeg",
+    "assets/images/honey-varieties-three-jars.jpg": "https://freight.cargo.site/t/original/i/T3097646919596925326743067745866/honey-varieties-three-jars.jpg",
+    "../assets/images/honey-varieties-three-jars.jpg": "https://freight.cargo.site/t/original/i/T3097646919596925326743067745866/honey-varieties-three-jars.jpg",
+    "assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/t/original/i/S3097646919836732999701291916874/giftset-mioodki.jpg",
+    "../assets/images/giftset-mioodki.jpg": "https://freight.cargo.site/t/original/i/S3097646919836732999701291916874/giftset-mioodki.jpg",
+    "assets/images/giftset-swieczka.jpg": "https://freight.cargo.site/t/original/i/F3097646919818286255627582365258/giftset-swieczka.jpg",
+    "../assets/images/giftset-swieczka.jpg": "https://freight.cargo.site/t/original/i/F3097646919818286255627582365258/giftset-swieczka.jpg",
+    "assets/images/giftset-trojmioodek.jpg": "https://freight.cargo.site/t/original/i/S3097646919799839511553872813642/giftset-trojmioodek.jpg",
+    "../assets/images/giftset-trojmioodek.jpg": "https://freight.cargo.site/t/original/i/S3097646919799839511553872813642/giftset-trojmioodek.jpg",
+    "assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/t/original/i/W3097646919578478582669358194250/giftset-swiateczny.jpg",
+    "../assets/images/giftset-swiateczny.jpg": "https://freight.cargo.site/t/original/i/W3097646919578478582669358194250/giftset-swiateczny.jpg",
+    "assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/Q3097646919560031838595648642634/apiary-kepa-redlowska.jpg",
+    "../assets/images/apiary-kepa-redlowska.jpg": "https://freight.cargo.site/t/original/i/Q3097646919560031838595648642634/apiary-kepa-redlowska.jpg",
+    "assets/images/jarek-hives.jpg": "https://freight.cargo.site/t/original/i/X3097646919744499279332744158794/jarek-hives.jpg",
+    "../assets/images/jarek-hives.jpg": "https://freight.cargo.site/t/original/i/X3097646919744499279332744158794/jarek-hives.jpg",
+    "assets/images/about-honeycomb.jpg": "https://freight.cargo.site/t/original/i/K3097646919762946023406453710410/about-honeycomb.jpg",
+    "../assets/images/about-honeycomb.jpg": "https://freight.cargo.site/t/original/i/K3097646919762946023406453710410/about-honeycomb.jpg",
+    "assets/images/about-hives-smoker.jpg": "https://freight.cargo.site/t/original/i/G3097646919781392767480163262026/about-hives-smoker.jpg",
+    "../assets/images/about-hives-smoker.jpg": "https://freight.cargo.site/t/original/i/G3097646919781392767480163262026/about-hives-smoker.jpg",
+    "assets/images/kepa-meadows.jpg": "https://freight.cargo.site/t/original/i/X3097646919726052535259034607178/kepa-meadows.jpg",
+    "../assets/images/kepa-meadows.jpg": "https://freight.cargo.site/t/original/i/X3097646919726052535259034607178/kepa-meadows.jpg",
+    "assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/t/original/i/R3097646919523138350448229539402/contact-apiary-corner.jpg",
+    "../assets/images/contact-apiary-corner.jpg": "https://freight.cargo.site/t/original/i/R3097646919523138350448229539402/contact-apiary-corner.jpg",
+    "assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/t/original/i/R3097646919541585094521939091018/stockists-cafe-shelf.jpg",
+    "../assets/images/stockists-cafe-shelf.jpg": "https://freight.cargo.site/t/original/i/R3097646919541585094521939091018/stockists-cafe-shelf.jpg",
+    "assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/Z3097646919615372070816777297482/honey-jar-kepa-cliff.jpg",
+    "../assets/images/honey-jar-kepa-cliff.jpg": "https://freight.cargo.site/t/original/i/Z3097646919615372070816777297482/honey-jar-kepa-cliff.jpg",
+    "assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/t/original/i/B3097646919855179743775001468490/kepa-bees-macro.jpg",
+    "../assets/images/kepa-bees-macro.jpg": "https://freight.cargo.site/t/original/i/B3097646919855179743775001468490/kepa-bees-macro.jpg",
+    "assets/images/logo_b.png": "https://freight.cargo.site/t/original/i/U3097646919707605791185325055562/logo_b.png",
+    "../assets/images/logo_b.png": "https://freight.cargo.site/t/original/i/U3097646919707605791185325055562/logo_b.png",
+    "assets/images/about-gallery-meadow-hives.jpg": "https://freight.cargo.site/t/original/i/U3097646919689159047111615503946/about-gallery-meadow-hives.jpg",
+    "../assets/images/about-gallery-meadow-hives.jpg": "https://freight.cargo.site/t/original/i/U3097646919689159047111615503946/about-gallery-meadow-hives.jpg",
+    "assets/images/about-gallery-path-beekeeper.jpg": "https://freight.cargo.site/t/original/i/K3097646919670712303037905952330/about-gallery-path-beekeeper.jpg",
+    "../assets/images/about-gallery-path-beekeeper.jpg": "https://freight.cargo.site/t/original/i/K3097646919670712303037905952330/about-gallery-path-beekeeper.jpg",
+    "assets/images/about-gallery-sunny-hives.jpg": "https://freight.cargo.site/t/original/i/R3097646919652265558964196400714/about-gallery-sunny-hives.jpg",
+    "../assets/images/about-gallery-sunny-hives.jpg": "https://freight.cargo.site/t/original/i/R3097646919652265558964196400714/about-gallery-sunny-hives.jpg",
 }
 
 
@@ -224,29 +222,31 @@ def wrap(fragment, lang):
     return f'<div class="hm-root" data-hm-lang="{lang}">\n{fragment}\n</div>'
 
 
-def page_jsonld(slug, lang, content_file):
+def page_jsonld(slug, lang, content_file, catalog_limit=None):
     canonical_url = f"{bs.SITE_BASE}/{slug}"
-    is_home = slug == HOME_SLUG[lang]
+    # breadcrumb_node skips the second "Honeymiood" crumb itself for any
+    # page["content"] starting with "home-", so no special-casing is needed here.
     page_stub = {
         "content": content_file,
-        # Empty for the homepage so breadcrumb_node doesn't add a second
-        # "Honeymiood" crumb pointing at itself (mirrors build-site.py's
-        # own PAGE_GROUPS, which uses canonical="" for the home entries).
-        "canonical": "" if is_home else slug,
+        "canonical": slug,
         "title": TITLE_BY_CONTENT.get(content_file, "Honeymiood"),
     }
-    jsonld = bs.build_jsonld(page_stub, lang, canonical_url)
+    jsonld = bs.build_jsonld(page_stub, lang, canonical_url, catalog_limit)
     return f'<script type="application/ld+json">\n{bs.dumps_ld(jsonld)}\n</script>'
 
 
 def build_pages():
     for page_id, slug, lang, content_file in PAGES:
         content = read(os.path.join(TEMPLATES, "content", content_file))
+
+        limit_match = re.search(r'<div id="hm-catalog"[^>]*data-limit="(\d+)"', content)
+        catalog_limit = int(limit_match.group(1)) if limit_match else None
+
         content = bs.inject_catalog(content, lang)
         content = bs.inject_fact_matrix(content, lang)
         content = bs.inject_faq(content, lang)
         content = rewrite_links(content, lang)
-        content += "\n" + page_jsonld(slug, lang, content_file)
+        content += "\n" + page_jsonld(slug, lang, content_file, catalog_limit)
         write(os.path.join(OUT, "pages", f"{slug}.html"), wrap(content, lang))
 
 

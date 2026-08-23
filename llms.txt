@@ -1,17 +1,17 @@
 # Honeymiood — Raw Family-Apiary Honey (Gdynia, Poland)
 
-> Honeymiood is a family apiary in Gdynia, Poland, run today by its fourth generation since 1923, right by the Kępa Redłowska Nature Reserve (54°29'N 18°33'E). Honey is cold-extracted, never heated above beehive temperature, and unfiltered. Published in Polish (default, /), English (/en/) and German (/de/).
+> Honeymiood is a family apiary in Gdynia, Poland, run today by its fourth generation since 1923, right by the Kępa Redłowska Nature Reserve (54°29'N 18°33'E). Honey is cold-extracted, never heated above beehive temperature, and unfiltered. Published in Polish (default, /), English (/eng) and German (/de).
 
 ## Honeys
-- [Rapeseed](https://honeymiood.com/honeys#rzepakowy): Creamy, delicate taste, light almost white colour; Pasieka dziadka Grzegorza, Gdynia.
-- [Acacia](https://honeymiood.com/honeys#akacjowy): Floral aroma, liquid and light in colour; Rezerwat Kępa Redłowska, Gdynia.
-- [Wildflower](https://honeymiood.com/honeys#wielokwiatowy): Floral, cornflower aroma, rich amber colour; Rezerwat Kępa Redłowska, Gdynia.
-- [Linden](https://honeymiood.com/honeys#lipowy): Velvety, dark resinous hue with a hint of citrus; Plaża Redłowska, Gdynia.
-- [Rapeseed Honey ~ Golden Milk](https://honeymiood.com/honeys#zlote-mleko): Spiced, warming; Pasieka dziadka Grzegorza, Gdynia.
-- [Rapeseed Honey with Bee Bread](https://honeymiood.com/honeys#pierzga): Creamy, with tiny bee bread particles; Pasieka dziadka Grzegorza, Gdynia.
+- [Rapeseed](https://honeymiood.com/honeys#rzepakowy): Creamy, delicate taste, light almost white colour; Grandpa Grzegorz's apiary, Gdynia.
+- [Acacia](https://honeymiood.com/honeys#akacjowy): Floral aroma, liquid and light in colour; Kępa Redłowska Nature Reserve, Gdynia.
+- [Wildflower](https://honeymiood.com/honeys#wielokwiatowy): Floral, cornflower aroma, rich amber colour; Kępa Redłowska Nature Reserve, Gdynia.
+- [Linden](https://honeymiood.com/honeys#lipowy): Velvety, dark resinous hue with a hint of citrus; Redłowo Beach, Gdynia.
+- [Rapeseed Honey ~ Golden Milk](https://honeymiood.com/honeys#zlote-mleko): Spiced, warming; Grandpa Grzegorz's apiary, Gdynia.
+- [Rapeseed Honey with Bee Bread](https://honeymiood.com/honeys#pierzga): Creamy, with tiny bee bread particles; Grandpa Grzegorz's apiary, Gdynia.
 
 ## Also from the Apiary
-- [Beeswax Candle](https://honeymiood.com/honeys#swieca): Honeyed aroma, warm and cosy light; Pasieka rodzinna, Gdynia.
+- [Beeswax Candle](https://honeymiood.com/honeys#swieca): Honeyed aroma, warm and cosy light; Family apiary, Gdynia.
 
 ## Pages
 - [Honeymiood](https://honeymiood.com/eng)
