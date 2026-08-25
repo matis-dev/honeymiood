@@ -35,6 +35,38 @@
 3. **No Additives or Synthetic Processing**: Zero sugar feeding during honey flow, no micro-filtering or chemical clarifying.
 4. **Zero-Tracking & Privacy First**: Clean site code with no advertising trackers, analytics cookies, or third-party bloat.
 
+### 1.5 Target Audience & Buyer Personas
+
+The brand serves 4 distinct customer archetypes across retail, lifestyle, and B2B:
+
+#### 1. Birgit (55–60) — *The German Baltic Tourist & Eco-Conscious Nature Lover*
+* **Profile**: 55–60 years old, eco-conscious traveler from Germany (e.g., Hamburg, Berlin, Saxony) vacationing on the Polish Baltic Coast (Gdynia, Sopot, Gdańsk).
+* **Core Values & Mindset**: Deep appreciation for untouched coastal nature, biodiversity, and authentic ecological craftsmanship. Strongly values the apiary’s pristine setting bordering the Kępa Redłowska Nature Reserve, sustainable beekeeping (*nachhaltige Imkerei* with zero sugar-feeding during honey flow), and over 100 years of family tradition. Seeks authentic single-origin raw honey and pure beeswax products to bring home as high-quality regional treasures.
+* **Favorite Products**: Lindenhonig (Miód Lipowy), Blütenhonig (Miód Wielokwiatowy), Bienenbrot (Pierzga / bee bread), hand-poured 100% pure beeswax candles.
+* **Pain Points & Frustrations**: Skeptical of mass-produced tourist souvenirs and blended supermarket honeys; frustrated when local brands lack clear German translations, botanical transparency, or clear directions to physical stockists.
+* **Website / UX Touchpoints**: Dedicated German language experience (`/de/`), high-contrast legible layout (*Plus Jakarta Sans*), explicit geographic coordinates (`54°29'N 18°33'E`), Google Maps links to local Gdynia stockists (*Pokusa Bakery, Kultura Smaku*), and straightforward EU shipping/re-order information.
+
+#### 2. Ania (34) — *The Conscious Foodie & Clean-Label Gourmet*
+* **Profile**: Urban professional/parent, shops at farmers' markets, specialty delis, and organic stores.
+* **Core Values & Mindset**: Seeks unadulterated, nutrient-dense foods with full provenance transparency. Uses raw honey as a natural sweetener in specialty coffee, herbal teas, and sourdough cooking.
+* **Favorite Products**: Miód Akacjowy, Miód Rzepakowy, Złote Mleko (turmeric-honey blend), Pierzga.
+* **Pain Points**: Vague "blend of EU and non-EU honeys" labels; lack of nutritional and enzyme integrity in heated supermarket jars.
+* **Website / UX Touchpoints**: Sensory tasting notes, single-origin botanical details, mobile-first seamless ordering.
+
+#### 3. Michał (38) — *The Specialty Cafe & Artisan Bakery Partner (B2B)*
+* **Profile**: Owner/barista of a third-wave coffee shop or craft sourdough bakery (e.g., *Pokusa, Tłok, Kubuś Piekarenka*).
+* **Core Values & Mindset**: Believes in pairing specialty espresso and wild yeast pastries with genuine artisanal ingredients. Wants a local, authentic storytelling angle to share with demanding culinary guests.
+* **Favorite Products**: Bulk raw honeys (1000g jars / wholesale), retail display jars for coffee counter shelves.
+* **Pain Points**: Unreliable suppliers, mass-produced honey that undermines the cafe's specialty reputation.
+* **Website / UX Touchpoints**: Dedicated B2B wholesale section on Contact page, personal beekeeper communication, stockist citation network.
+
+#### 4. Karolina (42) — *The Aesthetic & Corporate Gift Curator*
+* **Profile**: Marketing manager, HR executive, or thoughtful shopper seeking meaningful gifts.
+* **Core Values & Mindset**: Values tactile, premium presentation, sustainable packaging, and artisanal warmth over plastic corporate swag.
+* **Favorite Products**: *Zestaw Mioodki* (mini tasting flight), *Zestaw ze Świecą* (honey + hand-poured beeswax candle), custom corporate gift sets.
+* **Pain Points**: Generic gift baskets with industrial junk food; lack of customisation for bespoke corporate orders.
+* **Website / UX Touchpoints**: Curated gift sets page (`zestawy.html`), bespoke order inquiry forms, high-end editorial aesthetic.
+
 ---
 
 ## 2. Technical Architecture & Build Pipeline

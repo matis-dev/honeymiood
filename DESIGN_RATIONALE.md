@@ -23,11 +23,16 @@
 
 ---
 
-### 3. Market Context: Why Standard E-Commerce Templates Were Rejected
-* **The Problem**: In the raw honey sector, almost all sites fall into two traps:
-  1. *Outdated agricultural farm portals* with clunky mobile UX and low trust.
+### 3. Market Context & Buyer Personas: Designing for Diverse Segments
+* **The Industry Problem**: In the raw honey sector, almost all sites fall into two traps:
+  1. *Outdated agricultural farm portals* with clunky mobile UX, unreadable text, and low trust.
   2. *Generic, boxy e-commerce storefronts* designed for mass-produced industrial food.
 * **Our Solution**: Because direct modern benchmarks in the beekeeping niche do not exist, we drew inspiration from **specialty coffee roasteries, artisanal perfumeries, and botanical almanacs**. This positions Honeymiood in the **premium gastronomic & lifestyle tier**, matching its presence in curated specialty bakeries and cafes in Gdynia and Warsaw.
+* **Core Buyer Personas Driving the Design**:
+  * **Birgit (55–60) — *The German Baltic Tourist & Eco-Conscious Nature Lover***: An eco-conscious traveler from Germany visiting the Polish Baltic coast (Gdynia/Trójmiasto). She is captivated by untouched coastal nature, the protected Kępa Redłowska reserve, sustainable beekeeping (*nachhaltige Imkerei*), and over 100 years of family tradition. Design response: dedicated German language site (`/de/`), high-contrast legible typography (*Plus Jakarta Sans*), zero confusing popups, clear origin coordinates (`54°29'N 18°33'E`), Google Maps links to local Gdynia stockists (*Pokusa Bakery, Kultura Smaku*), and transparent EU shipping.
+  * **Ania (34) — *The Conscious Foodie & Clean-Label Gourmet***: Prioritizes single-origin terroir, raw enzymes, and clean-eating culinary pairings. Design response: rich botanical tasting notes, harvest year transparency, and instant mobile browsing.
+  * **Michał (38) — *The Specialty Cafe & Bakery Partner (B2B)***: Needs artisanal integrity and a compelling origin story that enhances his establishment's specialty reputation. Design response: clear B2B wholesale pathways and stockist network integration.
+  * **Karolina (42) — *The Aesthetic & Corporate Gift Curator***: Looks for tactile, high-end, eco-friendly gift collections. Design response: curated gift set presentation, linen paper aesthetics, and bespoke order inquiries.
 
 ---
 
@@ -105,9 +110,14 @@
 
 ---
 
-### 3. Kontekst Rynkowy: Dlaczego Odrzuciliśmy Typowe Szablony E-Commerce?
+### 3. Kontekst Rynkowy i Persony Odbiorców: Projektowanie dla Różnych Segmentów
 * **Problem w branży**: Większość stron z miodem to albo przestarzałe, nieresponsywne witryny gospodarskie, albo bezduszne, pudełkowe sklepy masowe.
 * **Nasze rozwiązanie**: Wobec braku nowoczesnych wzorców w samej branży pszczelarskiej, inspirację czerpaliśmy z **palarni kawy specialty, rzemieślniczych perfumerii i botanicznych almanachów**. Pozycjonuje to Honeymiood w **segmencie premium i stylu życia**, idealnie pasując do obecności w rzemieślniczych kawiarniach i piekarniach w Trójmieście czy Warszawie.
+* **Kluczowe Persony Kształtujące Projekt**:
+  * **Birgit (55–60 lat) — *Turystka z Niemiec i Miłośniczka Ekologicznej Przyrody***: Świadoma ekologicznie turystka z Niemiec spędzająca urlop na polskim wybrzeżu Bałtyku (Gdynia/Trójmiasto). Zachwyca ją dziewicza przyroda, sąsiedztwo Rezerwatu Kępa Redłowska, zrównoważone pszczelarstwo bez dokarmiania cukrem w trakcie pożytku oraz ponad 100-letnia tradycja rodzinna. Szuka autentycznego miodu regionalnego i świec z wosku jako wartościowej pamiątki. Odpowiedź projektowa: pełna niemiecka wersja językowa strony (`/de/`), wysoki kontrast, czytelna typografia (*Plus Jakarta Sans*), koordynaty pochodzenia (`54°29'N 18°33'E`), linki do map dla lokalnych punktów sprzedaży w Gdyni (*Pokusa Bakery, Kultura Smaku*) oraz przejrzyste informacje o wysyłce do Niemiec.
+  * **Ania (34) — *Świadoma Smakoszka i Entuzjastka Czystej Etykiety***: Szuka surowego, nieniszczonego termicznie miodu ze sprawdzonym terroirem do kuchni i kawy. Odpowiedź projektowa: sensoryczne opisy nut smakowych, transparentność rocznika zbiorów i wygoda na smartfonie.
+  * **Michał (38) — *Właściciel Kawiarni Specialty i Piekarni Rzemieślniczej (B2B)***: Oczekuje bezkompromisowej jakości i pięknej historii miejsca, którą może przekazać gościom lokalu. Odpowiedź projektowa: dedykowana sekcja B2B, kontakt z pszczelarzem i mapa punktów partnerskich.
+  * **Karolina (42) — *Kuratorka Prezentów i Zamówień Firmowych***: Poszukuje eleganckich, naturalnych zestawów upominkowych bez plastiku. Odpowiedź projektowa: sekcja zestawów z ręcznie robioną świecą woskową, estetyka papieru lnianego i opcja zamówień personalizowanych.
 
 ---
 
